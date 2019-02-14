@@ -1,0 +1,153 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #3375e2;
+
+    width:rem(150,$text-bp-sm);
+
+
+    @include bp-medium {
+        width:rem(130,$text-bp-md);
+
+    }
+
+    @include bp-large {
+        width:rem(350,$text-bp-lg);
+       
+    }
+}
+#nav-logo {
+    z-index: 1003;
+    width:rem(750,$text-bp-sm);
+    height:rem(710,$text-bp-sm);
+
+
+    @include bp-medium {
+        width:rem(310,$text-bp-md);
+        height:rem(294,$text-bp-md);
+
+    }
+
+    @include bp-large {
+        width:rem(300,$text-bp-lg);
+        height:rem(280,$text-bp-lg);
+        margin: 0 rem(25,$text-bp-lg);
+    }
+}
+#nav-logo img {
+  width:100%;
+  height:auto;
+}
+
+.menu-btn, .schedule-btn {
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Hitchcock', san-serif;
+    color:#FFF;
+    background-color: #6b6b6b;
+    font-size: rem(40,$text-bp-sm);
+    padding: rem(40,$text-bp-sm);
+
+    right:rem(18,$text-bp-sm);
+    top:rem(18,$text-bp-sm);
+
+    @include bp-medium {
+        font-size: rem(18,$text-bp-md);
+        padding: 0 rem(10,$text-bp-md);
+    }
+
+    @include bp-large {
+        font-size: rem(36,$text-bp-lg);
+        padding: rem(10,$text-bp-lg) 0 ;
+    }
+}
+
+.menu-btn:hover, .schedule-btn:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+#nav-btns {
+
+
+
+    
+}
+
+#navBtnHolder {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#social-nav {
+    text-align: center;
+    flex-direction: row;
+    
+    @include bp-medium {
+    }
+
+    @include bp-large {
+    }
+}
+
+.nav-btn {
+    text-align: center;
+    font-family: 'Hitchcock', san-serif;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #000;
+
+    font-size: rem(70,$text-bp-sm);
+    letter-spacing: rem(1,$text-bp-sm);
+    padding: rem(20,$text-bp-sm) 0;
+    width:100%;
+
+
+     @include bp-medium {
+        font-size: rem(19,$text-bp-md);
+        letter-spacing: rem(1,$text-bp-md);
+        padding: rem(16,$text-bp-md);
+      }
+
+    @include bp-large {
+        font-size: rem(24,$text-bp-lg);
+        padding: rem(10,$text-bp-lg) 0;
+    }
+}
+
+.nav-btn:hover {
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+}
+
+
+.social-btn {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fbf1e3;
+    font-size: rem(70,$text-bp-sm);
+    padding: 0 rem(25,$text-bp-sm);
+
+    @include bp-medium {
+        font-size: rem(22,$text-bp-md);
+        padding: rem(16,$text-bp-md) rem(8,$text-bp-md);
+    }
+
+    @include bp-large {
+        font-size: rem(27,$text-bp-lg);
+        padding: rem(20,$text-bp-lg) rem(10,$text-bp-lg);
+    }
+}
+
+.social-btn:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+
+
+
+
