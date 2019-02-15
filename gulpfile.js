@@ -61,6 +61,9 @@ var browserSync = require('browser-sync').create();
 // order js dependencies to avoid undefined errors
 var order = require("gulp-order");
 
+var gutil = require( 'gulp-util' );
+var ftp = require( 'vinyl-ftp' );
+
 /*===================================================
 End gulp plugins
 ===================================================*/
@@ -175,3 +178,38 @@ gulp.task('build', function (callback) { //do a full build for the site
 		callback
 	)
 });
+
+gulp.task( 'deploy', function () {
+
+	var conn = ftp.create( {
+		host:     '160.153.71.230',
+		user:     'jones@new.kapowiff.com',
+		password: 'KapowFtp2019!',
+		parallel: 10,
+		port:21,
+		log:      gutil.log
+	} );
+
+	var globs = [
+		'img/**',
+		'css/**',
+		'js/**',
+		'fonts/**',
+		'404.php',
+		'category.php',
+		'footer.php',
+		'functions.php',
+		'header.php',
+		'page.php',
+		'post.php',
+		'index.php'
+	];
+
+	// using base = '.' will transfer everything to /public_html correctly
+	// turn off buffering in gulp.src for best performance
+
+	return gulp.src( globs, { base: '.', buffer: false } )
+		.pipe( conn.newer( '/public_html/wp-content/themes/film-festival' ) ) // only upload newer files
+		.pipe( conn.dest( '/public_html/wp-content/themes/film-festival' ) );
+
+} );

@@ -3,7 +3,7 @@
 	</div><!-- end site-holder -->
 	<footer id="footer" role="contentinfo">
 		<div id="copyright">
-			©Laughing House Productions
+			©Kapow Intergalactic Film Festival
 		</div>
 	</footer>
 </div><!-- end site -->
