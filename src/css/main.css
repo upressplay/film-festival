@@ -117,7 +117,15 @@ html {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto; }
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 751px) {
+    #site-holder {
+      flex-direction: row; } }
+  @media only screen and (min-width: 1271px) {
+    #site-holder {
+      flex-direction: row; } }
 
 img {
   width: 100%;
@@ -162,22 +170,24 @@ nav {
   display: flex;
   flex-direction: column;
   background-color: #3375e2;
-  width: 15rem; }
+  width: 75rem; }
   @media only screen and (min-width: 751px) {
     nav {
-      width: 13rem; } }
+      width: 35rem; } }
   @media only screen and (min-width: 1271px) {
     nav {
       width: 35rem; } }
 
 #nav-logo {
   z-index: 1003;
-  width: 75rem;
-  height: 71rem; }
+  width: 73rem;
+  height: 71rem;
+  margin: 0 1rem; }
   @media only screen and (min-width: 751px) {
     #nav-logo {
-      width: 31rem;
-      height: 29.4rem; } }
+      width: 24rem;
+      height: 22.4rem;
+      margin: 0 2.5rem; } }
   @media only screen and (min-width: 1271px) {
     #nav-logo {
       width: 30rem;
@@ -194,14 +204,12 @@ nav {
   font-family: 'Hitchcock', san-serif;
   color: #FFF;
   background-color: #6b6b6b;
-  font-size: 4rem;
-  padding: 4rem;
-  right: 1.8rem;
-  top: 1.8rem; }
+  font-size: 6.5rem;
+  padding: 2rem 0; }
   @media only screen and (min-width: 751px) {
     .menu-btn, .schedule-btn {
-      font-size: 1.8rem;
-      padding: 0 1rem; } }
+      font-size: 2.7rem;
+      padding: 1rem 0; } }
   @media only screen and (min-width: 1271px) {
     .menu-btn, .schedule-btn {
       font-size: 3.6rem;
@@ -226,19 +234,17 @@ nav {
   text-transform: uppercase;
   color: #fff;
   background-color: #000;
-  font-size: 7rem;
-  letter-spacing: 0.1rem;
-  padding: 2rem 0;
+  font-size: 6rem;
+  padding: 1rem 0;
   width: 100%; }
   @media only screen and (min-width: 751px) {
     .nav-btn {
       font-size: 1.9rem;
-      letter-spacing: 0.1rem;
-      padding: 1.6rem; } }
+      padding: 0.5rem 0; } }
   @media only screen and (min-width: 1271px) {
     .nav-btn {
       font-size: 2.4rem;
-      padding: 1rem 0; } }
+      padding: 0.5rem 0; } }
 
 .nav-btn:hover {
   color: #000;
@@ -251,7 +257,7 @@ nav {
   vertical-align: middle;
   color: #fbf1e3;
   font-size: 7rem;
-  padding: 0 2.5rem; }
+  padding: 2.5rem 2.5rem; }
   @media only screen and (min-width: 751px) {
     .social-btn {
       font-size: 2.2rem;

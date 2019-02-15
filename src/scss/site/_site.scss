@@ -28,10 +28,23 @@ html {
 }
 
 #site-holder {
+
     width:100vw;
     min-height:100vh;
     overflow-x:hidden;
     overflow-y:auto;
+    display: flex;
+    flex-direction: column;
+
+    @include bp-medium {
+        flex-direction: row;
+    }
+    @include bp-large {
+        flex-direction: row;
+    }
+}
+
+#site-content {
 
     @include bp-medium {
     }
