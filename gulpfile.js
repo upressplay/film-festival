@@ -63,6 +63,7 @@ var order = require("gulp-order");
 
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
+var ftp_cred = require('./ftp.json');
 
 /*===================================================
 End gulp plugins
@@ -180,13 +181,13 @@ gulp.task('build', function (callback) { //do a full build for the site
 });
 
 gulp.task( 'deploy', function () {
-
+	gutil.log('ftp_cred.config.host = '+ftp_cred.config);
 	var conn = ftp.create( {
-		host:     '160.153.71.230',
-		user:     'jones@new.kapowiff.com',
-		password: 'KapowFtp2019!',
+		host:     ftp_cred.config.host,
+		user:     ftp_cred.config.user,
+		password: ftp_cred.config.password,
 		parallel: 10,
-		port:21,
+		port:     ftp_cred.config.port,
 		log:      gutil.log
 	} );
 
