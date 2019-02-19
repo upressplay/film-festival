@@ -3,7 +3,7 @@ body {
    padding:0;
    width:100vw;
    height:100vh;
-   font-family: 'Domine', serif;
+   font-family: $body-font;
    overflow-x:hidden;
    color:#000;
    background-color: #fff;
@@ -45,16 +45,24 @@ html {
 }
 
 #site-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
+    width:rem(750,$text-bp-sm);
     @include bp-medium {
+        width:rem(920,$text-bp-md);
     }
+
     @include bp-large {
+        width:rem(1250,$text-bp-lg);
     }
 }
 
 img {
-  width:100%;
-  height:auto;
+    display: block; 
+    width:100%;
+    height:auto;
 }
 
 h1, h2, h3 {

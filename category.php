@@ -1,13 +1,19 @@
-<?php get_header(); ?>
-<section id="content" role="main">
-<header class="header">
-<h1 class="entry-title"><?php _e( 'Category Archives: ', 'blankslate' ); ?><?php single_cat_title(); ?></h1>
-<?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
-</header>
+<?php 
+	get_header(); 
+	$cat = get_the_category($post->ID);
+	$catSlug = $cat[0]->slug;
+	$catName = $cat[0]->name;
+?>
+
+<div class="section-header">
+	<div class="title">
+		<?php echo $catName; ?>
+	</div>
+</div>
+<div class="thumb-holder">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
+<?php get_template_part( 'post' ); ?>
 <?php endwhile; endif; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-</section>
-<?php get_sidebar(); ?>
+</div>
+
 <?php get_footer(); ?>

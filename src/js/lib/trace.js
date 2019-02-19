@@ -23,7 +23,7 @@
 	"use strict";
 
 
-	var op = false,
+	var op = true,
 		queue = [];
 
 	/**

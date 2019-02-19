@@ -181,7 +181,7 @@ gulp.task('build', function (callback) { //do a full build for the site
 });
 
 gulp.task( 'deploy', function () {
-	gutil.log('ftp_cred.config.host = '+ftp_cred.config);
+	gutil.log('ftp_cred.config.host = '+ftp_cred.config.host);
 	var conn = ftp.create( {
 		host:     ftp_cred.config.host,
 		user:     ftp_cred.config.user,
@@ -203,7 +203,8 @@ gulp.task( 'deploy', function () {
 		'header.php',
 		'page.php',
 		'post.php',
-		'index.php'
+		'index.php',
+		'entry.php'
 	];
 
 	// using base = '.' will transfer everything to /public_html correctly

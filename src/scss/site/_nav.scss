@@ -4,16 +4,12 @@ nav {
     background-color: #3375e2;
 
     width:rem(750,$text-bp-sm);
-
-
     @include bp-medium {
         width:rem(350,$text-bp-md);
-
     }
 
     @include bp-large {
         width:rem(350,$text-bp-lg);
-       
     }
 }
 #nav-logo {
@@ -40,7 +36,7 @@ nav {
   height:auto;
 }
 
-.menu-btn, .schedule-btn {
+#menu-btn, #schedule-btn {
     cursor: pointer;
     text-align: center;
     font-family: 'Hitchcock', san-serif;
@@ -61,23 +57,21 @@ nav {
     }
 }
 
-.menu-btn:hover, .schedule-btn:hover {
+#menu-btn:hover, #schedule-btn:hover {
     background-color: #fff;
     color: #000;
     text-decoration: none;
 }
 
 #nav-btns {
-
-
-
-    
+    overflow: hidden;
+    height:0;
+    &.active {
+        height: auto;
+    }   
 }
 
-#navBtnHolder {
-    display: inline-block;
-    vertical-align: top;
-}
+
 
 #social-nav {
     text-align: center;
@@ -143,8 +137,87 @@ nav {
     color: #000;
     text-decoration: none;
 }
+.schedule-date {
+    display: flex;
+    flex-direction:row nowrap;
+    align-items:center;
 
+    margin:rem(10,$text-bp-sm) 0; 
+    @include bp-medium {
+        margin:rem(10,$text-bp-md) 0;
+    }
 
+    @include bp-large {
+        margin:rem(10,$text-bp-lg) 0;
+    }
+    .day-holder {
+        margin-right: rem(10,$text-bp-lg);
+        .day {
+            font-family: $nav-font;
+            color:#FFF;
+            background-color: #000;
+
+            font-size:rem(36,$text-bp-sm);
+            padding:rem(10,$text-bp-sm); 
+            @include bp-medium {
+                font-size:rem(22,$text-bp-md);
+                padding:rem(10,$text-bp-md);
+            }
+
+            @include bp-large {
+                font-size:rem(28,$text-bp-lg);
+                padding:rem(15,$text-bp-lg);
+            }    
+        }   
+    }
+    .time-date {
+        .time {
+            font-family: $time-font;
+            font-weight: 700;
+            color:#3375e2;
+            font-size:rem(36,$text-bp-sm);
+             
+            @include bp-medium {
+                font-size:rem(36,$text-bp-md);
+            }
+
+            @include bp-large {
+                font-size:rem(28,$text-bp-lg);
+            }   
+        }
+        .date {
+            color:#000;
+            font-size:rem(36,$text-bp-sm);
+             
+            @include bp-medium {
+                font-size:rem(36,$text-bp-md);
+            }
+
+            @include bp-large {
+                font-size:rem(18,$text-bp-lg);
+            }    
+        }
+
+    }
+}
+.tickets-btn {
+    font-family: $nav-font;
+    color:#FFF;
+    background-color: #fe0000;
+
+    font-size:rem(36,$text-bp-sm);
+    padding:rem(10,$text-bp-sm); 
+    @include bp-medium {
+        font-size:rem(22,$text-bp-md);
+        padding:rem(10,$text-bp-md);
+    }
+
+    @include bp-large {
+        font-size:rem(28,$text-bp-lg);
+        padding:rem(5,$text-bp-lg) rem(15,$text-bp-lg);
+        margin:0 rem(20,$text-bp-lg);
+    }   
+}
 
 
 

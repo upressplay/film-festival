@@ -7,7 +7,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.1/TweenMax.min.js"></script>
 
-		<script src="<?php echo get_template_directory_uri(); ?>/build/js/main.min.js"></script>
+		<script src="<?php echo get_template_directory_uri(); ?>/js/main.min.js"></script>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
@@ -40,7 +40,7 @@
 						}
 					?>
 					</div>
-					<div class="menu-btn">MENU <i class="far fa-caret-square-down"></i></div>
+					<div id="menu-btn">MENU <i class="far fa-caret-square-down"></i></div>
 				<div id="nav-btns">
 					<?php
 						$menu_items = wp_get_nav_menu_items( 'Main Menu' );
@@ -55,7 +55,7 @@
 					?>
 					
 				</div>
-				<div class="schedule-btn">SCHEDULE <i class="far fa-caret-square-down"></i></div>
+				<div id="schedule-btn">SCHEDULE <i class="far fa-caret-square-down"></i></div>
 				
 				
 				
