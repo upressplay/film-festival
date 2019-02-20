@@ -3,13 +3,14 @@
 	$header = get_field('header');
 	$videos = get_field('videos');
 	$photos = get_field('photos');
+	$poster = get_field('poster');
 
 ?>
 
 <div class="selection">
 	<?php if ( $header ) : ?>
 		<header> 
-			<img src="<?php echo $header['sizes']['header']; ?>"/>
+			<?php the_post_thumbnail('header'); ?>
 		</header> 
 		
 	<?php endif; ?>
@@ -22,7 +23,7 @@
 	<div class="info">
 		<div class="poster-social">
 			<div class="poster-thumb" data-hires=""> 
-				<?php the_post_thumbnail('thumb-poster'); ?>
+				<img src="<?php echo $poster['sizes']['tall']; ?>"/>
 			</div>
 			<div class="social"> 
 				
@@ -65,8 +66,8 @@
 	</div><!-- section-header -->
 	<div class="photo-gallery">
 		<?php foreach($photos as $photo) : ?>
-		<div class="photo-thumb" data-hires="<?php echo $photo['image']['url']; ?>">
-			<img src="<?php echo $photo['image']['sizes']['thumb-sq']; ?>"/>
+		<div class="photo-thumb" data-hires="<?php echo $poster['image']['url']; ?>">
+			<img src="<?php echo $poster['image']['sizes']['sq']; ?>"/>
 		</div>
 		 <?php endforeach; ?>
 	}
