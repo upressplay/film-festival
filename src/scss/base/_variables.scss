@@ -15,8 +15,8 @@ $text-bp-md		: 10px;		// fonts will scale up relative to screen-bp-md
 $text-bp-lg		: 10px;		// fonts will scale up relative to screen-bp-lg then stay there
 
 /* Colors */
-$color-1	: #FFFFFF;	// white
-$color-2	: #000000;	// black
+$color-blue	: #3375e2;	// white
+$color-red	: #fe0000;	// black
 
 $overlay-bg	: rgba(0,0,0,0.95);	// semi-transparent black
 
@@ -46,7 +46,7 @@ $snapchat	: #FFFC00;
 
 
 /* Fonts */
-$body-font : Arial, Helvetica, sans-serif;
+$body-font : 'Lato', sans-serif;
 $nav-font :'Hitchcock', san-serif;
 $headline-font :'Hitchcock', san-serif;
 $sub-font :'Hitchcock', san-serif;

@@ -44,6 +44,7 @@
  */
 @import url("//use.fontawesome.com/releases/v5.7.2/css/all.css");
 @import url("//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700");
+@import url("//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
 @font-face {
   font-family: 'Hitchcock';
   src: url("../fonts/Hitchcock.woff2") format("woff2"), url("../fonts/Hitchcock.woff") format("woff");
@@ -101,7 +102,7 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
   overflow-x: hidden;
   color: #000;
   background-color: #fff; }
@@ -112,7 +113,17 @@ html {
 #site {
   position: relative;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  font-size: 1.8rem;
+  line-height: 2.1rem; }
+  @media only screen and (min-width: 751px) {
+    #site {
+      font-size: 1.8rem;
+      line-height: 2.1rem; } }
+  @media only screen and (min-width: 1271px) {
+    #site {
+      font-size: 1.8rem;
+      line-height: 2.1rem; } }
 
 #site-holder {
   width: 100vw;
@@ -237,8 +248,17 @@ nav {
 #nav-btns {
   overflow: hidden;
   height: 0; }
+  @media only screen and (min-width: 751px) {
+    #nav-btns {
+      height: auto; } }
   #nav-btns.active {
     height: auto; }
+    @media only screen and (min-width: 751px) {
+      #nav-btns.active {
+        height: 0; } }
+    @media only screen and (min-width: 1271px) {
+      #nav-btns.active {
+        height: 0; } }
 
 #social-nav {
   text-align: center;
@@ -313,7 +333,7 @@ nav {
       @media only screen and (min-width: 1271px) {
         .schedule-date .day-holder .day {
           font-size: 2.8rem;
-          padding: 1.5rem; } }
+          padding: 2rem 1rem; } }
   .schedule-date .time-date .time {
     font-family: "Open Sans Condensed", sans-serif;
     font-weight: 700;
@@ -324,7 +344,8 @@ nav {
         font-size: 3.6rem; } }
     @media only screen and (min-width: 1271px) {
       .schedule-date .time-date .time {
-        font-size: 2.8rem; } }
+        font-size: 2.8rem;
+        line-height: 3.3rem; } }
   .schedule-date .time-date .date {
     color: #000;
     font-size: 3.6rem; }
@@ -351,8 +372,12 @@ nav {
       padding: 0.5rem 1.5rem;
       margin: 0 2rem; } }
 
+.tickets-btn:hover {
+  background-color: #3375e2; }
+
 .section-header {
-  background-color: #bbbbbb; }
+  background-color: #bbbbbb;
+  height: 4.8rem; }
   .section-header:nth-child(2) {
     background-color: #3375e2; }
   .section-header:nth-child(3) {
@@ -362,7 +387,7 @@ nav {
     font-family: "Hitchcock", san-serif;
     color: #FFF;
     background-color: #000;
-    transform: rotate(-3deg);
+    transform: rotate(-3deg) translateY(10px);
     padding: 0.5rem;
     font-size: 3.6rem; }
     @media only screen and (min-width: 751px) {
@@ -411,6 +436,7 @@ nav {
     .selection .info {
       margin: 2rem; } }
   .selection .info .poster-thumb {
+    border: 1px solid #000;
     width: 22.5rem; }
     @media only screen and (min-width: 751px) {
       .selection .info .poster-thumb {
@@ -419,15 +445,15 @@ nav {
       .selection .info .poster-thumb {
         width: 22.5rem;
         margin-right: 2rem; } }
-  .selection .info .info-txt .title {
+  .selection .info .info-txt > .title {
     display: inline-block;
     font-family: "Hitchcock", san-serif;
     color: #FFF;
     background-color: #000; }
     @media only screen and (min-width: 1271px) {
-      .selection .info .info-txt .title {
+      .selection .info .info-txt > .title {
         font-size: 5rem;
-        padding: 0.5rem 1.5rem; } }
+        padding: 1.5rem 1.5rem; } }
   .selection .info .info-txt .tagline {
     font-family: "Hitchcock", san-serif;
     color: #3375e2; }
@@ -437,8 +463,12 @@ nav {
         margin: 0.5rem 0; } }
   @media only screen and (min-width: 1271px) {
     .selection .info .synopsis {
-      font-size: 2.1rem;
-      line-height: 2.8rem; } }
+      margin: 1.5rem 0; } }
+  @media only screen and (min-width: 1271px) {
+    .selection .info .cast-crew {
+      margin: 1.5rem 0; } }
+  .selection .info .cast-crew .member > .title {
+    font-weight: 700; }
 
 .selection-thumb {
   text-align: center;
@@ -450,11 +480,17 @@ nav {
     .selection-thumb {
       width: 22.5rem;
       margin: 1.5rem; } }
-  @media only screen and (min-width: 1271px) {
-    .selection-thumb .poster-thumb {
-      margin-bottom: 1.5rem; } }
+  .selection-thumb .poster-thumb {
+    width: 22.5rem; }
+    @media only screen and (min-width: 751px) {
+      .selection-thumb .poster-thumb {
+        width: 22.5rem; } }
+    @media only screen and (min-width: 1271px) {
+      .selection-thumb .poster-thumb {
+        width: 20rem;
+        margin-bottom: 2rem; } }
   .selection-thumb .title {
-    display: inline;
+    text-align: center;
     font-family: "Hitchcock", san-serif;
     color: #FFF;
     font-size: 2.4rem; }
@@ -464,9 +500,9 @@ nav {
     @media only screen and (min-width: 1271px) {
       .selection-thumb .title {
         font-size: 2.4rem;
+        line-height: 3.5rem;
         background-color: #000;
-        padding: 0.5rem;
-        margin: 1.5rem; } }
+        padding: 0.5rem; } }
 
 #footer {
   font-family: 'Khula', sans-serif;

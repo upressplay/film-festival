@@ -1,7 +1,7 @@
 nav {
     display: flex;
     flex-direction: column;
-    background-color: #3375e2;
+    background-color: $color-blue;
 
     width:rem(750,$text-bp-sm);
     @include bp-medium {
@@ -66,8 +66,20 @@ nav {
 #nav-btns {
     overflow: hidden;
     height:0;
+
+    @include bp-medium {
+        height:auto;
+    }
     &.active {
         height: auto;
+
+        @include bp-medium {
+            height:0;
+        }
+
+        @include bp-large {
+            height:0;
+        }
     }   
 }
 
@@ -166,7 +178,7 @@ nav {
 
             @include bp-large {
                 font-size:rem(28,$text-bp-lg);
-                padding:rem(15,$text-bp-lg);
+                padding:rem(20,$text-bp-lg) rem(10,$text-bp-lg);
             }    
         }   
     }
@@ -183,6 +195,7 @@ nav {
 
             @include bp-large {
                 font-size:rem(28,$text-bp-lg);
+                line-height:rem(33,$text-bp-lg);
             }   
         }
         .date {
@@ -203,7 +216,7 @@ nav {
 .tickets-btn {
     font-family: $nav-font;
     color:#FFF;
-    background-color: #fe0000;
+    background-color: $color-red;
 
     font-size:rem(36,$text-bp-sm);
     padding:rem(10,$text-bp-sm); 
@@ -218,6 +231,8 @@ nav {
         margin:0 rem(20,$text-bp-lg);
     }   
 }
-
+.tickets-btn:hover {
+    background-color: $color-blue;    
+}
 
 

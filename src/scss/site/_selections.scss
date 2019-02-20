@@ -27,6 +27,7 @@
             margin: rem(20,$text-bp-lg);
         }
         .poster-thumb {
+            border: 1px solid #000;
             width:rem(225,$text-bp-sm);
             @include bp-medium {
                 width:rem(225,$text-bp-md);
@@ -38,7 +39,7 @@
             }     
         }
         .info-txt {
-            .title {
+            >.title {
                 display: inline-block;
                 font-family: $headline-font;
                 color:#FFF;
@@ -50,7 +51,7 @@
 
                 @include bp-large {
                     font-size:rem(50,$text-bp-lg);
-                    padding: rem(5,$text-bp-lg) rem(15,$text-bp-lg);
+                    padding: rem(15,$text-bp-lg) rem(15,$text-bp-lg);
                 }    
             }
             .tagline {
@@ -70,9 +71,25 @@
             }
 
             @include bp-large {
-                font-size:rem(21,$text-bp-lg);
-                line-height: rem(28,$text-bp-lg);
+                margin: rem(15,$text-bp-lg) 0;
             }
+        }
+        .cast-crew {
+            @include bp-medium {
+            }
+
+            @include bp-large {
+                margin: rem(15,$text-bp-lg) 0;
+            }
+            .member {
+                >.title {
+                    font-weight: 700;
+                }
+                >.name {
+
+                }
+            }
+            
         }
     } 
 
@@ -90,14 +107,19 @@
         margin:rem(15,$text-bp-lg);
     }
     .poster-thumb {
+        width:rem(225,$text-bp-sm);
         @include bp-medium {
+            width:rem(225,$text-bp-md);
         }
+
         @include bp-large {
-            margin-bottom:rem(15,$text-bp-lg);
-        }  
+            width:rem(200,$text-bp-lg);
+            margin-bottom: rem(20,$text-bp-lg);
+        }    
     }
     .title {
-        display: inline;
+        text-align: center;
+        //display: inline;
         font-family: $headline-font;
         color:#FFF;
         font-size:rem(24,$text-bp-sm);
@@ -108,9 +130,10 @@
         }
         @include bp-large {
             font-size:rem(24,$text-bp-lg);
+            line-height:rem(35,$text-bp-lg);
             background-color: #000;   
             padding:rem(5,$text-bp-lg); 
-            margin:rem(15,$text-bp-lg); 
+            
         }
         
     }

@@ -1,6 +1,5 @@
 <?php
 	
-	$header = get_field('header');
 	$videos = get_field('videos');
 	$photos = get_field('photos');
 	$poster = get_field('poster');
@@ -8,12 +7,9 @@
 ?>
 
 <div class="selection">
-	<?php if ( $header ) : ?>
-		<header> 
-			<?php the_post_thumbnail('header'); ?>
-		</header> 
-		
-	<?php endif; ?>
+	<header> 
+		<?php the_post_thumbnail('header'); ?>
+	</header> 
 
 	<div class="banner">
 		<a href="https://bang-energy.com" target="_blank">
@@ -22,7 +18,7 @@
 	</div>
 	<div class="info">
 		<div class="poster-social">
-			<div class="poster-thumb" data-hires=""> 
+			<div class="poster-thumb" data-hires="<?php echo $poster['url']; ?>"> 
 				<img src="<?php echo $poster['sizes']['tall']; ?>"/>
 			</div>
 			<div class="social"> 
@@ -55,6 +51,22 @@
 			<div class="synopsis">
 				<?php echo get_field('synopsis'); ?>
 			</div>
+			
+			<?php if( have_rows('cast_crew') ): ?>
+
+				<div class="cast-crew">
+				<?php while( have_rows('cast_crew') ): the_row(); ?>
+					<div class="member">
+						<span class="title">
+							<?php echo get_sub_field('cast_crew_title'); ?>
+						</span>: 
+						<span class="name">
+							<?php echo get_sub_field('cast_crew_name'); ?>
+						</span>
+					</div>
+				<?php endwhile; ?>
+				</div><!-- cast-crew -->
+			<?php endif; ?>
 		</div><!-- info-txt -->
 	</div><!-- info -->
 

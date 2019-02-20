@@ -13,16 +13,23 @@ html {
 }
 
 #site {
-   position: relative;
-   width:100vw;
-   height:100vh;
+    position: relative;
+    width:100vw;
+    height:100vh;
 
-   @include bp-medium {
-   }
+    font-size:rem(18,$text-bp-lg);
+    line-height: rem(21,$text-bp-lg);
+
+    @include bp-medium {
+        font-size:rem(18,$text-bp-lg);
+        line-height: rem(21,$text-bp-lg);
+    }
 
 
-   @include bp-large {
-   }
+    @include bp-large {
+        font-size:rem(18,$text-bp-lg);
+        line-height: rem(21,$text-bp-lg);
+    }
 
 
 }
