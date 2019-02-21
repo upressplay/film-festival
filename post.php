@@ -5,7 +5,7 @@
 ?>
 <a href="<?php echo get_permalink($post->ID);?>">
 	<div class="selection-thumb">
-	<?php if ( has_post_thumbnail() ) : ?>
+	<?php if ( $poster ) : ?>
 		<div class="poster-thumb"> 
 			<img src="<?php echo $poster['sizes']['tall']; ?>"/>
 		</div><!-- poster-thumb -->

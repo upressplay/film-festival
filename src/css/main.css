@@ -402,7 +402,9 @@ nav {
 
 .thumb-holder {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 .photo-gallery {
   display: flex;
@@ -471,23 +473,19 @@ nav {
     font-weight: 700; }
 
 .selection-thumb {
+  flex-basis: auto;
   text-align: center;
   width: 22.5rem; }
   @media only screen and (min-width: 751px) {
     .selection-thumb {
-      width: 22.5rem; } }
+      width: 20rem; } }
   @media only screen and (min-width: 1271px) {
     .selection-thumb {
-      width: 22.5rem;
-      margin: 1.5rem; } }
+      width: 20rem; } }
   .selection-thumb .poster-thumb {
-    width: 22.5rem; }
-    @media only screen and (min-width: 751px) {
-      .selection-thumb .poster-thumb {
-        width: 22.5rem; } }
+    width: inherit; }
     @media only screen and (min-width: 1271px) {
       .selection-thumb .poster-thumb {
-        width: 20rem;
         margin-bottom: 2rem; } }
   .selection-thumb .title {
     text-align: center;

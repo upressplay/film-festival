@@ -7,9 +7,11 @@
 ?>
 
 <div class="selection">
+	<?php if ( has_post_thumbnail() ) : ?>
 	<header> 
 		<?php the_post_thumbnail('header'); ?>
 	</header> 
+	<?php endif; ?>
 
 	<div class="banner">
 		<a href="https://bang-energy.com" target="_blank">
@@ -64,6 +66,16 @@
 							<?php echo get_sub_field('cast_crew_name'); ?>
 						</span>
 					</div>
+				<?php endwhile; ?>
+				</div><!-- cast-crew -->
+			<?php endif; ?>
+			<?php if( have_rows('links') ): ?>
+
+				<div class="links">
+				<?php while( have_rows('links') ): the_row(); ?>
+					<a href="<?php echo get_sub_field('link_url'); ?>" target="_blank">
+						<?php echo get_sub_field('text'); ?>
+					</a>
 				<?php endwhile; ?>
 				</div><!-- cast-crew -->
 			<?php endif; ?>

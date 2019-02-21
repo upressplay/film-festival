@@ -96,24 +96,23 @@
 }
 
 .selection-thumb {
+    flex-basis:auto;
     text-align: center;
     width:rem(225,$text-bp-sm);
 
     @include bp-medium {
-        width:rem(225,$text-bp-md);
+        width:rem(200,$text-bp-md);
     }
     @include bp-large {
-        width:rem(225,$text-bp-lg);
-        margin:rem(15,$text-bp-lg);
+        width:rem(200,$text-bp-lg);
+        //margin:rem(15,$text-bp-lg);
     }
     .poster-thumb {
-        width:rem(225,$text-bp-sm);
+        width:inherit;
         @include bp-medium {
-            width:rem(225,$text-bp-md);
         }
 
         @include bp-large {
-            width:rem(200,$text-bp-lg);
             margin-bottom: rem(20,$text-bp-lg);
         }    
     }

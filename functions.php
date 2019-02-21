@@ -5,7 +5,7 @@ add_image_size( 'share', 1200, 600, array( 'top', 'center' ) );
 add_image_size( 'rect', 400, 225, array( 'top', 'center' ) );
 add_image_size( 'sq', 400, 400, array( 'center', 'center' ) );
 add_image_size( 'sm', 200, 200, array( 'center', 'center' ) );
-add_image_size( 'tall', 225, 335, array( 'center', 'center' ) );
+add_image_size( 'tall', 300, 445, array( 'center', 'center' ) );
 
 add_action( 'after_setup_theme', 'ff_setup' );
 
