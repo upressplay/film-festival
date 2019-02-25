@@ -1,7 +1,9 @@
 .selection {
     header {
         border: 1px solid #000;
+        margin: rem(20,$text-bp-sm);
         @include bp-medium {
+            margin: rem(20,$text-bp-md);
         }
 
         @include bp-large {
@@ -10,7 +12,9 @@
     } 
     .banner {
         border: 1px solid #000;
+        margin: rem(20,$text-bp-sm);
         @include bp-medium {
+            margin: rem(20,$text-bp-md);
         }
 
         @include bp-large {
@@ -20,7 +24,9 @@
     .info {
         display: flex;
         flex-direction:row nowrap;
+        margin: rem(20,$text-bp-sm);
         @include bp-medium {
+            margin: rem(20,$text-bp-md);
         }
 
         @include bp-large {
@@ -29,8 +35,10 @@
         .poster-thumb {
             border: 1px solid #000;
             width:rem(225,$text-bp-sm);
+            margin-right: rem(20,$text-bp-sm);
             @include bp-medium {
                 width:rem(225,$text-bp-md);
+                margin-right: rem(20,$text-bp-md);
             }
 
             @include bp-large {
@@ -44,9 +52,13 @@
                 font-family: $headline-font;
                 color:#FFF;
                 background-color: #000;
-
+                font-size:rem(50,$text-bp-sm);
+                line-height:rem(55,$text-bp-sm);
+                padding: rem(15,$text-bp-sm) rem(15,$text-bp-sm);
                  
                 @include bp-medium {
+                    font-size:rem(50,$text-bp-md);
+                    padding: rem(15,$text-bp-md) rem(15,$text-bp-md);
                 }
 
                 @include bp-large {
@@ -57,7 +69,11 @@
             .tagline {
                 font-family: $sub-font;
                 color: #3375e2;
+                font-size:rem(28,$text-bp-sm);
+                margin: rem(5,$text-bp-sm) 0;
                 @include bp-medium {
+                    font-size:rem(28,$text-bp-md);
+                    margin: rem(5,$text-bp-md) 0;
                 }
 
                 @include bp-large {
@@ -67,7 +83,9 @@
             }
         }
         .synopsis {
+            margin: rem(15,$text-bp-sm) 0;
             @include bp-medium {
+                margin: rem(15,$text-bp-md) 0;
             }
 
             @include bp-large {
@@ -105,7 +123,7 @@
     }
     @include bp-large {
         width:rem(200,$text-bp-lg);
-        //margin:rem(15,$text-bp-lg);
+        margin:rem(15,$text-bp-lg) rem(5,$text-bp-lg);
     }
     .poster-thumb {
         width:inherit;

@@ -14,9 +14,9 @@ nav {
 }
 #nav-logo {
     z-index: 1003;
-    width:rem(730,$text-bp-sm);
-    height:rem(710,$text-bp-sm);
-    margin: 0 rem(10,$text-bp-sm);
+    width:rem(500,$text-bp-sm);
+    height:rem(475,$text-bp-sm);
+    margin: 0 rem(125,$text-bp-sm);
 
 
     @include bp-medium {
@@ -104,7 +104,7 @@ nav {
     background-color: #000;
 
     font-size: rem(60,$text-bp-sm);
-    padding: rem(10,$text-bp-sm) 0;
+    padding: rem(20,$text-bp-sm) 0;
     width:100%;
 
 
@@ -131,7 +131,7 @@ nav {
     display: inline-block;
     vertical-align: middle;
     color: #fbf1e3;
-    font-size: rem(70,$text-bp-sm);
+    font-size: rem(50,$text-bp-sm);
     padding: rem(25,$text-bp-sm) rem(25,$text-bp-sm);
 
     @include bp-medium {
@@ -170,10 +170,10 @@ nav {
             background-color: #000;
 
             font-size:rem(36,$text-bp-sm);
-            padding:rem(10,$text-bp-sm); 
+            padding:rem(20,$text-bp-sm) rem(10,$text-bp-sm); 
             @include bp-medium {
                 font-size:rem(22,$text-bp-md);
-                padding:rem(10,$text-bp-md);
+                padding:rem(20,$text-bp-md) rem(10,$text-bp-md);
             }
 
             @include bp-large {

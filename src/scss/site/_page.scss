@@ -5,6 +5,16 @@
     justify-content:space-around;
 }
 
+.category-hosts {
+    .thumb-holder {
+        flex-direction:column;
+        flex-wrap: nowrap;   
+    }
+    .excerpt {
+        display: none;
+    }
+}
+
 .photo-gallery {
 	display: flex;
 	flex-direction:row;
@@ -18,4 +28,15 @@
             width:rem(200,$text-bp-lg); 
         }    
     }
+}
+
+.page-content {
+	width:rem(25,$text-bp-sm) rem(50,$text-bp-sm);
+
+    @include bp-medium {
+        width:rem(25,$text-bp-md) rem(50,$text-bp-md);
+    }
+    @include bp-large {
+        padding:rem(25,$text-bp-lg) rem(50,$text-bp-lg); 
+    }  	
 }

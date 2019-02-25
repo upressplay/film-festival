@@ -114,8 +114,8 @@ html {
   position: relative;
   width: 100vw;
   height: 100vh;
-  font-size: 1.8rem;
-  line-height: 2.1rem; }
+  font-size: 2.4rem;
+  line-height: 2.8rem; }
   @media only screen and (min-width: 751px) {
     #site {
       font-size: 1.8rem;
@@ -205,9 +205,9 @@ nav {
 
 #nav-logo {
   z-index: 1003;
-  width: 73rem;
-  height: 71rem;
-  margin: 0 1rem; }
+  width: 50rem;
+  height: 47.5rem;
+  margin: 0 12.5rem; }
   @media only screen and (min-width: 751px) {
     #nav-logo {
       width: 24rem;
@@ -271,7 +271,7 @@ nav {
   color: #fff;
   background-color: #000;
   font-size: 6rem;
-  padding: 1rem 0;
+  padding: 2rem 0;
   width: 100%; }
   @media only screen and (min-width: 751px) {
     .nav-btn {
@@ -292,7 +292,7 @@ nav {
   display: inline-block;
   vertical-align: middle;
   color: #fbf1e3;
-  font-size: 7rem;
+  font-size: 5rem;
   padding: 2.5rem 2.5rem; }
   @media only screen and (min-width: 751px) {
     .social-btn {
@@ -325,11 +325,11 @@ nav {
       color: #FFF;
       background-color: #000;
       font-size: 3.6rem;
-      padding: 1rem; }
+      padding: 2rem 1rem; }
       @media only screen and (min-width: 751px) {
         .schedule-date .day-holder .day {
           font-size: 2.2rem;
-          padding: 1rem; } }
+          padding: 2rem 1rem; } }
       @media only screen and (min-width: 1271px) {
         .schedule-date .day-holder .day {
           font-size: 2.8rem;
@@ -377,19 +377,25 @@ nav {
 
 .section-header {
   background-color: #bbbbbb;
-  height: 4.8rem; }
+  height: 8rem; }
   .section-header:nth-child(2) {
     background-color: #3375e2; }
   .section-header:nth-child(3) {
     background-color: #6b6b6b; }
+  @media only screen and (min-width: 751px) {
+    .section-header {
+      height: 4.8rem; } }
+  @media only screen and (min-width: 1271px) {
+    .section-header {
+      height: 4.8rem; } }
   .section-header .title {
     display: inline-block;
     font-family: "Hitchcock", san-serif;
     color: #FFF;
     background-color: #000;
     transform: rotate(-3deg) translateY(10px);
-    padding: 0.5rem;
-    font-size: 3.6rem; }
+    padding: 1.5rem;
+    font-size: 4.4rem; }
     @media only screen and (min-width: 751px) {
       .section-header .title {
         padding: 0.5rem;
@@ -406,6 +412,13 @@ nav {
   flex-wrap: wrap;
   justify-content: space-around; }
 
+.category-hosts .thumb-holder {
+  flex-direction: column;
+  flex-wrap: nowrap; }
+
+.category-hosts .excerpt {
+  display: none; }
+
 .photo-gallery {
   display: flex;
   flex-direction: row; }
@@ -419,30 +432,103 @@ nav {
       .photo-gallery .photo-thumb {
         width: 20rem; } }
 
+.page-content {
+  width: 2.5rem 5rem; }
+  @media only screen and (min-width: 751px) {
+    .page-content {
+      width: 2.5rem 5rem; } }
+  @media only screen and (min-width: 1271px) {
+    .page-content {
+      padding: 2.5rem 5rem; } }
+
+.thumb {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .thumb {
+      margin: 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .thumb {
+      margin: 2rem; } }
+  .thumb .thumb-img {
+    flex-basis: auto;
+    width: 40rem;
+    margin-right: 2rem; }
+    @media only screen and (min-width: 751px) {
+      .thumb .thumb-img {
+        width: 40rem;
+        margin-right: 2rem; } }
+    @media only screen and (min-width: 1271px) {
+      .thumb .thumb-img {
+        width: 40rem;
+        margin-right: 2rem; } }
+  .thumb .info {
+    flex-basis: auto;
+    width: 116rem; }
+    @media only screen and (min-width: 751px) {
+      .thumb .info {
+        width: 116rem; } }
+    @media only screen and (min-width: 1271px) {
+      .thumb .info {
+        width: 116rem; } }
+    .thumb .info > .title {
+      display: inline-block;
+      font-family: "Hitchcock", san-serif;
+      color: #FFF;
+      background-color: #000;
+      font-size: 5rem;
+      line-height: 5.5rem;
+      padding: 1.5rem 1.5rem; }
+      @media only screen and (min-width: 751px) {
+        .thumb .info > .title {
+          font-size: 5rem;
+          padding: 1.5rem 1.5rem; } }
+      @media only screen and (min-width: 1271px) {
+        .thumb .info > .title {
+          font-size: 4rem;
+          padding: 0.5rem 1.5rem; } }
+
 .selection header {
-  border: 1px solid #000; }
+  border: 1px solid #000;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .selection header {
+      margin: 2rem; } }
   @media only screen and (min-width: 1271px) {
     .selection header {
       margin: 2rem; } }
 
 .selection .banner {
-  border: 1px solid #000; }
+  border: 1px solid #000;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .selection .banner {
+      margin: 2rem; } }
   @media only screen and (min-width: 1271px) {
     .selection .banner {
       margin: 2rem; } }
 
 .selection .info {
   display: flex;
-  flex-direction: row nowrap; }
+  flex-direction: row nowrap;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .selection .info {
+      margin: 2rem; } }
   @media only screen and (min-width: 1271px) {
     .selection .info {
       margin: 2rem; } }
   .selection .info .poster-thumb {
     border: 1px solid #000;
-    width: 22.5rem; }
+    width: 22.5rem;
+    margin-right: 2rem; }
     @media only screen and (min-width: 751px) {
       .selection .info .poster-thumb {
-        width: 22.5rem; } }
+        width: 22.5rem;
+        margin-right: 2rem; } }
     @media only screen and (min-width: 1271px) {
       .selection .info .poster-thumb {
         width: 22.5rem;
@@ -451,21 +537,39 @@ nav {
     display: inline-block;
     font-family: "Hitchcock", san-serif;
     color: #FFF;
-    background-color: #000; }
+    background-color: #000;
+    font-size: 5rem;
+    line-height: 5.5rem;
+    padding: 1.5rem 1.5rem; }
+    @media only screen and (min-width: 751px) {
+      .selection .info .info-txt > .title {
+        font-size: 5rem;
+        padding: 1.5rem 1.5rem; } }
     @media only screen and (min-width: 1271px) {
       .selection .info .info-txt > .title {
         font-size: 5rem;
         padding: 1.5rem 1.5rem; } }
   .selection .info .info-txt .tagline {
     font-family: "Hitchcock", san-serif;
-    color: #3375e2; }
+    color: #3375e2;
+    font-size: 2.8rem;
+    margin: 0.5rem 0; }
+    @media only screen and (min-width: 751px) {
+      .selection .info .info-txt .tagline {
+        font-size: 2.8rem;
+        margin: 0.5rem 0; } }
     @media only screen and (min-width: 1271px) {
       .selection .info .info-txt .tagline {
         font-size: 2.8rem;
         margin: 0.5rem 0; } }
-  @media only screen and (min-width: 1271px) {
-    .selection .info .synopsis {
-      margin: 1.5rem 0; } }
+  .selection .info .synopsis {
+    margin: 1.5rem 0; }
+    @media only screen and (min-width: 751px) {
+      .selection .info .synopsis {
+        margin: 1.5rem 0; } }
+    @media only screen and (min-width: 1271px) {
+      .selection .info .synopsis {
+        margin: 1.5rem 0; } }
   @media only screen and (min-width: 1271px) {
     .selection .info .cast-crew {
       margin: 1.5rem 0; } }
@@ -481,7 +585,8 @@ nav {
       width: 20rem; } }
   @media only screen and (min-width: 1271px) {
     .selection-thumb {
-      width: 20rem; } }
+      width: 20rem;
+      margin: 1.5rem 0.5rem; } }
   .selection-thumb .poster-thumb {
     width: inherit; }
     @media only screen and (min-width: 1271px) {

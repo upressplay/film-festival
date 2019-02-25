@@ -12,6 +12,10 @@
 		<?php the_post_thumbnail('header'); ?>
 	</header> 
 	<?php endif; ?>
+	
+	<div class="page-content">
+		<?php the_content(); ?>
+	</div>
 
 	<div class="banner">
 		<a href="https://bang-energy.com" target="_blank">
@@ -62,9 +66,15 @@
 						<span class="title">
 							<?php echo get_sub_field('cast_crew_title'); ?>
 						</span>: 
+						<?php if(get_sub_field('cast_crew_url') != "") : ?>
+							<a href="<?php echo get_sub_field('cast_crew_url'); ?>" target="_blank">
+						<?php endif; ?>
 						<span class="name">
 							<?php echo get_sub_field('cast_crew_name'); ?>
 						</span>
+						<?php if(get_sub_field('cast_crew_url') != "") : ?>
+							</a>
+						<?php endif; ?>
 					</div>
 				<?php endwhile; ?>
 				</div><!-- cast-crew -->

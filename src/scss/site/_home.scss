@@ -6,7 +6,16 @@
 	&:nth-child(3) {
   		background-color: #6b6b6b;
 	}
-    height: rem(48,$text-bp-lg); 
+
+	height: rem(80,$text-bp-sm);
+	@include bp-medium {
+        height: rem(48,$text-bp-md);
+    }
+    @include bp-large {
+    	height: rem(48,$text-bp-lg); 
+    }
+
+     
 	.title {
 		display: inline-block;
 		font-family: $headline-font;
@@ -15,8 +24,8 @@
     	 
     	transform: rotate(-3deg) translateY(10px);
 
-    	padding:rem(5,$text-bp-sm);
-        font-size: rem(36,$text-bp-sm);
+    	padding:rem(15,$text-bp-sm);
+        font-size: rem(44,$text-bp-sm);
 
     	@include bp-medium {
             padding:rem(5,$text-bp-md);

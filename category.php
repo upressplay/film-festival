@@ -6,13 +6,17 @@
 ?>
 
 <div class="section-header">
-	<div class="title">
+	<h1 class="title">
 		<?php echo $catName; ?>
-	</div>
+	</h1>
 </div>
 <div class="thumb-holder">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'post' ); ?>
+<?php if($catSlug == "official-selection") {
+	get_template_part( 'post-selection' );	
+	} else {
+		get_template_part( 'post' );
+	} ?>
 <?php endwhile; endif; ?>
 </div>
 
