@@ -1,10 +1,12 @@
 .section-header {
-	background-color: #bbbbbb;
-	&:nth-child(2) {
-  		background-color: #3375e2;
+	&:nth-of-type(1) {
+        background-color: $color-lt-gray;
+    }
+    &:nth-of-type(2) {
+  		background-color: $color-gray;
 	}
-	&:nth-child(3) {
-  		background-color: #6b6b6b;
+	&:nth-of-type(3) {
+  		background-color: $color-blue;
 	}
 
 	height: rem(80,$text-bp-sm);
@@ -36,6 +38,27 @@
             font-size: rem(36,$text-bp-lg); 
             margin-left: rem(10,$text-bp-lg); 
         }
+    }
+
+    .more-btn {
+        display: inline-block;
+        vertical-align: middle;
+        font-family: $headline-font;
+        color:#FFF;
+         
+        font-size: rem(24,$text-bp-sm);
+
+        @include bp-medium {
+            font-size: rem(24,$text-bp-md);
+        }
+        @include bp-large {
+            font-size: rem(24,$text-bp-lg); 
+            margin-left: rem(10,$text-bp-lg); 
+        }
+    }
+
+    .more-btn:hover {
+        color:#000;
     }
 
 }

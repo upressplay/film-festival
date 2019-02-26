@@ -11,17 +11,10 @@
 		</a>
 	</div>
 	
-	<h1 class="title">
-		<?php the_title(); ?>
-	</h1>
-
-	<h2 class="date">
-		<?php the_date('F j, Y'); ?>
-	</h2>
-
-	<div class="content">
+	<div class="page-content">
 		<?php the_content(); ?>
 	</div>
+
 </div><!-- single -->
 
 

@@ -25,7 +25,7 @@
 			addPost(entry);
 		});
 
-		dom.gallery = $( ".gallery" );
+		dom.gallery = $( ".thumb-photos" );
 		dom.gallery.each(function( index ) {
 			var entry = $(this);
 			addPost(entry);

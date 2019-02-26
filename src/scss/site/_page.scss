@@ -30,13 +30,24 @@
     }
 }
 
-.page-content {
-	width:rem(25,$text-bp-sm) rem(50,$text-bp-sm);
+.page-content, .post-content {
+	padding:rem(25,$text-bp-sm) rem(50,$text-bp-sm);
 
     @include bp-medium {
-        width:rem(25,$text-bp-md) rem(50,$text-bp-md);
+        padding:rem(25,$text-bp-md) rem(50,$text-bp-md);
     }
     @include bp-large {
         padding:rem(25,$text-bp-lg) rem(50,$text-bp-lg); 
     }  	
+}
+
+.next-prev {
+    margin:rem(10,$text-bp-sm) rem(20,$text-bp-sm); 
+
+    @include bp-medium {
+        margin:rem(10,$text-bp-md) rem(20,$text-bp-md); 
+    }
+    @include bp-large {
+        margin:rem(10,$text-bp-lg) rem(20,$text-bp-lg); 
+    }    
 }

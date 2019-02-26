@@ -1,0 +1,22 @@
+.category-photos {
+    .thumb-holder {
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center;   
+    }
+}
+
+.thumb-photos {
+	cursor: pointer;
+	.thumb-img {
+		width:rem(125,$text-bp-sm);
+	    @include bp-medium {
+	        width:rem(125,$text-bp-md);
+	    }
+
+	    @include bp-large {
+	        width:rem(125,$text-bp-lg);
+	    } 
+	}
+}
+

@@ -4,7 +4,7 @@
 
 ?>
 <a href="<?php echo get_permalink($post->ID);?>">
-	<div class="selection-thumb">
+	<div class="thumb-selection">
 		<?php echo $catName; ?>
 	<?php if ( $poster ) : ?>
 		<div class="poster-thumb"> 

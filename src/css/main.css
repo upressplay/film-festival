@@ -123,7 +123,7 @@ html {
   @media only screen and (min-width: 1271px) {
     #site {
       font-size: 1.8rem;
-      line-height: 2.1rem; } }
+      line-height: 2.4rem; } }
 
 #site-holder {
   width: 100vw;
@@ -376,12 +376,13 @@ nav {
   background-color: #3375e2; }
 
 .section-header {
-  background-color: #bbbbbb;
   height: 8rem; }
-  .section-header:nth-child(2) {
+  .section-header:nth-of-type(1) {
+    background-color: #bbbbbb; }
+  .section-header:nth-of-type(2) {
     background-color: #3375e2; }
-  .section-header:nth-child(3) {
-    background-color: #6b6b6b; }
+  .section-header:nth-of-type(3) {
+    background-color: #3375e2; }
   @media only screen and (min-width: 751px) {
     .section-header {
       height: 4.8rem; } }
@@ -405,6 +406,21 @@ nav {
         padding: 0.5rem;
         font-size: 3.6rem;
         margin-left: 1rem; } }
+  .section-header .more-btn {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Hitchcock", san-serif;
+    color: #FFF;
+    font-size: 2.4rem; }
+    @media only screen and (min-width: 751px) {
+      .section-header .more-btn {
+        font-size: 2.4rem; } }
+    @media only screen and (min-width: 1271px) {
+      .section-header .more-btn {
+        font-size: 2.4rem;
+        margin-left: 1rem; } }
+  .section-header .more-btn:hover {
+    color: #000; }
 
 .thumb-holder {
   display: flex;
@@ -432,14 +448,23 @@ nav {
       .photo-gallery .photo-thumb {
         width: 20rem; } }
 
-.page-content {
-  width: 2.5rem 5rem; }
+.page-content, .post-content {
+  padding: 2.5rem 5rem; }
   @media only screen and (min-width: 751px) {
-    .page-content {
-      width: 2.5rem 5rem; } }
-  @media only screen and (min-width: 1271px) {
-    .page-content {
+    .page-content, .post-content {
       padding: 2.5rem 5rem; } }
+  @media only screen and (min-width: 1271px) {
+    .page-content, .post-content {
+      padding: 2.5rem 5rem; } }
+
+.next-prev {
+  margin: 1rem 2rem; }
+  @media only screen and (min-width: 751px) {
+    .next-prev {
+      margin: 1rem 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .next-prev {
+      margin: 1rem 2rem; } }
 
 .thumb {
   display: flex;
@@ -490,6 +515,153 @@ nav {
         .thumb .info > .title {
           font-size: 4rem;
           padding: 0.5rem 1.5rem; } }
+
+.single header {
+  border: 1px solid #000;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .single header {
+      margin: 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .single header {
+      margin: 2rem; } }
+
+.single .banner {
+  border: 1px solid #000;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .single .banner {
+      margin: 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .single .banner {
+      margin: 2rem; } }
+
+.single .info {
+  display: flex;
+  flex-direction: row nowrap;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .single .info {
+      margin: 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .single .info {
+      margin: 2rem; } }
+
+.single > .title {
+  font-family: "Hitchcock", san-serif;
+  color: #3375e2;
+  font-size: 5rem;
+  line-height: 5.5rem;
+  margin-bottom: 1.5rem; }
+  @media only screen and (min-width: 751px) {
+    .single > .title {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      margin-bottom: 1.5rem; } }
+  @media only screen and (min-width: 1271px) {
+    .single > .title {
+      font-size: 3.6rem;
+      line-height: 4rem;
+      margin: 1rem 2rem; } }
+
+.single > .date {
+  font-size: 5rem;
+  line-height: 5.5rem;
+  margin: 1rem 2rem; }
+  @media only screen and (min-width: 751px) {
+    .single > .date {
+      font-size: 2.8rem;
+      line-height: 3.2rem;
+      margin: 1rem 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .single > .date {
+      font-size: 2.1rem;
+      line-height: 2.4rem;
+      margin: 1rem 2rem; } }
+
+.single > .content {
+  margin: 1rem 2rem; }
+  @media only screen and (min-width: 751px) {
+    .single > .content {
+      margin: 1rem 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .single > .content {
+      margin: 1rem 2rem; } }
+
+.next-prev {
+  margin: 1rem 2rem; }
+  @media only screen and (min-width: 751px) {
+    .next-prev {
+      margin: 1rem 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .next-prev {
+      margin: 1rem 2rem; } }
+
+.category-photos .thumb-holder {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.thumb-photos {
+  cursor: pointer; }
+  .thumb-photos .thumb-img {
+    width: 12.5rem; }
+    @media only screen and (min-width: 751px) {
+      .thumb-photos .thumb-img {
+        width: 12.5rem; } }
+    @media only screen and (min-width: 1271px) {
+      .thumb-photos .thumb-img {
+        width: 12.5rem; } }
+
+.category-news .thumb-holder {
+  flex-direction: column;
+  flex-wrap: nowrap; }
+  @media only screen and (min-width: 1271px) {
+    .category-news .thumb-holder {
+      margin: 2rem; } }
+
+.thumb-news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  cursor: pointer; }
+  @media only screen and (min-width: 1271px) {
+    .thumb-news {
+      margin-bottom: 2rem; } }
+  .thumb-news .thumb-img {
+    width: 12.5rem; }
+    @media only screen and (min-width: 751px) {
+      .thumb-news .thumb-img {
+        width: 12.5rem; } }
+    @media only screen and (min-width: 1271px) {
+      .thumb-news .thumb-img {
+        width: 40rem;
+        margin-right: 2rem; } }
+  .thumb-news .info {
+    width: 79rem; }
+    @media only screen and (min-width: 751px) {
+      .thumb-news .info {
+        width: 79rem; } }
+    @media only screen and (min-width: 1271px) {
+      .thumb-news .info {
+        width: 79rem; } }
+    .thumb-news .info > .title {
+      display: inline;
+      font-family: "Hitchcock", san-serif;
+      color: #3375e2;
+      font-size: 5rem;
+      line-height: 5.5rem;
+      margin-bottom: 1.5rem; }
+      @media only screen and (min-width: 751px) {
+        .thumb-news .info > .title {
+          font-size: 2.8rem;
+          line-height: 3.2rem;
+          margin-bottom: 1.5rem; } }
+      @media only screen and (min-width: 1271px) {
+        .thumb-news .info > .title {
+          font-size: 3.6rem;
+          line-height: 4rem;
+          margin-bottom: 1rem; } }
 
 .selection header {
   border: 1px solid #000;
@@ -576,32 +748,32 @@ nav {
   .selection .info .cast-crew .member > .title {
     font-weight: 700; }
 
-.selection-thumb {
+.thumb-selection {
   flex-basis: auto;
   text-align: center;
   width: 22.5rem; }
   @media only screen and (min-width: 751px) {
-    .selection-thumb {
+    .thumb-selection {
       width: 20rem; } }
   @media only screen and (min-width: 1271px) {
-    .selection-thumb {
+    .thumb-selection {
       width: 20rem;
       margin: 1.5rem 0.5rem; } }
-  .selection-thumb .poster-thumb {
+  .thumb-selection .poster-thumb {
     width: inherit; }
     @media only screen and (min-width: 1271px) {
-      .selection-thumb .poster-thumb {
+      .thumb-selection .poster-thumb {
         margin-bottom: 2rem; } }
-  .selection-thumb .title {
+  .thumb-selection .title {
     text-align: center;
     font-family: "Hitchcock", san-serif;
     color: #FFF;
     font-size: 2.4rem; }
     @media only screen and (min-width: 751px) {
-      .selection-thumb .title {
+      .thumb-selection .title {
         font-size: 1.8rem; } }
     @media only screen and (min-width: 1271px) {
-      .selection-thumb .title {
+      .thumb-selection .title {
         font-size: 2.4rem;
         line-height: 3.5rem;
         background-color: #000;
