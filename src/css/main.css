@@ -114,8 +114,8 @@ html {
   position: relative;
   width: 100vw;
   height: 100vh;
-  font-size: 2.4rem;
-  line-height: 2.8rem; }
+  font-size: 2.8rem;
+  line-height: 3.6rem; }
   @media only screen and (min-width: 751px) {
     #site {
       font-size: 1.8rem;
@@ -157,7 +157,6 @@ img {
   height: auto; }
 
 h1, h2, h3 {
-  margin: 0 !important;
   font-weight: normal; }
 
 p {
@@ -210,8 +209,8 @@ nav {
   margin: 0 12.5rem; }
   @media only screen and (min-width: 751px) {
     #nav-logo {
-      width: 24rem;
-      height: 22.4rem;
+      width: 30rem;
+      height: 28rem;
       margin: 0 2.5rem; } }
   @media only screen and (min-width: 1271px) {
     #nav-logo {
@@ -275,8 +274,8 @@ nav {
   width: 100%; }
   @media only screen and (min-width: 751px) {
     .nav-btn {
-      font-size: 1.9rem;
-      padding: 0.5rem 0; } }
+      font-size: 2.4rem;
+      padding: 0.7rem 0; } }
   @media only screen and (min-width: 1271px) {
     .nav-btn {
       font-size: 2.4rem;
@@ -296,8 +295,8 @@ nav {
   padding: 2.5rem 2.5rem; }
   @media only screen and (min-width: 751px) {
     .social-btn {
-      font-size: 2.2rem;
-      padding: 1.6rem 0.8rem; } }
+      font-size: 2.7rem;
+      padding: 2rem 1rem; } }
   @media only screen and (min-width: 1271px) {
     .social-btn {
       font-size: 2.7rem;
@@ -376,12 +375,11 @@ nav {
   background-color: #3375e2; }
 
 .section-header {
+  background-color: #bbbbbb;
   height: 8rem; }
-  .section-header:nth-of-type(1) {
-    background-color: #bbbbbb; }
-  .section-header:nth-of-type(2) {
-    background-color: #3375e2; }
-  .section-header:nth-of-type(3) {
+  .section-header.gray {
+    background-color: #6b6b6b; }
+  .section-header.blue {
     background-color: #3375e2; }
   @media only screen and (min-width: 751px) {
     .section-header {
@@ -390,37 +388,69 @@ nav {
     .section-header {
       height: 4.8rem; } }
   .section-header .title {
+    position: relative;
     display: inline-block;
     font-family: "Hitchcock", san-serif;
     color: #FFF;
     background-color: #000;
-    transform: rotate(-3deg) translateY(10px);
+    transform: rotate(-3deg) translateY(-2rem);
     padding: 1.5rem;
-    font-size: 4.4rem; }
+    font-size: 4.4rem;
+    margin: 0 0 0 1rem; }
     @media only screen and (min-width: 751px) {
       .section-header .title {
-        padding: 0.5rem;
-        font-size: 3.6rem; } }
-    @media only screen and (min-width: 1271px) {
-      .section-header .title {
+        transform: rotate(-3deg) translateY(0.5rem);
         padding: 0.5rem;
         font-size: 3.6rem;
-        margin-left: 1rem; } }
+        margin: 0 0 0 1rem; } }
+    @media only screen and (min-width: 1271px) {
+      .section-header .title {
+        transform: rotate(-3deg) translateY(0.5rem);
+        padding: 0.5rem;
+        font-size: 3.6rem;
+        margin: 0 0 0 1rem; } }
   .section-header .more-btn {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     font-family: "Hitchcock", san-serif;
     color: #FFF;
-    font-size: 2.4rem; }
+    font-size: 3.6rem;
+    margin: 2.5rem; }
     @media only screen and (min-width: 751px) {
       .section-header .more-btn {
-        font-size: 2.4rem; } }
+        font-size: 2.4rem;
+        margin: 1.5rem; } }
     @media only screen and (min-width: 1271px) {
       .section-header .more-btn {
         font-size: 2.4rem;
-        margin-left: 1rem; } }
+        margin: 1.5rem; } }
   .section-header .more-btn:hover {
     color: #000; }
+
+.schedule-thumbs, .news-thumbs, .photos-thumbs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.news-thumbs {
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .news-thumbs {
+      margin: 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .news-thumbs {
+      margin: 5rem; } }
+
+.banner {
+  border: 1px solid #000;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .banner {
+      margin: 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .banner {
+      margin: 2rem; } }
 
 .thumb-holder {
   display: flex;
@@ -552,12 +582,12 @@ nav {
   color: #3375e2;
   font-size: 5rem;
   line-height: 5.5rem;
-  margin-bottom: 1.5rem; }
+  margin: 1.5rem; }
   @media only screen and (min-width: 751px) {
     .single > .title {
       font-size: 2.8rem;
       line-height: 3.2rem;
-      margin-bottom: 1.5rem; } }
+      margin: 1.5rem; } }
   @media only screen and (min-width: 1271px) {
     .single > .title {
       font-size: 3.6rem;
@@ -565,8 +595,9 @@ nav {
       margin: 1rem 2rem; } }
 
 .single > .date {
-  font-size: 5rem;
-  line-height: 5.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3.6rem;
   margin: 1rem 2rem; }
   @media only screen and (min-width: 751px) {
     .single > .date {
@@ -615,36 +646,48 @@ nav {
 
 .category-news .thumb-holder {
   flex-direction: column;
-  flex-wrap: nowrap; }
+  flex-wrap: nowrap;
+  margin: 3rem; }
+  @media only screen and (min-width: 751px) {
+    .category-news .thumb-holder {
+      margin: 5rem; } }
   @media only screen and (min-width: 1271px) {
     .category-news .thumb-holder {
-      margin: 2rem; } }
+      margin: 5rem; } }
 
 .thumb-news {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  cursor: pointer; }
+  flex-direction: column;
+  flex-wrap: wrap;
+  cursor: pointer;
+  margin-bottom: 5rem; }
+  @media only screen and (min-width: 751px) {
+    .thumb-news {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin-bottom: 5rem; } }
   @media only screen and (min-width: 1271px) {
     .thumb-news {
-      margin-bottom: 2rem; } }
+      margin-bottom: 5rem; } }
   .thumb-news .thumb-img {
-    width: 12.5rem; }
+    width: 69rem;
+    margin: 0 0 3rem 0; }
     @media only screen and (min-width: 751px) {
       .thumb-news .thumb-img {
-        width: 12.5rem; } }
+        width: 32rem;
+        margin: 0 5rem 0 0; } }
     @media only screen and (min-width: 1271px) {
       .thumb-news .thumb-img {
         width: 40rem;
-        margin-right: 2rem; } }
+        margin: 0 5rem 0 0; } }
   .thumb-news .info {
-    width: 79rem; }
+    width: 69rem; }
     @media only screen and (min-width: 751px) {
       .thumb-news .info {
-        width: 79rem; } }
+        width: 50rem; } }
     @media only screen and (min-width: 1271px) {
       .thumb-news .info {
-        width: 79rem; } }
+        width: 66rem; } }
     .thumb-news .info > .title {
       display: inline;
       font-family: "Hitchcock", san-serif;
@@ -662,6 +705,15 @@ nav {
           font-size: 3.6rem;
           line-height: 4rem;
           margin-bottom: 1rem; } }
+    .thumb-news .info > .date {
+      font-weight: 700;
+      margin-bottom: 1.5rem; }
+      @media only screen and (min-width: 751px) {
+        .thumb-news .info > .date {
+          margin-bottom: 1.5rem; } }
+      @media only screen and (min-width: 1271px) {
+        .thumb-news .info > .date {
+          margin-bottom: 1rem; } }
 
 .selection header {
   border: 1px solid #000;
@@ -671,16 +723,6 @@ nav {
       margin: 2rem; } }
   @media only screen and (min-width: 1271px) {
     .selection header {
-      margin: 2rem; } }
-
-.selection .banner {
-  border: 1px solid #000;
-  margin: 2rem; }
-  @media only screen and (min-width: 751px) {
-    .selection .banner {
-      margin: 2rem; } }
-  @media only screen and (min-width: 1271px) {
-    .selection .banner {
       margin: 2rem; } }
 
 .selection .info {
@@ -749,12 +791,12 @@ nav {
     font-weight: 700; }
 
 .thumb-selection {
-  flex-basis: auto;
-  text-align: center;
-  width: 22.5rem; }
+  width: 22.5rem;
+  margin: 1.5rem 0.5rem; }
   @media only screen and (min-width: 751px) {
     .thumb-selection {
-      width: 20rem; } }
+      width: 20rem;
+      margin: 1.5rem 0.5rem; } }
   @media only screen and (min-width: 1271px) {
     .thumb-selection {
       width: 20rem;
@@ -765,19 +807,21 @@ nav {
       .thumb-selection .poster-thumb {
         margin-bottom: 2rem; } }
   .thumb-selection .title {
-    text-align: center;
-    font-family: "Hitchcock", san-serif;
-    color: #FFF;
-    font-size: 2.4rem; }
+    text-align: left;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 3.6rem; }
     @media only screen and (min-width: 751px) {
       .thumb-selection .title {
-        font-size: 1.8rem; } }
+        font-size: 1.8rem;
+        line-height: 3rem; } }
     @media only screen and (min-width: 1271px) {
       .thumb-selection .title {
         font-size: 2.4rem;
-        line-height: 3.5rem;
-        background-color: #000;
-        padding: 0.5rem; } }
+        line-height: 3rem; } }
 
 #footer {
   font-family: 'Khula', sans-serif;

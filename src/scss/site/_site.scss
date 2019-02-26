@@ -17,8 +17,8 @@ html {
     width:100vw;
     height:100vh;
 
-    font-size:rem(24,$text-bp-lg);
-    line-height: rem(28,$text-bp-lg);
+    font-size:rem(28,$text-bp-lg);
+    line-height: rem(36,$text-bp-lg);
 
     @include bp-medium {
         font-size:rem(18,$text-bp-lg);
@@ -73,7 +73,6 @@ img {
 }
 
 h1, h2, h3 {
-    margin: 0 !important;
     font-weight: normal;
 }
 

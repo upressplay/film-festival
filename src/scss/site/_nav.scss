@@ -20,8 +20,8 @@ nav {
 
 
     @include bp-medium {
-        width:rem(240,$text-bp-md);
-        height:rem(224,$text-bp-md);
+        width:rem(300,$text-bp-md);
+        height:rem(280,$text-bp-md);
         margin: 0 rem(25,$text-bp-md);
     }
 
@@ -109,8 +109,8 @@ nav {
 
 
      @include bp-medium {
-        font-size: rem(19,$text-bp-md);
-        padding: rem(5,$text-bp-md) 0;
+        font-size: rem(24,$text-bp-md);
+        padding: rem(7,$text-bp-md) 0;
       }
 
     @include bp-large {
@@ -135,8 +135,8 @@ nav {
     padding: rem(25,$text-bp-sm) rem(25,$text-bp-sm);
 
     @include bp-medium {
-        font-size: rem(22,$text-bp-md);
-        padding: rem(16,$text-bp-md) rem(8,$text-bp-md);
+        font-size: rem(27,$text-bp-md);
+        padding: rem(20,$text-bp-md) rem(10,$text-bp-md);
     }
 
     @include bp-large {
@@ -184,11 +184,12 @@ nav {
     }
     .time-date {
         .time {
-            font-family: $time-font;
+            font-family: $narrow-font;
             font-weight: 700;
             color:#3375e2;
             font-size:rem(36,$text-bp-sm);
              
+
             @include bp-medium {
                 font-size:rem(36,$text-bp-md);
             }

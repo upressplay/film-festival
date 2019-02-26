@@ -9,6 +9,11 @@
 			<div class="title"> 
 				<?php echo get_the_title($post->ID); ?>
 			</div> 
+
+			<div class="date">
+				<?php the_date('F j, Y'); ?>
+			</div>
+
 			<?php if ( !empty( get_the_excerpt() ) ) : ?>
 			<div class="excerpt"> 
 				<?php echo get_the_excerpt($post->ID); ?>
