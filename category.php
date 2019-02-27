@@ -14,8 +14,10 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php if ($catSlug == "official-selection") {
 		get_template_part( 'thumb-official-selection' );	
-	} elseif ($catSlug == "hosts") {
+	} elseif ($catSlug == "your-hosts") {
 		get_template_part( 'thumb-host' );
+	} elseif ($catSlug == "schedule") {
+		get_template_part( 'post-schedule' );
 	} elseif ($catSlug == "news") {
 		get_template_part( 'thumb-news' );
 	} elseif ($catSlug == "photos") {

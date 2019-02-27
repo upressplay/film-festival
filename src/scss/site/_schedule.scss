@@ -1,0 +1,259 @@
+.schedule {
+    .info-banner {
+        display: flex;
+        flex-direction:row nowrap;
+        align-items: center;
+        background-color: $color-blue;
+        color: #fff;
+
+        padding: rem(5,$text-bp-md) rem(15,$text-bp-md);
+        @include bp-medium {
+            padding: rem(5,$text-bp-md) rem(15,$text-bp-md);
+        }
+
+        @include bp-large {
+            padding: rem(5,$text-bp-lg) rem(15,$text-bp-lg);
+        }
+
+        .day-holder {
+            margin-right: rem(10,$text-bp-lg);
+            .day {
+                font-family: $nav-font;
+                color:#FFF;
+                background-color: #000;
+
+                font-size:rem(36,$text-bp-sm);
+                padding:rem(20,$text-bp-sm) rem(10,$text-bp-sm); 
+                @include bp-medium {
+                    font-size:rem(22,$text-bp-md);
+                    padding:rem(20,$text-bp-md) rem(10,$text-bp-md);
+                }
+
+                @include bp-large {
+                    font-size:rem(28,$text-bp-lg);
+                    padding:rem(10,$text-bp-lg) rem(10,$text-bp-lg);
+                }    
+            }   
+        }
+        .date-time {
+            font-family: $headline-font;
+            color:#fff;
+            font-size:rem(36,$text-bp-sm);
+             
+
+            @include bp-medium {
+                font-size:rem(36,$text-bp-md);
+            }
+
+            @include bp-large {
+                font-size:rem(28,$text-bp-lg);
+                line-height:rem(33,$text-bp-lg);
+            }   
+        }
+        
+    } 
+    .block-selections {
+        margin: rem(20,$text-bp-sm);
+        @include bp-medium {
+            margin: rem(20,$text-bp-md);
+        }
+
+        @include bp-large {
+            margin: rem(20,$text-bp-lg);
+        } 
+        .block-info {
+            display: flex;
+            flex-direction:row;
+            flex-wrap: nowrap;
+            .poster-thumb {
+                width:rem(200,$text-bp-sm);
+                @include bp-medium {
+                     width:rem(200,$text-bp-md);
+                }
+
+                @include bp-large {
+                    width:rem(150,$text-bp-lg);
+                    margin-right: rem(20,$text-bp-lg);
+                }    
+            }
+            >.title {
+                display: inline-block;
+                font-family: $headline-font;
+                color:#FFF;
+                background-color: #000;
+                font-size:rem(50,$text-bp-sm);
+                line-height:rem(55,$text-bp-sm);
+                padding: rem(15,$text-bp-sm) rem(15,$text-bp-sm);
+                 
+                @include bp-medium {
+                    font-size:rem(50,$text-bp-md);
+                    padding: rem(15,$text-bp-md) rem(15,$text-bp-md);
+                }
+
+                @include bp-large {
+                    font-size:rem(50,$text-bp-lg);
+                    padding: rem(15,$text-bp-lg) rem(15,$text-bp-lg);
+                }    
+            }
+        }
+        .selections {
+            display: flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+        }    
+    }
+    
+
+}
+
+.thumb-schedule {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+
+    margin:rem(15,$text-bp-sm) rem(5,$text-bp-sm);
+
+    @include bp-medium {
+        margin:rem(15,$text-bp-md) rem(5,$text-bp-md);
+    }
+    @include bp-large {
+        margin:rem(5,$text-bp-lg) rem(5,$text-bp-lg);
+    }
+    .poster-thumb {
+        width:rem(200,$text-bp-sm);
+        @include bp-medium {
+             width:rem(200,$text-bp-md);
+        }
+
+        @include bp-large {
+            width:rem(150,$text-bp-lg);
+            margin-right: rem(20,$text-bp-lg);
+        }    
+    }
+    .info {
+        width:rem(200,$text-bp-sm);
+        @include bp-medium {
+             width:rem(200,$text-bp-md);
+        }
+
+        @include bp-large {
+            width:rem(200,$text-bp-lg);
+        }
+        .title {
+            text-align: left;
+            font-family: $narrow-font;
+            font-weight: 700;
+            color:#000;
+            text-transform: uppercase;
+            font-size:rem(30,$text-bp-sm);
+            line-height:rem(36,$text-bp-sm);
+            
+            
+            @include bp-medium {
+                font-size:rem(18,$text-bp-md);
+                line-height:rem(30,$text-bp-md);
+            }
+            @include bp-large {
+                font-size:rem(18,$text-bp-lg);
+                line-height:rem(21,$text-bp-lg);
+            }
+        }   
+        .selections {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content:flex-start;
+
+        } 
+    }
+    
+}
+
+.schedule-date {
+    display: flex;
+    flex-direction:row nowrap;
+    align-items:center;
+
+    margin:rem(10,$text-bp-sm) 0; 
+    @include bp-medium {
+        margin:rem(10,$text-bp-md) 0;
+    }
+
+    @include bp-large {
+        margin:rem(10,$text-bp-lg) 0;
+    }
+    .day-holder {
+        margin-right: rem(10,$text-bp-lg);
+        .day {
+            font-family: $nav-font;
+            color:#FFF;
+            background-color: #000;
+
+            font-size:rem(36,$text-bp-sm);
+            padding:rem(20,$text-bp-sm) rem(10,$text-bp-sm); 
+            @include bp-medium {
+                font-size:rem(22,$text-bp-md);
+                padding:rem(20,$text-bp-md) rem(10,$text-bp-md);
+            }
+
+            @include bp-large {
+                font-size:rem(28,$text-bp-lg);
+                padding:rem(20,$text-bp-lg) rem(10,$text-bp-lg);
+            }    
+        }   
+    }
+    .time-date {
+        .time {
+            font-family: $narrow-font;
+            font-weight: 700;
+            color:#3375e2;
+            font-size:rem(36,$text-bp-sm);
+             
+
+            @include bp-medium {
+                font-size:rem(36,$text-bp-md);
+            }
+
+            @include bp-large {
+                font-size:rem(28,$text-bp-lg);
+                line-height:rem(33,$text-bp-lg);
+            }   
+        }
+        .date {
+            color:#000;
+            font-size:rem(36,$text-bp-sm);
+             
+            @include bp-medium {
+                font-size:rem(36,$text-bp-md);
+            }
+
+            @include bp-large {
+                font-size:rem(18,$text-bp-lg);
+            }    
+        }
+
+    }
+}
+.tickets-btn {
+    display: inline-block;
+    font-family: $nav-font;
+    color:#FFF;
+    background-color: $color-red;
+
+    font-size:rem(36,$text-bp-sm);
+    padding:rem(10,$text-bp-sm); 
+    @include bp-medium {
+        font-size:rem(22,$text-bp-md);
+        padding:rem(10,$text-bp-md);
+    }
+
+    @include bp-large {
+        font-size:rem(28,$text-bp-lg);
+        padding:rem(5,$text-bp-lg) rem(15,$text-bp-lg);
+        margin:0 rem(20,$text-bp-lg);
+    }   
+}
+.tickets-btn:hover {
+    background-color: $color-blue;    
+}

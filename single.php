@@ -8,7 +8,7 @@
 
 	<div class="section-header">
 		<span class="title">
-			<?php if($catSlug == "news") {
+			<?php if($catSlug == "news" || $catSlug == "schedule") {
 				echo $catName;
 				
 				} else {
@@ -21,6 +21,8 @@
 				get_template_part( 'post-official-selection' );	
 			} elseif ($catSlug == "photos") {
 				get_template_part( 'post-photos' );
+			} elseif ($catSlug == "schedule") {
+				get_template_part( 'post-schedule' );
 			} else {
 				get_template_part( 'post-single' );
 			} 

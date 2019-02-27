@@ -146,3 +146,38 @@
         
     }
 }
+
+.thumb-selection-sm {
+    width:rem(225,$text-bp-sm);
+
+    @include bp-medium {
+        width:rem(50,$text-bp-md);
+    }
+    @include bp-large {
+        width:rem(50,$text-bp-lg);
+    }
+    .poster-thumb-sm {
+        width:inherit;   
+    }
+    .title {
+        text-align: left;
+        font-family: $narrow-font;
+        font-weight: 700;
+        color:#000;
+        text-transform: uppercase;
+        font-size:rem(30,$text-bp-sm);
+        line-height:rem(36,$text-bp-sm);
+        
+        
+        @include bp-medium {
+            font-size:rem(18,$text-bp-md);
+            line-height:rem(30,$text-bp-md);
+        }
+        @include bp-large {
+            font-size:rem(24,$text-bp-lg);
+            line-height:rem(30,$text-bp-lg);
+            
+        }
+        
+    }
+}

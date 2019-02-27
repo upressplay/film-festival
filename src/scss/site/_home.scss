@@ -74,11 +74,22 @@
     justify-content: flex-start;   
 }
 
-.news-thumbs {
+.schedule-thumbs {
 	margin: rem(20,$text-bp-sm);
 
     @include bp-medium {
         margin: rem(20,$text-bp-md);
+    }
+    @include bp-large {
+        margin: rem(20,$text-bp-lg); 
+    } 
+}
+
+.news-thumbs {
+    margin: rem(50,$text-bp-sm);
+
+    @include bp-medium {
+        margin: rem(50,$text-bp-md);
     }
     @include bp-large {
         margin: rem(50,$text-bp-lg); 

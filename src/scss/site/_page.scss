@@ -5,7 +5,7 @@
     justify-content:space-around;
 }
 
-.category-hosts {
+.category-your-hosts {
     .thumb-holder {
         flex-direction:column;
         flex-wrap: nowrap;   
@@ -41,13 +41,4 @@
     }  	
 }
 
-.next-prev {
-    margin:rem(10,$text-bp-sm) rem(20,$text-bp-sm); 
 
-    @include bp-medium {
-        margin:rem(10,$text-bp-md) rem(20,$text-bp-md); 
-    }
-    @include bp-large {
-        margin:rem(10,$text-bp-lg) rem(20,$text-bp-lg); 
-    }    
-}
