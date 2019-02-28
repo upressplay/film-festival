@@ -1,3 +1,10 @@
+.category-schedule {
+    .thumb-holder {
+        flex-direction:column;
+        flex-wrap: nowrap;
+        justify-content: center;   
+    }
+}
 .schedule {
     .info-banner {
         display: flex;
@@ -76,25 +83,69 @@
                     margin-right: rem(20,$text-bp-lg);
                 }    
             }
-            >.title {
-                display: inline-block;
-                font-family: $headline-font;
-                color:#FFF;
-                background-color: #000;
-                font-size:rem(50,$text-bp-sm);
-                line-height:rem(55,$text-bp-sm);
-                padding: rem(15,$text-bp-sm) rem(15,$text-bp-sm);
-                 
+            .block-host{
+                width:rem(200,$text-bp-sm);
                 @include bp-medium {
-                    font-size:rem(50,$text-bp-md);
-                    padding: rem(15,$text-bp-md) rem(15,$text-bp-md);
+                     width:rem(200,$text-bp-md);
                 }
 
                 @include bp-large {
-                    font-size:rem(50,$text-bp-lg);
-                    padding: rem(15,$text-bp-lg) rem(15,$text-bp-lg);
+                    width:rem(700,$text-bp-lg);
+                }    
+                .title {
+                    display: inline-block;
+                    font-family: $headline-font;
+                    color:#FFF;
+                    background-color: #000;
+                    font-size:rem(30,$text-bp-sm);
+                    line-height:rem(36,$text-bp-sm);
+                    padding: rem(10,$text-bp-sm) rem(10,$text-bp-sm);
+                     
+                    @include bp-medium {
+                        font-size:rem(30,$text-bp-md);
+                        line-height:rem(34,$text-bp-md);
+                        padding: rem(10,$text-bp-md) rem(10,$text-bp-md);
+                    }
+
+                    @include bp-large {
+                        font-size:rem(36,$text-bp-lg);
+                        line-height:rem(40,$text-bp-lg);
+                        padding: rem(10,$text-bp-lg) rem(10,$text-bp-lg);
+                        margin-bottom: rem(10,$text-bp-lg);
+                    }    
+                }
+                .hosted-by {
+                    font-family: $headline-font;
+                    font-size:rem(21,$text-bp-sm);
+                    line-height:rem(24,$text-bp-sm);
+                     
+                    @include bp-medium {
+                        font-size:rem(21,$text-bp-md);
+                        line-height:rem(24,$text-bp-md);
+                    }
+
+                    @include bp-large {
+                        font-size:rem(21,$text-bp-lg);
+                        line-height:rem(24,$text-bp-lg);
+                    } 
+                }
+                .host-name {
+                    font-family: $headline-font;
+                    font-size:rem(21,$text-bp-sm);
+                    line-height:rem(24,$text-bp-sm);
+                     
+                    @include bp-medium {
+                        font-size:rem(28,$text-bp-md);
+                        line-height:rem(32,$text-bp-md);
+                    }
+
+                    @include bp-large {
+                        font-size:rem(36,$text-bp-lg);
+                        line-height:rem(40,$text-bp-lg);
+                    } 
                 }    
             }
+            
         }
         .selections {
             display: flex;
@@ -255,5 +306,5 @@
     }   
 }
 .tickets-btn:hover {
-    background-color: $color-blue;    
+    background-color: $color-gray;    
 }

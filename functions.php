@@ -100,3 +100,33 @@ function remove_admin_login_header() {
 function empty_content($str) {
     return trim(str_replace('&nbsp;','',strip_tags($str,'<img>'))) == '';
 }
+
+function pagination($pages = '', $range = 4)
+{
+    $showitems = ($range * 2)+1;
+ 
+    global $paged;
+    if(empty($paged)) $paged = 1;
+ 
+    if($pages == '')
+    {
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if(!$pages)
+        {
+            $pages = 1;
+        }
+    }
+
+    if(1 != $pages)
+    {
+    	echo "<div class=\"page-nav\">";
+    	if($paged >1) {
+    		echo "<a href='".get_pagenum_link($paged-1)."'?><i class=\"fas fa-caret-square-left\"></i></a>";
+    	}
+    	if($paged < $pages) {
+    		echo "<a href='".get_pagenum_link($paged+1)."'?><i class=\"fas fa-caret-square-right\"></i></a>";	
+    	}
+    	echo "</div>";
+    }
+}

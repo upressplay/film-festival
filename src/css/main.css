@@ -169,19 +169,19 @@ p {
       margin: 2rem 0; } }
 
 a:link {
-  color: #24293D;
+  color: #3375e2;
   text-decoration: none; }
 
 a:visited {
-  color: #24293D;
+  color: #3375e2;
   text-decoration: none; }
 
 a:hover {
-  color: #3A3F5D;
+  color: #000;
   text-decoration: none; }
 
 a:active {
-  color: #24293D;
+  color: #3375e2;
   text-decoration: none; }
 
 .screen-reader-text {
@@ -428,6 +428,18 @@ nav {
     .page-content, .post-content {
       padding: 2.5rem 5rem; } }
 
+.page-nav {
+  font-size: 3.6rem;
+  margin: 2rem; }
+  @media only screen and (min-width: 751px) {
+    .page-nav {
+      font-size: 3.6rem;
+      margin: 2rem; } }
+  @media only screen and (min-width: 1271px) {
+    .page-nav {
+      font-size: 3.6rem;
+      margin: 2rem; } }
+
 .thumb {
   display: flex;
   flex-direction: row;
@@ -576,6 +588,11 @@ nav {
       .thumb-photos .thumb-img {
         width: 12.5rem; } }
 
+.category-schedule .thumb-holder {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center; }
+
 .schedule .info-banner {
   display: flex;
   flex-direction: row nowrap;
@@ -638,22 +655,57 @@ nav {
         .schedule .block-selections .block-info .poster-thumb {
           width: 15rem;
           margin-right: 2rem; } }
-    .schedule .block-selections .block-info > .title {
-      display: inline-block;
-      font-family: "Hitchcock", san-serif;
-      color: #FFF;
-      background-color: #000;
-      font-size: 5rem;
-      line-height: 5.5rem;
-      padding: 1.5rem 1.5rem; }
+    .schedule .block-selections .block-info .block-host {
+      width: 20rem; }
       @media only screen and (min-width: 751px) {
-        .schedule .block-selections .block-info > .title {
-          font-size: 5rem;
-          padding: 1.5rem 1.5rem; } }
+        .schedule .block-selections .block-info .block-host {
+          width: 20rem; } }
       @media only screen and (min-width: 1271px) {
-        .schedule .block-selections .block-info > .title {
-          font-size: 5rem;
-          padding: 1.5rem 1.5rem; } }
+        .schedule .block-selections .block-info .block-host {
+          width: 70rem; } }
+      .schedule .block-selections .block-info .block-host .title {
+        display: inline-block;
+        font-family: "Hitchcock", san-serif;
+        color: #FFF;
+        background-color: #000;
+        font-size: 3rem;
+        line-height: 3.6rem;
+        padding: 1rem 1rem; }
+        @media only screen and (min-width: 751px) {
+          .schedule .block-selections .block-info .block-host .title {
+            font-size: 3rem;
+            line-height: 3.4rem;
+            padding: 1rem 1rem; } }
+        @media only screen and (min-width: 1271px) {
+          .schedule .block-selections .block-info .block-host .title {
+            font-size: 3.6rem;
+            line-height: 4rem;
+            padding: 1rem 1rem;
+            margin-bottom: 1rem; } }
+      .schedule .block-selections .block-info .block-host .hosted-by {
+        font-family: "Hitchcock", san-serif;
+        font-size: 2.1rem;
+        line-height: 2.4rem; }
+        @media only screen and (min-width: 751px) {
+          .schedule .block-selections .block-info .block-host .hosted-by {
+            font-size: 2.1rem;
+            line-height: 2.4rem; } }
+        @media only screen and (min-width: 1271px) {
+          .schedule .block-selections .block-info .block-host .hosted-by {
+            font-size: 2.1rem;
+            line-height: 2.4rem; } }
+      .schedule .block-selections .block-info .block-host .host-name {
+        font-family: "Hitchcock", san-serif;
+        font-size: 2.1rem;
+        line-height: 2.4rem; }
+        @media only screen and (min-width: 751px) {
+          .schedule .block-selections .block-info .block-host .host-name {
+            font-size: 2.8rem;
+            line-height: 3.2rem; } }
+        @media only screen and (min-width: 1271px) {
+          .schedule .block-selections .block-info .block-host .host-name {
+            font-size: 3.6rem;
+            line-height: 4rem; } }
   .schedule .block-selections .selections {
     display: flex;
     flex-direction: row;
@@ -777,7 +829,7 @@ nav {
       margin: 0 2rem; } }
 
 .tickets-btn:hover {
-  background-color: #3375e2; }
+  background-color: #6b6b6b; }
 
 .category-news .thumb-holder {
   flex-direction: column;
@@ -926,21 +978,21 @@ nav {
     font-weight: 700; }
 
 .thumb-selection {
-  width: 22.5rem;
+  width: 15rem;
   margin: 1.5rem 0.5rem; }
   @media only screen and (min-width: 751px) {
     .thumb-selection {
-      width: 20rem;
+      width: 15rem;
       margin: 1.5rem 0.5rem; } }
   @media only screen and (min-width: 1271px) {
     .thumb-selection {
-      width: 20rem;
+      width: 15rem;
       margin: 1.5rem 0.5rem; } }
   .thumb-selection .poster-thumb {
     width: inherit; }
     @media only screen and (min-width: 1271px) {
       .thumb-selection .poster-thumb {
-        margin-bottom: 2rem; } }
+        margin-bottom: 1rem; } }
   .thumb-selection .title {
     text-align: left;
     font-family: "Open Sans Condensed", sans-serif;
@@ -955,8 +1007,8 @@ nav {
         line-height: 3rem; } }
     @media only screen and (min-width: 1271px) {
       .thumb-selection .title {
-        font-size: 2.4rem;
-        line-height: 3rem; } }
+        font-size: 2.1rem;
+        line-height: 2.4rem; } }
 
 .thumb-selection-sm {
   width: 22.5rem; }

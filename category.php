@@ -17,7 +17,7 @@
 	} elseif ($catSlug == "your-hosts") {
 		get_template_part( 'thumb-host' );
 	} elseif ($catSlug == "schedule") {
-		get_template_part( 'post-schedule' );
+		get_template_part( 'post-schedule' );	
 	} elseif ($catSlug == "news") {
 		get_template_part( 'thumb-news' );
 	} elseif ($catSlug == "photos") {
@@ -30,6 +30,9 @@
 
 
 </div><!-- thumb-holder -->
-<div class="navigation"><p><?php posts_nav_link(); ?></p></div>
+<?php if (function_exists("pagination")) {
+		pagination();
+	} 
+?>
 
 <?php get_footer(); ?>

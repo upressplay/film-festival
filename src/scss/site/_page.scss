@@ -40,5 +40,18 @@
         padding:rem(25,$text-bp-lg) rem(50,$text-bp-lg); 
     }  	
 }
+.page-nav {
+    font-size:rem(36,$text-bp-sm);
+    margin:rem(20,$text-bp-sm); 
+    @include bp-medium {
+        font-size:rem(36,$text-bp-md);
+        margin:rem(20,$text-bp-md);
+    }
+
+    @include bp-large {
+        font-size:rem(36,$text-bp-lg);
+        margin:rem(20,$text-bp-lg);
+    }
+}
 
 

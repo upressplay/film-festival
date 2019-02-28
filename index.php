@@ -16,13 +16,12 @@
 		<?php 
 			$date_now = date('Y-m-d H:i:s');
 			$args = array(
-			   'category_name'=>'schedule',
-			    'posts_per_page'=> 3,
+			   'category_name'		=>'schedule',
+			    'posts_per_page'	=> 3,
 			    'order'				=> 'ASC',
-	'orderby'			=> 'meta_value',
-	'meta_key'			=> 'start_date',
-	'meta_type'			=> 'DATETIME'
-
+				'orderby'			=> 'meta_value',
+				'meta_key'			=> 'start_date',
+				'meta_type'			=> 'DATETIME'
 			);
 			$query = new WP_Query( $args );
 			while ( $query->have_posts() ) : $query->the_post(); 

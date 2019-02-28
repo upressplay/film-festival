@@ -104,15 +104,15 @@
 }
 
 .thumb-selection {
-    width:rem(225,$text-bp-sm);
+    width:rem(150,$text-bp-sm);
     margin:rem(15,$text-bp-sm) rem(5,$text-bp-sm);
 
     @include bp-medium {
-        width:rem(200,$text-bp-md);
+        width:rem(150,$text-bp-md);
         margin:rem(15,$text-bp-md) rem(5,$text-bp-md);
     }
     @include bp-large {
-        width:rem(200,$text-bp-lg);
+        width:rem(150,$text-bp-lg);
         margin:rem(15,$text-bp-lg) rem(5,$text-bp-lg);
     }
     .poster-thumb {
@@ -121,7 +121,7 @@
         }
 
         @include bp-large {
-            margin-bottom: rem(20,$text-bp-lg);
+            margin-bottom: rem(10,$text-bp-lg);
         }    
     }
     .title {
@@ -139,8 +139,8 @@
             line-height:rem(30,$text-bp-md);
         }
         @include bp-large {
-            font-size:rem(24,$text-bp-lg);
-            line-height:rem(30,$text-bp-lg);
+            font-size:rem(21,$text-bp-lg);
+            line-height:rem(24,$text-bp-lg);
             
         }
         
