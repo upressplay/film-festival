@@ -44,21 +44,59 @@
 				<?php echo get_field('tagline'); ?>
 			</h2><!-- tagline -->
 			<?php endif; ?>
+
+			
+
 			<div class="date-tickets">
-				<div class="schedule-date">
-					<div class="day-holder">
-						<div class="day">TH</div>
-					</div> 
-					<div class="time-date">
-						<div class="time">9:00pm </div>
-						<div class="date">Sept 13 </div>
-					</div><!-- date-time -->
-				</div><!-- schedule-date -->
-				<a href="https://www.laemmle.com/films/44626" target="_blank">
-					<div class="tickets-btn">
-						Buy Ticketes
-					</div><!-- buy-tickets-btn -->
-				</a>
+				<?php 
+
+				$args = array(
+				   'category_name'		=>'schedule',
+				    'order'				=> 'ASC',
+				    'meta_query' => array(
+						array(
+							'key' => 'selections', // name of custom field
+							'value' => '"' . $post->ID . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+							'compare' => 'LIKE'
+						)
+					)
+				);
+				$schedules = get_posts( $args );
+				if( $schedules ): ?>
+					<?php foreach( $schedules as $schedule ): ?>
+						<?php 
+
+						$start_date = get_field('start_date', $schedule->ID);
+
+						$weekday = date("D", strtotime($start_date));
+						$time = date("g:i a", strtotime($start_date));
+						$month = date("M", strtotime($start_date));
+						$day = date("j", strtotime($start_date));
+						?>
+
+						<div class="schedule-date">
+							<div class="day-holder">
+								<div class="day"><?php echo $weekday; ?></div>
+							</div> 
+							<div class="time-date">
+								<div class="time"><?php echo $time; ?> </div>
+								<div class="date"><?php echo $month; ?> <?php echo $day; ?> </div>
+							</div><!-- date-time -->
+						</div><!-- schedule-date -->
+
+						<?php 
+							$cta_btn = get_field('cta_btn', $schedule->ID);
+						?>
+						<?php if ($cta_btn['url'] != '') : ?>
+						<a href="<?php echo $cta_btn['url']; ?>" target="blank">
+							<div class="tickets-btn">
+								<?php echo $cta_btn['text']; ?>
+							</div>
+						</a>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				<?php endif; ?>
+				
 			</div><!-- date-tickets -->
 			<div class="synopsis">
 				<?php echo get_field('synopsis'); ?>

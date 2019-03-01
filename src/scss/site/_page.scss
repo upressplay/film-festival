@@ -51,7 +51,7 @@
     }
 
     @include bp-large {
-        font-size:rem(36,$text-bp-lg);
+        font-size:rem(48,$text-bp-lg);
         margin:rem(20,$text-bp-lg);
     }
 }
@@ -61,6 +61,13 @@
     flex-wrap: nowrap;
     justify-content:center;
     cursor:pointer;
+    margin-bottom: rem(20,$text-bp-sm);
+         
+    @include bp-medium {
+    }
+
+    @include bp-large {
+    }   
     .share {
         color: $color-blue; 
         font-size:rem(60,$text-bp-sm);

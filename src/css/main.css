@@ -451,7 +451,7 @@ nav {
       margin: 2rem; } }
   @media only screen and (min-width: 1271px) {
     .page-nav {
-      font-size: 3.6rem;
+      font-size: 4.8rem;
       margin: 2rem; } }
 
 .social {
@@ -459,7 +459,8 @@ nav {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 2rem; }
   .social .share {
     color: #3375e2;
     font-size: 6rem;
@@ -613,15 +614,14 @@ nav {
   justify-content: center; }
 
 .thumb-photos {
-  cursor: pointer; }
-  .thumb-photos .thumb-img {
-    width: 15rem; }
-    @media only screen and (min-width: 751px) {
-      .thumb-photos .thumb-img {
-        width: 12.5rem; } }
-    @media only screen and (min-width: 1271px) {
-      .thumb-photos .thumb-img {
-        width: 12.5rem; } }
+  cursor: pointer;
+  width: 15rem; }
+  @media only screen and (min-width: 751px) {
+    .thumb-photos {
+      width: 12.5rem; } }
+  @media only screen and (min-width: 1271px) {
+    .thumb-photos {
+      width: 12.5rem; } }
 
 .category-schedule .thumb-holder {
   flex-direction: column;
@@ -802,13 +802,13 @@ nav {
 .date-tickets {
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
-  flex-wrap: wrap; }
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center; }
   @media only screen and (min-width: 751px) {
     .date-tickets {
-      align-items: center;
-      flex-direction: row;
-      flex-wrap: nowrap; } }
+      justify-content: flex-start; } }
   .date-tickets .schedule-date {
     display: flex;
     flex-direction: row;
@@ -868,7 +868,7 @@ nav {
   background-color: #fe0000;
   font-size: 4.8rem;
   padding: 1.5rem;
-  margin: 2rem 0; }
+  margin: 0 2rem; }
   @media only screen and (min-width: 751px) {
     .tickets-btn {
       font-size: 2.2rem;
@@ -881,7 +881,7 @@ nav {
       margin: 0 2rem; } }
 
 .tickets-btn:hover {
-  background-color: #6b6b6b; }
+  background-color: #3375e2; }
 
 .category-news .thumb-holder {
   flex-direction: column;
@@ -965,26 +965,31 @@ nav {
       margin: 2rem; } }
 
 .selection .info {
+  text-align: center;
   display: flex;
-  flex-direction: row nowrap;
-  margin: 2rem; }
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 3rem; }
   @media only screen and (min-width: 751px) {
     .selection .info {
+      text-align: left;
+      flex-direction: row;
       margin: 2rem; } }
   @media only screen and (min-width: 1271px) {
     .selection .info {
       margin: 2rem; } }
   .selection .info .poster-social {
-    margin-right: 2rem; }
+    margin: 2rem 0 5rem 0; }
     @media only screen and (min-width: 751px) {
       .selection .info .poster-social {
-        margin-right: 2rem; } }
+        margin: 0 2rem 0 0; } }
     @media only screen and (min-width: 1271px) {
       .selection .info .poster-social {
-        margin-right: 2rem; } }
+        margin-right: 0 2rem 0 0; } }
     .selection .info .poster-social .poster-thumb {
+      display: inline-block;
       border: 1px solid #000;
-      width: 22.5rem; }
+      width: 40rem; }
       @media only screen and (min-width: 751px) {
         .selection .info .poster-social .poster-thumb {
           width: 22.5rem; } }
@@ -992,48 +997,60 @@ nav {
         .selection .info .poster-social .poster-thumb {
           width: 22.5rem; } }
   .selection .info .info-txt > .title {
-    display: inline-block;
+    display: inline;
     font-family: "Hitchcock", san-serif;
     color: #FFF;
     background-color: #000;
-    font-size: 5rem;
-    line-height: 5.5rem;
+    font-size: 7rem;
+    line-height: 7.5rem;
     padding: 1.5rem 1.5rem;
     margin: 0; }
     @media only screen and (min-width: 751px) {
       .selection .info .info-txt > .title {
         font-size: 5rem;
+        line-height: 6.5rem;
         padding: 1.5rem 1.5rem; } }
     @media only screen and (min-width: 1271px) {
       .selection .info .info-txt > .title {
         font-size: 5rem;
+        line-height: 9.5rem;
         padding: 1.5rem 1.5rem; } }
   .selection .info .info-txt .tagline {
     font-family: "Hitchcock", san-serif;
     color: #3375e2;
-    font-size: 2.8rem;
-    margin: 0.5rem 0; }
+    font-size: 3.3rem;
+    line-height: 3rem;
+    margin: 5rem 0 5rem 0; }
     @media only screen and (min-width: 751px) {
       .selection .info .info-txt .tagline {
         font-size: 2.8rem;
-        margin: 0.5rem 0; } }
+        line-height: 3.3rem;
+        margin: 2.5rem 0; } }
     @media only screen and (min-width: 1271px) {
       .selection .info .info-txt .tagline {
         font-size: 2.8rem;
-        margin: 0.5rem 0; } }
+        line-height: 3.6rem;
+        margin: 2.5rem 0; } }
   .selection .info .synopsis {
+    margin: 3.5rem 0; }
+    @media only screen and (min-width: 751px) {
+      .selection .info .synopsis {
+        margin: 1.5rem 0; } }
+    @media only screen and (min-width: 1271px) {
+      .selection .info .synopsis {
+        margin: 1.5rem 0; } }
+  .selection .info .cast-crew {
     margin: 1.5rem 0; }
     @media only screen and (min-width: 751px) {
-      .selection .info .synopsis {
+      .selection .info .cast-crew {
         margin: 1.5rem 0; } }
     @media only screen and (min-width: 1271px) {
-      .selection .info .synopsis {
+      .selection .info .cast-crew {
         margin: 1.5rem 0; } }
-  @media only screen and (min-width: 1271px) {
-    .selection .info .cast-crew {
-      margin: 1.5rem 0; } }
-  .selection .info .cast-crew .member > .title {
-    font-weight: 700; }
+    .selection .info .cast-crew .member > .title {
+      font-weight: 700; }
+  .selection .info .links a {
+    margin-right: 1.5rem; }
 
 .thumb-selection {
   width: 20rem;

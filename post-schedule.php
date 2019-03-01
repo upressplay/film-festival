@@ -42,19 +42,18 @@
 				</div>
 				
 				<?php
-					$host = get_field('host');
-					if( $host ): ?>
-						<div class="hosted-by">
+					$hosts = get_field('host',$post->ID);
+					if( $hosts ): ?>
+						<?php foreach( $hosts as $host ): ?>
+							<div class="hosted-by">
 							Hosted By: 
 						</div>
 						<div class="host-name">
-						<?php 
-							$post = $host;
-							setup_postdata( $post ); 
-						?>
-					    <?php the_title(); ?>
-					    <?php wp_reset_postdata(); ?>
+							<?php echo get_the_title( $host->ID ); ?>
 					    </div><!-- host-name -->
+						
+						<?php endforeach; ?>
+						
 				<?php endif; ?>
 				<div class="content"> 
 					<?php echo get_the_content($post->ID);?>
@@ -63,7 +62,7 @@
 		</div> <!-- block-info -->
 		<div class="selections">
 			<?php 
-			$selections = get_field('selections');
+			$selections = get_field('selections',$post->ID);
 			if($selections) :
 			    foreach( $selections as $selection ) : ?>
 

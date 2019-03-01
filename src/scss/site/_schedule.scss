@@ -226,13 +226,13 @@
     display: flex;
     align-items:flex-start;
 
-    flex-direction:column;
-    flex-wrap:wrap;
-
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:center;
     @include bp-medium {
-        align-items:center;
-        flex-direction:row;
-        flex-wrap:nowrap;
+        
+        justify-content:flex-start;
     }
     .schedule-date {
         display: flex;
@@ -311,7 +311,7 @@
 
     font-size:rem(48,$text-bp-sm);
     padding:rem(15,$text-bp-sm); 
-    margin:rem(20,$text-bp-lg) 0;
+    margin:0 rem(20,$text-bp-lg);
     @include bp-medium {
         font-size:rem(22,$text-bp-md);
         padding:rem(10,$text-bp-md);
@@ -325,5 +325,5 @@
     }   
 }
 .tickets-btn:hover {
-    background-color: $color-gray;    
+    background-color: $color-blue;    
 }

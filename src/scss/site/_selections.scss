@@ -12,10 +12,14 @@
     } 
     
     .info {
+        text-align: center;
         display: flex;
-        flex-direction:row nowrap;
-        margin: rem(20,$text-bp-sm);
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: rem(30,$text-bp-sm);
         @include bp-medium {
+            text-align: left;
+            flex-direction: row;
             margin: rem(20,$text-bp-md);
         }
 
@@ -23,17 +27,18 @@
             margin: rem(20,$text-bp-lg);
         }
         .poster-social {
-            margin-right: rem(20,$text-bp-sm);
+            margin: rem(20,$text-bp-sm) 0 rem(50,$text-bp-sm) 0;
             @include bp-medium {
-                margin-right: rem(20,$text-bp-md);
+                margin:0 rem(20,$text-bp-md) 0 0;
             }
 
             @include bp-large {
-                margin-right: rem(20,$text-bp-lg);
+                margin-right:0 rem(20,$text-bp-lg) 0 0;
             }
             .poster-thumb {
+                display: inline-block;
                 border: 1px solid #000;
-                width:rem(225,$text-bp-sm);
+                width:rem(400,$text-bp-sm);
                 @include bp-medium {
                     width:rem(225,$text-bp-md);
                 }
@@ -48,43 +53,48 @@
         
         .info-txt {
             >.title {
-                display: inline-block;
+                display: inline;
                 font-family: $headline-font;
                 color:#FFF;
                 background-color: #000;
-                font-size:rem(50,$text-bp-sm);
-                line-height:rem(55,$text-bp-sm);
+                font-size:rem(70,$text-bp-sm);
+                line-height:rem(75,$text-bp-sm);
                 padding: rem(15,$text-bp-sm) rem(15,$text-bp-sm);
                 margin:0;
                  
                 @include bp-medium {
                     font-size:rem(50,$text-bp-md);
+                    line-height:rem(65,$text-bp-md);
                     padding: rem(15,$text-bp-md) rem(15,$text-bp-md);
                 }
 
                 @include bp-large {
                     font-size:rem(50,$text-bp-lg);
+                    line-height:rem(95,$text-bp-lg);
                     padding: rem(15,$text-bp-lg) rem(15,$text-bp-lg);
                 }    
             }
             .tagline {
                 font-family: $sub-font;
                 color: #3375e2;
-                font-size:rem(28,$text-bp-sm);
-                margin: rem(5,$text-bp-sm) 0;
+                font-size:rem(33,$text-bp-sm);
+                line-height:rem(30,$text-bp-sm);
+                margin: rem(50,$text-bp-sm) 0 rem(50,$text-bp-sm) 0;
                 @include bp-medium {
                     font-size:rem(28,$text-bp-md);
-                    margin: rem(5,$text-bp-md) 0;
+                    line-height:rem(33,$text-bp-md);
+                    margin: rem(25,$text-bp-md) 0;
                 }
 
                 @include bp-large {
                     font-size:rem(28,$text-bp-lg);
-                    margin: rem(5,$text-bp-lg) 0;
+                    line-height:rem(36,$text-bp-lg);
+                    margin: rem(25,$text-bp-lg) 0;
                 }
             }
         }
         .synopsis {
-            margin: rem(15,$text-bp-sm) 0;
+            margin: rem(35,$text-bp-sm) 0;
             @include bp-medium {
                 margin: rem(15,$text-bp-md) 0;
             }
@@ -94,7 +104,9 @@
             }
         }
         .cast-crew {
+            margin: rem(15,$text-bp-sm) 0;
             @include bp-medium {
+                margin: rem(15,$text-bp-md) 0;
             }
 
             @include bp-large {
@@ -109,6 +121,11 @@
                 }
             }
             
+        }
+        .links {
+            a {
+                margin-right: rem(15,$text-bp-lg);
+            }
         }
     } 
 
