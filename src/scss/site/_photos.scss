@@ -9,7 +9,7 @@
 .thumb-photos {
 	cursor: pointer;
 	.thumb-img {
-		width:rem(125,$text-bp-sm);
+		width:rem(150,$text-bp-sm);
 	    @include bp-medium {
 	        width:rem(125,$text-bp-md);
 	    }

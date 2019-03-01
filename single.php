@@ -8,12 +8,7 @@
 
 	<div class="section-header">
 		<span class="title">
-			<?php if($catSlug == "news" || $catSlug == "schedule") {
-				echo $catName;
-				
-				} else {
-					the_title();	
-				} ?>
+			<?php echo $catName;?>
 		</span>
 	</div>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -28,7 +23,7 @@
 			} 
 		?>
 	<?php endwhile; endif; ?>
-	<div class="next-prev">
-		<?php previous_post_link('%link', 'Previous', TRUE); ?>  <?php next_post_link('%link', 'Next', TRUE); ?> 
+	<div class="page-nav">
+		<?php previous_post_link('%link', '<i class="fas fa-caret-square-left"></i>', TRUE); ?>  <?php next_post_link('%link', '<i class="fas fa-caret-square-right"></i>', TRUE); ?> 
 	</div> 
 <?php get_footer(); ?>

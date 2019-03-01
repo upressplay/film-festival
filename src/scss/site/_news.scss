@@ -2,7 +2,9 @@
     .thumb-holder {
         flex-direction:column;
         flex-wrap: nowrap;
-        margin:rem(30,$text-bp-sm);
+
+        margin:rem(20,$text-bp-sm);
+        
         @include bp-medium {
 	        margin:rem(50,$text-bp-md);
 	    }

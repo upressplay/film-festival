@@ -24,8 +24,16 @@
 				<img src="<?php echo $poster['sizes']['tall']; ?>"/>
 			</div>
 			<div class="social"> 
-				
-			</div>
+				<div class="page-social-btn share" data-type="facebook" data-title="<?php echo get_the_title($post->ID) ?>" data-url="<?php echo get_permalink($post->ID) ?>" data-desc="<?php echo get_field('synopsis'); ?>">
+					<span class="fab fa-facebook-square" aria-hidden="true" ></span>
+					<span class="screen-reader-text">Facebook</span>
+				</div>
+				<div class="page-social-btn share" data-type="twitter" data-title="<?php echo get_the_title($post->ID) ?>"  data-url="<?php echo get_permalink($post->ID) ?>" data-desc="<?php echo get_field('synopsis'); ?>">
+					<span class="fab fa-twitter-square" aria-hidden="true" ></span>
+					<span class="screen-reader-text">Twitter</span>
+				</div>
+			</div><!-- social -->
+
 		</div>
 		<div class="info-txt">
 			<h1 class="title">
@@ -36,20 +44,22 @@
 				<?php echo get_field('tagline'); ?>
 			</h2><!-- tagline -->
 			<?php endif; ?>
-			<div class="schedule-date">
-				<div class="day-holder">
-					<div class="day">TH</div>
-				</div> 
-				<div class="time-date">
-					<div class="time">9:00pm </div>
-					<div class="date">Sept 13 </div>
-				</div><!-- date-time -->
+			<div class="date-tickets">
+				<div class="schedule-date">
+					<div class="day-holder">
+						<div class="day">TH</div>
+					</div> 
+					<div class="time-date">
+						<div class="time">9:00pm </div>
+						<div class="date">Sept 13 </div>
+					</div><!-- date-time -->
+				</div><!-- schedule-date -->
 				<a href="https://www.laemmle.com/films/44626" target="_blank">
 					<div class="tickets-btn">
 						Buy Ticketes
 					</div><!-- buy-tickets-btn -->
 				</a>
-			</div><!-- schedule-date -->
+			</div><!-- date-tickets -->
 			<div class="synopsis">
 				<?php echo get_field('synopsis'); ?>
 			</div>

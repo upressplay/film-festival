@@ -41,9 +41,11 @@
     }  	
 }
 .page-nav {
-    font-size:rem(36,$text-bp-sm);
-    margin:rem(20,$text-bp-sm); 
+    text-align: center;
+    font-size:rem(75,$text-bp-sm);
+    margin:rem(30,$text-bp-sm); 
     @include bp-medium {
+        text-align: left;
         font-size:rem(36,$text-bp-md);
         margin:rem(20,$text-bp-md);
     }
@@ -53,5 +55,30 @@
         margin:rem(20,$text-bp-lg);
     }
 }
+.social {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content:center;
+    cursor:pointer;
+    .share {
+        color: $color-blue; 
+        font-size:rem(60,$text-bp-sm);
+        margin: rem(20,$text-bp-sm);
+         
+        @include bp-medium {
+            font-size:rem(50,$text-bp-md);
+            margin: rem(10,$text-bp-md);
+        }
 
+        @include bp-large {
+            font-size:rem(50,$text-bp-lg);
+            margin: rem(10,$text-bp-lg);
+        }   
+        &:hover {
+            color:#000;
+        }
+    }
+    
+} 
 

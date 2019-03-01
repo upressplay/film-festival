@@ -172,9 +172,11 @@
         margin:rem(5,$text-bp-lg) rem(5,$text-bp-lg);
     }
     .poster-thumb {
-        width:rem(200,$text-bp-sm);
+        width:rem(250,$text-bp-sm);
+        margin-right: rem(20,$text-bp-sm);
         @include bp-medium {
              width:rem(200,$text-bp-md);
+             margin-right: rem(20,$text-bp-md);
         }
 
         @include bp-large {
@@ -183,7 +185,7 @@
         }    
     }
     .info {
-        width:rem(200,$text-bp-sm);
+        width:rem(410,$text-bp-sm);
         @include bp-medium {
              width:rem(200,$text-bp-md);
         }
@@ -220,83 +222,100 @@
     }
     
 }
-
-.schedule-date {
+.date-tickets {
     display: flex;
-    flex-direction:row nowrap;
-    align-items:center;
+    align-items:flex-start;
 
-    margin:rem(10,$text-bp-sm) 0; 
+    flex-direction:column;
+    flex-wrap:wrap;
+
     @include bp-medium {
-        margin:rem(10,$text-bp-md) 0;
+        align-items:center;
+        flex-direction:row;
+        flex-wrap:nowrap;
     }
+    .schedule-date {
+        display: flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+        align-items:center;
 
-    @include bp-large {
-        margin:rem(10,$text-bp-lg) 0;
-    }
-    .day-holder {
-        margin-right: rem(10,$text-bp-lg);
-        .day {
-            font-family: $nav-font;
-            color:#FFF;
-            background-color: #000;
+        margin:rem(10,$text-bp-sm) 0; 
+        @include bp-medium {
+            margin:rem(10,$text-bp-md) 0;
+        }
 
-            font-size:rem(36,$text-bp-sm);
-            padding:rem(20,$text-bp-sm) rem(10,$text-bp-sm); 
-            @include bp-medium {
-                font-size:rem(22,$text-bp-md);
-                padding:rem(20,$text-bp-md) rem(10,$text-bp-md);
-            }
+        @include bp-large {
+            margin:rem(10,$text-bp-lg) 0;
+        }
+        .day-holder {
+            margin-right: rem(10,$text-bp-lg);
+            .day {
+                font-family: $nav-font;
+                color:#FFF;
+                background-color: #000;
 
-            @include bp-large {
-                font-size:rem(28,$text-bp-lg);
-                padding:rem(20,$text-bp-lg) rem(10,$text-bp-lg);
-            }    
-        }   
-    }
-    .time-date {
-        .time {
-            font-family: $narrow-font;
-            font-weight: 700;
-            color:#3375e2;
-            font-size:rem(36,$text-bp-sm);
-             
+                font-size:rem(55,$text-bp-sm);
+                padding:rem(40,$text-bp-sm) rem(20,$text-bp-sm); 
+                @include bp-medium {
+                    font-size:rem(22,$text-bp-md);
+                    padding:rem(20,$text-bp-md) rem(10,$text-bp-md);
+                }
 
-            @include bp-medium {
-                font-size:rem(36,$text-bp-md);
-            }
-
-            @include bp-large {
-                font-size:rem(28,$text-bp-lg);
-                line-height:rem(33,$text-bp-lg);
+                @include bp-large {
+                    font-size:rem(28,$text-bp-lg);
+                    padding:rem(20,$text-bp-lg) rem(10,$text-bp-lg);
+                }    
             }   
         }
-        .date {
-            color:#000;
-            font-size:rem(36,$text-bp-sm);
-             
-            @include bp-medium {
-                font-size:rem(36,$text-bp-md);
+        .time-date {
+            .time {
+                font-family: $narrow-font;
+                font-weight: 700;
+                color:#3375e2;
+                font-size:rem(48,$text-bp-sm);
+                line-height:rem(65,$text-bp-sm);
+
+                @include bp-medium {
+                    font-size:rem(36,$text-bp-md);
+                    line-height:rem(41,$text-bp-md);
+                }
+
+                @include bp-large {
+                    font-size:rem(28,$text-bp-lg);
+                    line-height:rem(33,$text-bp-lg);
+                }   
+            }
+            .date {
+                color:#000;
+                font-size:rem(36,$text-bp-sm);
+                 
+                @include bp-medium {
+                    font-size:rem(36,$text-bp-md);
+                }
+
+                @include bp-large {
+                    font-size:rem(18,$text-bp-lg);
+                }    
             }
 
-            @include bp-large {
-                font-size:rem(18,$text-bp-lg);
-            }    
         }
-
-    }
+    }   
 }
+
 .tickets-btn {
     display: inline-block;
     font-family: $nav-font;
     color:#FFF;
     background-color: $color-red;
 
-    font-size:rem(36,$text-bp-sm);
-    padding:rem(10,$text-bp-sm); 
+    font-size:rem(48,$text-bp-sm);
+    padding:rem(15,$text-bp-sm); 
+    margin:rem(20,$text-bp-lg) 0;
     @include bp-medium {
         font-size:rem(22,$text-bp-md);
         padding:rem(10,$text-bp-md);
+        margin:0 rem(20,$text-bp-md);
     }
 
     @include bp-large {

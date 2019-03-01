@@ -38,8 +38,8 @@
         font-family: $headline-font;
         color:$color-blue;
         font-size:rem(50,$text-bp-sm);
-        line-height:rem(55,$text-bp-sm);
-        margin: rem(15,$text-bp-sm);
+        line-height:rem(53,$text-bp-sm);
+        margin: rem(30,$text-bp-sm);
          
         @include bp-medium {
             font-size:rem(28,$text-bp-md);
@@ -58,7 +58,7 @@
         font-size:rem(30,$text-bp-sm);
         font-weight: 700;
         line-height:rem(36,$text-bp-sm);
-        margin: rem(10,$text-bp-sm) rem(20,$text-bp-sm);
+        margin: rem(10,$text-bp-sm) rem(30,$text-bp-sm);
          
         @include bp-medium {
             font-size:rem(28,$text-bp-md);
@@ -73,7 +73,7 @@
         }    
     }
     >.content {
-        margin: rem(10,$text-bp-sm) rem(20,$text-bp-sm);
+        margin: rem(20,$text-bp-sm) rem(30,$text-bp-sm);
          
         @include bp-medium {
             margin: rem(10,$text-bp-md) rem(20,$text-bp-md);

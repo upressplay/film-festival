@@ -37,21 +37,23 @@
 			<div class="selections">
 				<?php 
 				$selections = get_field('selections');
-			    foreach( $selections as $selection ) : ?>
+				if($selections) :
+				    foreach( $selections as $selection ) : ?>
 
-			    	<?php 
-			    		$poster = get_field('poster', $selection->ID);
-			    	?>
-			    	<a href="<?php echo get_permalink($selection->ID);?>">
-						<div class="thumb-selection-sm">
-						
-							<div class="poster-thumb-sm"> 
-								<img src="<?php echo $poster['sizes']['tall']; ?>"/>
-							</div><!-- poster-thumb-sm -->
+				    	<?php 
+				    		$poster = get_field('poster', $selection->ID);
+				    	?>
+				    	<a href="<?php echo get_permalink($selection->ID);?>">
+							<div class="thumb-selection-sm">
+							
+								<div class="poster-thumb-sm"> 
+									<img src="<?php echo $poster['sizes']['tall']; ?>"/>
+								</div><!-- poster-thumb-sm -->
 
-						</div> <!-- thumb-selection-sm -->
-					</a>
-			    <?php endforeach; ?>
+							</div> <!-- thumb-selection-sm -->
+						</a>
+				    <?php endforeach; ?>
+				<?php endif; ?>
 			</div><!-- selections -->
 		</div><!-- info -->
 	</div> <!-- thumb-schedule -->

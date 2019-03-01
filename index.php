@@ -2,34 +2,36 @@
 	get_header(); 
 
 ?>
-	<div class="section-header">
-		<h2 class="title">
-			Schedule
-		</h2><!-- title -->
-		<a href="/schedule">
-			<div class="more-btn">
-				More
-			</div><!-- more-btn -->
-		</a>
-	</div><!-- section-header -->
-	<div class="schedule-thumbs">
-		<?php 
-			$date_now = date('Y-m-d H:i:s');
-			$args = array(
-			   'category_name'		=>'schedule',
-			    'posts_per_page'	=> 3,
-			    'order'				=> 'ASC',
-				'orderby'			=> 'meta_value',
-				'meta_key'			=> 'start_date',
-				'meta_type'			=> 'DATETIME'
-			);
-			$query = new WP_Query( $args );
-			while ( $query->have_posts() ) : $query->the_post(); 
-			    
-			    get_template_part( 'thumb-schedule' );	
+	<div class="desktop">
+		<div class="section-header">
+			<h2 class="title">
+				Schedule
+			</h2><!-- title -->
+			<a href="/schedule">
+				<div class="more-btn">
+					More
+				</div><!-- more-btn -->
+			</a>
+		</div><!-- section-header -->
+		<div class="schedule-thumbs">
+			<?php 
+				$date_now = date('Y-m-d H:i:s');
+				$args = array(
+				   'category_name'		=>'schedule',
+				    'posts_per_page'	=> 3,
+				    'order'				=> 'ASC',
+					'orderby'			=> 'meta_value',
+					'meta_key'			=> 'start_date',
+					'meta_type'			=> 'DATETIME'
+				);
+				$query = new WP_Query( $args );
+				while ( $query->have_posts() ) : $query->the_post(); 
+				    
+				    get_template_part( 'thumb-schedule' );	
 
 
-		 endwhile; ?>
+			 endwhile; ?>
+		</div>
 	</div>
 	<div class="banner">
 		<a href="https://bang-energy.com" target="_blank">

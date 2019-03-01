@@ -23,7 +23,7 @@
     	color:#FFF;
     	background-color: #000;
     	 
-    	transform: rotate(-3deg) translateY(rem(-20,$text-bp-sm));
+    	transform: rotate(-3deg) translateY(rem(5,$text-bp-sm));
 
     	padding:rem(15,$text-bp-sm);
         font-size: rem(44,$text-bp-sm);
@@ -86,7 +86,7 @@
 }
 
 .news-thumbs {
-    margin: rem(50,$text-bp-sm);
+    margin: rem(30,$text-bp-sm);
 
     @include bp-medium {
         margin: rem(50,$text-bp-md);
@@ -94,6 +94,9 @@
     @include bp-large {
         margin: rem(50,$text-bp-lg); 
     } 
+    a {
+        color: #000;
+    }
 }
 
 .banner {

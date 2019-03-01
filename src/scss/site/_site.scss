@@ -112,4 +112,16 @@ a:active {
     top: -9999px;
     left: -9999px;
 }
+.mobile {
+    @include bp-medium {
+        display: none;
+    }    
+}
+
+.desktop {
+    display: none;
+    @include bp-medium {
+        display: block;     
+    }    
+}
 

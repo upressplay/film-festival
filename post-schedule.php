@@ -64,23 +64,25 @@
 		<div class="selections">
 			<?php 
 			$selections = get_field('selections');
-		    foreach( $selections as $selection ) : ?>
+			if($selections) :
+			    foreach( $selections as $selection ) : ?>
 
-		    	<?php 
-		    		$poster = get_field('poster', $selection->ID);
-		    	?>
-		    	<a href="<?php echo get_permalink($selection->ID);?>">
-					<div class="thumb-selection">
-					
-						<div class="poster-thumb"> 
-							<img src="<?php echo $poster['sizes']['tall']; ?>"/>
-						</div><!-- poster-thumb-sm -->
-						<div class="title"> 
-							<?php echo get_the_title($selection->ID); ?>
-						</div><!-- poster-thumb-sm -->
-					</div> <!-- thumb-selection-sm -->
-				</a>
-		    <?php endforeach; ?>
+			    	<?php 
+			    		$poster = get_field('poster', $selection->ID);
+			    	?>
+			    	<a href="<?php echo get_permalink($selection->ID);?>">
+						<div class="thumb-selection">
+						
+							<div class="poster-thumb"> 
+								<img src="<?php echo $poster['sizes']['tall']; ?>"/>
+							</div><!-- poster-thumb-sm -->
+							<div class="title"> 
+								<?php echo get_the_title($selection->ID); ?>
+							</div><!-- poster-thumb-sm -->
+						</div> <!-- thumb-selection-sm -->
+					</a>
+			    <?php endforeach; ?>
+			<?php endif; ?>
 		</div><!-- selections -->
 	</div><!-- block-selections -->
 </div> <!-- schedule -->
