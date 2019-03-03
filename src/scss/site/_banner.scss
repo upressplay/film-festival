@@ -1,0 +1,111 @@
+.banner {
+    border: 1px solid #000;
+    margin: rem(20,$text-bp-sm) auto;
+    @include bp-medium {
+        margin: rem(20,$text-bp-md) auto;
+    }
+
+    @include bp-large {
+        margin: rem(20,$text-bp-lg) auto;
+    }
+    &.size250x250 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size200x200 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size468x60 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size728x90 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size300x250 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size336x280 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size120x600 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size160x600 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size300x600 {
+        width: rem(728,$text-bp-sm);
+        @include bp-medium {
+            width: rem(728,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+    &.size980x120 {
+        width: rem(730,$text-bp-sm);
+        @include bp-medium {
+            width: rem(980,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(980,$text-bp-lg);
+        }   
+    }
+}

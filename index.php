@@ -33,11 +33,10 @@
 			 endwhile; ?>
 		</div>
 	</div>
-	<div class="banner">
-		<a href="https://bang-energy.com" target="_blank">
-			<img src="http://new.kapowiff.com/wp-content/uploads/2019/02/bang_720x90.jpg"/>
-		</a>
-	</div>
+	<?php 
+		$page_placement = 'Home Page Top Banner';
+		include( locate_template( 'banner.php', false, false ) ); 
+	?>
 	<div class="section-header gray">
 		<h2 class="title">
 			News
@@ -87,9 +86,8 @@
 			endwhile;
 		?>
 	</div>
-	<div class="banner">
-		<a href="https://bang-energy.com" target="_blank">
-			<img src="http://new.kapowiff.com/wp-content/uploads/2019/02/bang_720x90.jpg"/>
-		</a>
-	</div>
+	<?php 
+		$page_placement = 'Home Page Bottom Banner';
+		include( locate_template( 'banner.php', false, false ) ); 
+	?>
 <?php get_footer(); ?>

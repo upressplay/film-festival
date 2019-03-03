@@ -405,6 +405,96 @@ nav {
     .banner {
       margin: 2rem; } }
 
+.banner {
+  border: 1px solid #000;
+  margin: 2rem auto; }
+  @media only screen and (min-width: 751px) {
+    .banner {
+      margin: 2rem auto; } }
+  @media only screen and (min-width: 1271px) {
+    .banner {
+      margin: 2rem auto; } }
+  .banner.size250x250 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size250x250 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size250x250 {
+        width: 98rem; } }
+  .banner.size200x200 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size200x200 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size200x200 {
+        width: 98rem; } }
+  .banner.size468x60 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size468x60 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size468x60 {
+        width: 98rem; } }
+  .banner.size728x90 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size728x90 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size728x90 {
+        width: 98rem; } }
+  .banner.size300x250 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size300x250 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size300x250 {
+        width: 98rem; } }
+  .banner.size336x280 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size336x280 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size336x280 {
+        width: 98rem; } }
+  .banner.size120x600 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size120x600 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size120x600 {
+        width: 98rem; } }
+  .banner.size160x600 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size160x600 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size160x600 {
+        width: 98rem; } }
+  .banner.size300x600 {
+    width: 72.8rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size300x600 {
+        width: 72.8rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size300x600 {
+        width: 98rem; } }
+  .banner.size980x120 {
+    width: 73rem; }
+    @media only screen and (min-width: 751px) {
+      .banner.size980x120 {
+        width: 98rem; } }
+    @media only screen and (min-width: 1271px) {
+      .banner.size980x120 {
+        width: 98rem; } }
+
 .thumb-holder {
   display: flex;
   flex-direction: row;
@@ -534,16 +624,6 @@ nav {
       margin: 2rem; } }
   @media only screen and (min-width: 1271px) {
     .single header {
-      margin: 2rem; } }
-
-.single .banner {
-  border: 1px solid #000;
-  margin: 2rem; }
-  @media only screen and (min-width: 751px) {
-    .single .banner {
-      margin: 2rem; } }
-  @media only screen and (min-width: 1271px) {
-    .single .banner {
       margin: 2rem; } }
 
 .single .info {

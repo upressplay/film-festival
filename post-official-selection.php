@@ -12,12 +12,10 @@
 		<?php the_post_thumbnail('header'); ?>
 	</header> 
 	<?php endif; ?>
-
-	<div class="banner">
-		<a href="https://bang-energy.com" target="_blank">
-			<img src="http://new.kapowiff.com/wp-content/uploads/2019/02/bang_720x90.jpg"/>
-		</a>
-	</div>
+	<?php 
+		$page_placement = 'Official Selection Top Banner';
+		include( locate_template( 'banner.php', false, false ) ); 
+	?>
 	<div class="info">
 		<div class="poster-social">
 			<div class="poster-thumb" data-hires="<?php echo $poster['url']; ?>"> 
@@ -157,6 +155,10 @@
 		</div><!-- title -->
 	</div><!-- section-header -->
 	<?php endif; ?>
+	<?php 
+		$page_placement = 'Official Selection Top Banner';
+		include( locate_template( 'banner.php', false, false ) ); 
+	?>
 </div><!-- selection -->
 
 

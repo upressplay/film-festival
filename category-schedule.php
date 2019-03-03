@@ -10,6 +10,10 @@
 		<?php echo $catName; ?>
 	</h1>
 </div><!-- section-header -->
+<?php 
+	$page_placement = 'Official Selection Top Banner';
+	include( locate_template( 'banner.php', false, false ) ); 
+?>
 <div class="thumb-holder">
 <?php 
 			$date_now = date('Y-m-d H:i:s');
@@ -31,7 +35,10 @@
 		 endwhile; ?>
 
 </div><!-- thumb-holder -->
- 
+<?php 
+	$page_placement = 'Official Selection Top Banner';
+	include( locate_template( 'banner.php', false, false ) ); 
+?>
 <?php if (function_exists("pagination")) {
 		pagination($query->max_num_pages);
 	} 
