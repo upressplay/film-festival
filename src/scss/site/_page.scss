@@ -89,3 +89,17 @@
     
 } 
 
+.ff-btn img {
+    margin: rem(50,$text-bp-sm) auto;
+    width: rem(200,$text-bp-sm);
+         
+    @include bp-medium {
+        margin: rem(50,$text-bp-md) auto;
+        width: rem(200,$text-bp-md);
+    }
+
+    @include bp-large {
+        margin: rem(50,$text-bp-lg) auto;
+        width: rem(200,$text-bp-lg);
+    }    
+}

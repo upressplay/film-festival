@@ -24,7 +24,7 @@
 			<div class="title"> 
 				<?php echo get_the_title($post->ID);?>
 			</div> 
-
+			<div class="date-tickets">
 			<div class="schedule-date">
 				<div class="day-holder">
 					<div class="day"><?php echo $weekday; ?></div>
@@ -34,6 +34,7 @@
 					<div class="date"><?php echo $month; ?> <?php echo $day; ?> </div>
 				</div><!-- date-time -->
 			</div><!-- schedule-date -->
+			</div><!-- date-tickets -->
 			<div class="selections">
 				<?php 
 				$selections = get_field('selections');
