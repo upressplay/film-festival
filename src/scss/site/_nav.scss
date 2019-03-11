@@ -5,7 +5,7 @@ nav {
 
     width:rem(750,$text-bp-sm);
     @include bp-medium {
-        width:rem(350,$text-bp-md);
+        width:rem(300,$text-bp-md);
     }
 
     @include bp-large {
@@ -20,8 +20,8 @@ nav {
 
 
     @include bp-medium {
-        width:rem(300,$text-bp-md);
-        height:rem(280,$text-bp-md);
+        width:rem(250,$text-bp-md);
+        height:rem(230,$text-bp-md);
         margin: 0 rem(25,$text-bp-md);
     }
 

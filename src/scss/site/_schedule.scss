@@ -74,8 +74,10 @@
             flex-wrap: nowrap;
             .poster-thumb {
                 width:rem(200,$text-bp-sm);
+                margin-right: rem(20,$text-bp-sm);
                 @include bp-medium {
-                     width:rem(200,$text-bp-md);
+                     width:rem(150,$text-bp-md);
+                     margin-right: rem(20,$text-bp-md);
                 }
 
                 @include bp-large {
@@ -84,9 +86,9 @@
                 }    
             }
             .block-host{
-                width:rem(200,$text-bp-sm);
+                width:rem(400,$text-bp-sm);
                 @include bp-medium {
-                     width:rem(200,$text-bp-md);
+                     width:rem(560,$text-bp-md);
                 }
 
                 @include bp-large {
@@ -100,11 +102,13 @@
                     font-size:rem(30,$text-bp-sm);
                     line-height:rem(36,$text-bp-sm);
                     padding: rem(10,$text-bp-sm) rem(10,$text-bp-sm);
+                    margin-bottom: rem(10,$text-bp-sm);
                      
                     @include bp-medium {
                         font-size:rem(30,$text-bp-md);
                         line-height:rem(34,$text-bp-md);
                         padding: rem(10,$text-bp-md) rem(10,$text-bp-md);
+                        margin-bottom: rem(10,$text-bp-md);
                     }
 
                     @include bp-large {
@@ -166,7 +170,7 @@
     margin:rem(15,$text-bp-sm) rem(5,$text-bp-sm);
 
     @include bp-medium {
-        margin:rem(15,$text-bp-md) rem(5,$text-bp-md);
+        margin:rem(5,$text-bp-md) rem(5,$text-bp-md);
     }
     @include bp-large {
         margin:rem(5,$text-bp-lg) rem(5,$text-bp-lg);
@@ -175,8 +179,8 @@
         width:rem(250,$text-bp-sm);
         margin-right: rem(20,$text-bp-sm);
         @include bp-medium {
-             width:rem(200,$text-bp-md);
-             margin-right: rem(20,$text-bp-md);
+             width:rem(100,$text-bp-md);
+             margin-right: rem(10,$text-bp-md);
         }
 
         @include bp-large {
@@ -187,7 +191,7 @@
     .info {
         width:rem(410,$text-bp-sm);
         @include bp-medium {
-             width:rem(200,$text-bp-md);
+             width:rem(175,$text-bp-md);
         }
 
         @include bp-large {
@@ -205,7 +209,7 @@
             
             @include bp-medium {
                 font-size:rem(18,$text-bp-md);
-                line-height:rem(30,$text-bp-md);
+                line-height:rem(21,$text-bp-md);
             }
             @include bp-large {
                 font-size:rem(18,$text-bp-lg);
@@ -277,8 +281,8 @@
                 line-height:rem(65,$text-bp-sm);
 
                 @include bp-medium {
-                    font-size:rem(36,$text-bp-md);
-                    line-height:rem(41,$text-bp-md);
+                    font-size:rem(24,$text-bp-md);
+                    line-height:rem(28,$text-bp-md);
                 }
 
                 @include bp-large {
@@ -291,7 +295,7 @@
                 font-size:rem(36,$text-bp-sm);
                  
                 @include bp-medium {
-                    font-size:rem(36,$text-bp-md);
+                    font-size:rem(18,$text-bp-md);
                 }
 
                 @include bp-large {

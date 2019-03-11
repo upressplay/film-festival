@@ -17,12 +17,12 @@ html {
     width:100vw;
     height:100vh;
 
-    font-size:rem(28,$text-bp-lg);
-    line-height: rem(36,$text-bp-lg);
+    font-size:rem(28,$text-bp-sm);
+    line-height: rem(36,$text-bp-sm);
 
     @include bp-medium {
-        font-size:rem(18,$text-bp-lg);
-        line-height: rem(21,$text-bp-lg);
+        font-size:rem(18,$text-bp-md);
+        line-height: rem(24,$text-bp-md);
     }
 
 
@@ -58,7 +58,7 @@ html {
 
     width:rem(750,$text-bp-sm);
     @include bp-medium {
-        width:rem(920,$text-bp-md);
+        width:rem(970,$text-bp-md);
     }
 
     @include bp-large {

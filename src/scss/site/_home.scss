@@ -78,7 +78,7 @@
 	margin: rem(20,$text-bp-sm);
 
     @include bp-medium {
-        margin: rem(20,$text-bp-md);
+        margin: rem(15,$text-bp-md);
     }
     @include bp-large {
         margin: rem(20,$text-bp-lg); 
