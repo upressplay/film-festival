@@ -15,10 +15,11 @@
 	function init() {
 		
 		render();
+
 	}
 
 	function render() {
-		trace.log(id+" render");
+		trace.log(id+" render!");
 		dom.videos = $( ".videos" );
 		dom.videos.each(function( index ) {
 			var entry = $(this);
@@ -118,14 +119,16 @@
 		}
 
 		var post = $('#'+id);
+		trace.log('post = '+post.attr('data-id'));
 		nextPost = post;
 		var cat = post.attr('data-cat');
 
 		var img = $('#'+id).attr('data-hires');
+		trace.log('img = '+img);
 		var imgW = $('#'+id).attr('data-hires-w');
 		var imgH = $('#'+id).attr('data-hires-h');
 		var imgRatio = imgW/imgH;
-		trace.log('imgRatio = '+imgRatio);
+		trace.log('imgW = '+imgW);
 
 		var vidid = post.attr('data-vidid');
 		var playlist = post.attr('data-playlist');
