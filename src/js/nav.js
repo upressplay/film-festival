@@ -23,7 +23,8 @@
         dom.menuBtn = $("#menu-btn");
         dom.scheduleBtn = $("#schedule-btn");
         dom.photoBtn = $("#photo-btn");  
-        dom.navBtns = $("#nav-btns");    
+        dom.navBtns = $("#nav-btns"); 
+        dom.scheduleMenu = $("#schedule-menu");    
 
         dom.menuBtn.click(function(event) {
             openMenu();
@@ -42,6 +43,14 @@
         trace.push('openMenu');
 
          dom.navBtns.toggleClass('active');
+        
+
+    }
+
+    function openSchedule() {
+        trace.push('openSchedule');
+
+         dom.scheduleMenu.toggleClass('active');
         
 
     }

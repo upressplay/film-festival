@@ -209,3 +209,44 @@
         
     }
 }
+
+.winner {
+    text-align: center;
+    font-family: $narrow-font;
+    background-color: #d39500;
+    color:#000;
+    text-transform: uppercase;
+
+    .title {
+        text-align: center;
+        font-weight: 700;
+        font-size:rem(30,$text-bp-sm);
+        line-height:rem(36,$text-bp-sm);        
+        @include bp-medium {
+            font-size:rem(18,$text-bp-md);
+            line-height:rem(30,$text-bp-md);
+        }
+        @include bp-large {
+            font-size:rem(24,$text-bp-lg);
+            line-height:rem(30,$text-bp-lg);
+            
+        }      
+    }
+    .desc {
+        text-align: center;
+        font-weight: 300;
+        font-size:rem(30,$text-bp-sm);
+        line-height:rem(36,$text-bp-sm);
+        
+        @include bp-medium {
+            font-size:rem(16,$text-bp-md);
+            line-height:rem(18,$text-bp-md);
+        }
+        @include bp-large {
+            font-size:rem(18,$text-bp-lg);
+            line-height:rem(21,$text-bp-lg);
+            
+        }  
+    }
+    
+}

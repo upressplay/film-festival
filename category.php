@@ -26,6 +26,8 @@
 		get_template_part( 'thumb-news' );
 	} elseif ($catSlug == "photos") {
 		get_template_part( 'thumb-photos' );
+	} elseif ($catSlug == "winners") {
+		get_template_part( 'thumb-winners' );
 	} else {
 		get_template_part( 'thumb' );
 	} ?>

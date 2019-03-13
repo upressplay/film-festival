@@ -161,6 +161,40 @@
 
 }
 
+.schedule-thumbs {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: flex-start;  
+    margin: rem(20,$text-bp-sm);
+
+    @include bp-medium {
+        margin: rem(15,$text-bp-md);
+    }
+    @include bp-large {
+        margin: rem(20,$text-bp-lg); 
+    } 
+    &.menu {
+        background-color: #fff;
+        margin:0;
+        .thumb-schedule {
+            .poster-thumb {
+                width:rem(250,$text-bp-sm);
+                margin-right: rem(20,$text-bp-sm);
+                @include bp-medium {
+                     width:rem(100,$text-bp-md);
+                     margin-right: rem(10,$text-bp-md);
+                }
+
+                @include bp-large {
+                    width:rem(120,$text-bp-lg);
+                    margin-right: rem(10,$text-bp-lg);
+                }    
+            }
+        }
+    }
+}
+
 .thumb-schedule {
     display: flex;
     flex-direction: row;
@@ -170,11 +204,12 @@
     margin:rem(15,$text-bp-sm) rem(5,$text-bp-sm);
 
     @include bp-medium {
-        margin:rem(5,$text-bp-md) rem(5,$text-bp-md);
+        margin:rem(5,$text-bp-md) rem(5,$text-bp-md) rem(10,$text-bp-md) rem(5,$text-bp-md);
     }
     @include bp-large {
-        margin:rem(5,$text-bp-lg) rem(5,$text-bp-lg);
+        margin:rem(5,$text-bp-lg) rem(5,$text-bp-lg) rem(10,$text-bp-lg) rem(5,$text-bp-lg);
     }
+    
     .poster-thumb {
         width:rem(250,$text-bp-sm);
         margin-right: rem(20,$text-bp-sm);
@@ -185,9 +220,11 @@
 
         @include bp-large {
             width:rem(150,$text-bp-lg);
-            margin-right: rem(20,$text-bp-lg);
+            margin-right: rem(10,$text-bp-lg);
         }    
     }
+
+    
     .info {
         width:rem(410,$text-bp-sm);
         @include bp-medium {
