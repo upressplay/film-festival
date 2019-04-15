@@ -10,7 +10,7 @@
 	cursor: pointer;
 	width:rem(150,$text-bp-sm);
     @include bp-medium {
-        width:rem(125,$text-bp-md);
+        width:rem(97,$text-bp-md);
     }
 
     @include bp-large {

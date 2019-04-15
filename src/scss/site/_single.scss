@@ -11,7 +11,7 @@
         }  
     } 
     
-    .info {
+    > .info {
         display: flex;
         flex-direction:row nowrap;
         margin: rem(20,$text-bp-sm);

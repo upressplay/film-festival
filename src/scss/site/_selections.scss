@@ -158,8 +158,8 @@
         font-weight: 700;
         color:#000;
         text-transform: uppercase;
-        font-size:rem(30,$text-bp-sm);
-        line-height:rem(36,$text-bp-sm);
+        font-size:rem(40,$text-bp-sm);
+        line-height:rem(44,$text-bp-sm);
         
         
         @include bp-medium {
@@ -176,7 +176,7 @@
 }
 
 .thumb-selection-sm {
-    width:rem(225,$text-bp-sm);
+    width:rem(110,$text-bp-sm);
 
     @include bp-medium {
         width:rem(35,$text-bp-md);

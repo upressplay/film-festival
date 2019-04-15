@@ -142,7 +142,7 @@
 	</div><!-- section-header -->
 	<div class="photo-gallery">
 		<?php foreach($photos as $photo) : ?>
-		<div class="thumb-photos" data-hires="<?php echo $photo['image']['url']; ?>">
+		<div class="thumb-photos photos" data-hires="<?php echo $photo['image']['url']; ?>">
 			<img src="<?php echo $photo['image']['sizes']['thumbnail']; ?>"/>
 		</div>
 		 <?php endforeach; ?>

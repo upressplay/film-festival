@@ -8,11 +8,16 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.1/TweenMax.min.js"></script>
 
 		<script src="<?php echo get_template_directory_uri(); ?>/js/main.min.js"></script>
+		<?php 
+			global $segments;
+			$segments = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/')); 
+		?>
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 	
 	<div id="site">
+		<?php include 'overlay.php'; ?>
 		<div id="site-holder">
 			<nav>
 				<a href="/">
@@ -75,6 +80,11 @@
 
 					 endwhile; 
 					 wp_reset_postdata();?>
+					<a href="/schedule">
+					 	<div class="blue-btn">
+					 		MORE <i class="fas fa-caret-square-right"></i>
+					 	</div>
+					</a>
 
 				</div>
 				

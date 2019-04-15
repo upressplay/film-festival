@@ -99,7 +99,7 @@ nav {
 
 .nav-btn {
     text-align: center;
-    font-family: 'Hitchcock', san-serif;
+    font-family: $nav-font;
     text-transform: uppercase;
     color: #fff;
     background-color: #000;
@@ -124,6 +124,28 @@ nav {
     color: #000;
     background-color: #fff;
     text-decoration: none;
+}
+
+.blue-btn {
+    font-family: $nav-font;
+    background-color: $color-blue;
+    vertical-align: center;
+    color: #fff;
+    margin: rem(20,$text-bp-sm);
+    font-size: rem(60,$text-bp-sm);
+    padding: rem(20,$text-bp-sm);
+
+     @include bp-medium {
+        margin: rem(20,$text-bp-sm);
+        font-size: rem(28,$text-bp-md);
+        padding: rem(15,$text-bp-md);
+      }
+
+    @include bp-large {
+        margin: rem(10,$text-bp-sm);
+        font-size: rem(28,$text-bp-lg);
+        padding: rem(10,$text-bp-lg) rem(15,$text-bp-lg);
+    }    
 }
 
 

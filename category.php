@@ -7,7 +7,7 @@
 
 <div class="section-header">
 	<h1 class="title">
-		<?php echo $catName; ?>
+		<?php echo $catName;?>
 	</h1>
 </div><!-- section-header -->
 <?php 
@@ -16,7 +16,7 @@
 ?>
 <div class="thumb-holder">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php if ($catSlug == "official-selection") {
+<?php if ($catSlug == "official-selection" || $segments[0] == "official-selection") {
 		get_template_part( 'thumb-official-selection' );	
 	} elseif ($catSlug == "your-hosts") {
 		get_template_part( 'thumb-host' );
