@@ -15,7 +15,7 @@
 				}
 			}
 		?>
-		<?php if ( has_post_thumbnail() && $size == "size980x120" && $right_placement) : ?>
+		<?php if ( has_post_thumbnail() && $right_placement) : ?>
 			
 		<a href="<?php echo $url; ?>" target="_blank">
 			<div class="banner <?php echo $size; ?>">

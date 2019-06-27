@@ -53,13 +53,18 @@
 						    $title = $menu_item->title;
 						    $url = $menu_item->url;
 						    $attr_title = $menu_item->attr_title;
+						    $target = $menu_item->target;
 						    $btn_class = "nav-btn";
 						    //if($attr_title == $segments[0]) $btn_class = "activeBtn";
-						    echo '<a href="' . $url . '"><div class="' . $btn_class . '">' . $title . '</div></a>';
+						    echo '<a href="' . $url . '" target="' . $target . '"><div class="' . $btn_class . '">' . $title . '</div></a>';
 						}
 					?>
 					
 				</div>
+				<?php 
+					$page_placement = 'Nav Top Banner';
+					include( locate_template( 'banner.php', false, false ) ); 
+				?>
 				<div id="schedule-btn">SCHEDULE <i class="far fa-caret-square-down"></i></div>
 				<div id="schedule-menu" class="schedule-thumbs menu">
 					<?php 
@@ -87,7 +92,10 @@
 					</a>
 
 				</div>
-				
+				<?php 
+					$page_placement = 'Nav Bottom Banner';
+					include( locate_template( 'banner.php', false, false ) ); 
+				?>
 				
 			</nav>
 			<div id="site-content">

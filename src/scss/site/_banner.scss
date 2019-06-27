@@ -1,13 +1,6 @@
 .banner {
     border: 1px solid #000;
-    margin: rem(20,$text-bp-sm) auto;
-    @include bp-medium {
-        margin: rem(20,$text-bp-md) auto;
-    }
 
-    @include bp-large {
-        margin: rem(20,$text-bp-lg) auto;
-    }
     &.size250x250 {
         width: rem(728,$text-bp-sm);
         @include bp-medium {
@@ -98,14 +91,27 @@
             width: rem(980,$text-bp-lg);
         }   
     }
+    &.size750x2000 {
+        width: rem(750,$text-bp-sm);
+        @include bp-medium {
+            width: rem(300,$text-bp-md);
+        }
+
+        @include bp-large {
+            width: rem(350,$text-bp-lg);
+        }   
+    }
     &.size980x120 {
         width: rem(730,$text-bp-sm);
+        margin: rem(20,$text-bp-sm) auto;
         @include bp-medium {
             width: rem(980,$text-bp-md);
+            margin: rem(20,$text-bp-md) auto;
         }
 
         @include bp-large {
             width: rem(980,$text-bp-lg);
+            margin: rem(20,$text-bp-lg) auto;
         }   
     }
 }

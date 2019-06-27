@@ -1,4 +1,4 @@
-;(function(site, undefined){
+(function(site){
 	"use strict";
 
 
@@ -9,17 +9,11 @@
 
 	function init() {
 		render();
-    }
+	}
 
-    function render() {
-    	trace.push('render');
-
-    	breakPoint = utils.getBreakPoint();
-    	
-    	if(breakPoint != "bp-small") {  
-
-        }
-    }
+	function render() {
+		trace.push('render');
+	}
 
 	trace.push('yo');
 
