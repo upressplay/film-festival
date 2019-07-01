@@ -1,0 +1,44 @@
+.thumb-hosts {
+    display: flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    
+    .thumb-img {
+        width:rem(200,$text-bp-sm);
+        margin:rem(15,$text-bp-sm) rem(5,$text-bp-sm);
+
+        @include bp-medium {
+            width:rem(150,$text-bp-md);
+            margin:rem(15,$text-bp-md) rem(5,$text-bp-md);
+        }
+        @include bp-large {
+            width:rem(150,$text-bp-lg);
+            margin:rem(15,$text-bp-lg) rem(5,$text-bp-lg);
+        }    
+    }
+    
+    .info {
+        .title {
+            text-align: left;
+            font-family: $narrow-font;
+            font-weight: 700;
+            color:#000;
+            text-transform: uppercase;
+            font-size:rem(40,$text-bp-sm);
+            line-height:rem(44,$text-bp-sm);
+            
+            
+            @include bp-medium {
+                font-size:rem(18,$text-bp-md);
+                line-height:rem(30,$text-bp-md);
+            }
+            @include bp-large {
+                font-size:rem(21,$text-bp-lg);
+                line-height:rem(24,$text-bp-lg);
+                
+            }
+            
+        }     
+    }
+    
+}
