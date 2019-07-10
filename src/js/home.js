@@ -1,11 +1,5 @@
-;(function(obj, undefined){
+(function(site){
 	"use strict";
-
-	var id = "home",
-	data = [],
-	dom = {},
-	trace = site.utilities.trace,
-	utils = site.utils;
 
 	function init() {
 		

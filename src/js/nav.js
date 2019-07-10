@@ -1,59 +1,49 @@
-;(function(obj, undefined){
+(function(site){
 	"use strict";
 
 	var id = "nav",
-	color = "dark",
 	trace = site.utilities.trace,
-    utils = site.utils,
-    menuOpen = false,
-    dom = {},
-    navCollapsed = false,
-    breakPoint = "";
+	utils = site.utils,
+	dom = {};
 
 	function init() {
 
-        render();    
-    }
+		render();    
+	}
 
-    function render() {
+	function render() {
 
-    	
-        trace.log(id+" render utils.getBreakPoint = "+utils.getBreakPoint());
+		
+		trace.log(id+" render utils.getBreakPoint = "+utils.getBreakPoint());
 
-        dom.menuBtn = $("#menu-btn");
-        dom.scheduleBtn = $("#schedule-btn");
-        dom.photoBtn = $("#photo-btn");  
-        dom.navBtns = $("#nav-btns"); 
-        dom.scheduleMenu = $("#schedule-menu");    
+		dom.menuBtn = $("#menu-btn");
+		dom.scheduleBtn = $("#schedule-btn");
+		dom.photoBtn = $("#photo-btn");  
+		dom.navBtns = $("#nav-btns"); 
+		dom.scheduleMenu = $("#schedule-menu");    
 
-        dom.menuBtn.click(function(event) {
-            openMenu();
-        });
+		dom.menuBtn.click(function() {
+			openMenu();
+		});
 
-        dom.scheduleBtn.click(function(event) {
-            openSchedule();
-        });
+		dom.scheduleBtn.click(function() {
+			openSchedule();
+		});
 
-    }
+	}
 
-    /*
-        openMenu opens and closes the mobile nav
-     */
-    function openMenu() {
-        trace.push('openMenu');
+	/*
+		openMenu opens and closes the mobile nav
+	 */
+	function openMenu() {
+		trace.push('openMenu');
+		dom.navBtns.toggleClass('active');
+	}
 
-         dom.navBtns.toggleClass('active');
-        
-
-    }
-
-    function openSchedule() {
-        trace.push('openSchedule');
-
-         dom.scheduleMenu.toggleClass('active');
-        
-
-    }
+	function openSchedule() {
+		trace.push('openSchedule');
+		dom.scheduleMenu.toggleClass('active');
+	}
 
 	site.nav = {
 	};

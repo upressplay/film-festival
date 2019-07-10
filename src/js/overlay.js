@@ -1,18 +1,14 @@
-;(function(obj, undefined){
+(function(site){
 	"use strict";
 
 	var id = "overlay",
-	data = [],
 	dom = {},
 	trace = site.utilities.trace,
-	utils = site.utils,
 	current = 0,
 	next = 0,
-	nextContent = {},
 	currentContent = {},
 	videos = {},
-	photos = [],
-	overlayOpen = false;
+	photos = [];
 
 	function init() {
 
@@ -32,7 +28,7 @@
 			
 			var btn = $(this);
 			btn.attr('data-id',index);
-			btn.click(function(event) {
+			btn.click(function() {
 				event.preventDefault();
                 openOverlay(index,videos);
             });
@@ -46,16 +42,18 @@
 
 			var btn = $(this);
 			btn.attr('data-id',index);
-			btn.click(function(event) {
+
+			btn.click(function() {
 				event.preventDefault();
                 openOverlay(index,photos);
             });
+
 			photos.content.push(btn);
 		});
 
 		dom.overlay = $('.overlay');
 		dom.closeBtn = dom.overlay.find('.close-btn');
-		dom.closeBtn.click(function(event) {
+		dom.closeBtn.click(function() {
             closeOverlay();
         });
 
@@ -65,17 +63,17 @@
         dom.left = dom.overlay.find('.left');
         dom.right = dom.overlay.find('.right');
 
-        dom.left.click(function(event) {
+        dom.left.click(function() {
             nextOverlay('left');
         });
-        dom.right.click(function(event) {
+        dom.right.click(function() {
             nextOverlay('right');
         });
 
-		dom.overlay.on('swipeleft', function(e){
+		dom.overlay.on('swipeleft', function(){
 			trace.log('left');
 			nextOverlay('left');
-		}).on('swiperight', function(e){
+		}).on('swiperight', function(){
 			trace.log('right');
 			nextOverlay('right');
 		});
@@ -103,7 +101,6 @@
 
 	function openOverlay(id,type) {
 		trace.log('openOverlay id '+id);
-		overlayOpen = true;
 
 		currentContent = type;
 		
@@ -112,7 +109,6 @@
 	}
 
 	function closeOverlay() {
-		overlayOpen = false;
 		trace.log('closeOverlay');
 		dom.overlay.removeClass('active');
 		dom.content.html('');
@@ -159,12 +155,6 @@
 		trace.log("closeContent "); 
 		dom.content.removeClass('active');
 		openContent(id);
-	}
-
-	function hidePost() {
-		trace.log("hidePost"); 
-
-
 	}
 
 

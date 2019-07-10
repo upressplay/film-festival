@@ -3,9 +3,7 @@
 
 
 	// Cache Modules
-	var trace = site.utilities.trace,
-	utils = site.utils,
-	breakPoint = "";
+	var trace = site.utilities.trace;
 
 	function init() {
 		render();
