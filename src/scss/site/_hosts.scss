@@ -1,11 +1,12 @@
 .thumb-hosts {
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     flex-wrap:nowrap;
 
     margin:0 rem(50,$text-bp-sm) rem(50,$text-bp-sm) rem(50,$text-bp-sm);
 
     @include bp-medium {
+        flex-direction:row;
         margin:0 0 0 rem(50,$text-bp-md);
     }
     @include bp-large {
@@ -15,7 +16,7 @@
     >.thumb-img {
         flex-basis:auto;
         width:rem(650,$text-bp-sm);
-        margin:0 rem(50,$text-bp-sm) rem(50,$text-bp-sm) rem(50,$text-bp-sm);
+        margin:0 0 rem(50,$text-bp-sm) 0;
 
         @include bp-medium {
             width:rem(300,$text-bp-md);
@@ -28,7 +29,7 @@
     }
     
     >.info {
-        width:rem(200,$text-bp-sm);
+        width:rem(650,$text-bp-sm);
 
         @include bp-medium {
             width:rem(150,$text-bp-md);

@@ -10,8 +10,8 @@ $screen-bp-lg	: 1600px;	// content shouldn't get above this width
 
 /* Breakpoint Font Root Sizes */
 $text-bp-min	: 16px;		// fonts stay this size and will not scale under screen-bp-min
-$text-bp-sm		: 10px;		// fonts will scale up relative to screen-bp-sm
-$text-bp-md		: 10px;		// fonts will scale up relative to screen-bp-md
+$text-bp-sm		: 16px;		// fonts will scale up relative to screen-bp-sm
+$text-bp-md		: 12px;		// fonts will scale up relative to screen-bp-md
 $text-bp-lg		: 10px;		// fonts will scale up relative to screen-bp-lg then stay there
 
 /* Colors */

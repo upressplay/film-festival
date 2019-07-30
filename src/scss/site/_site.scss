@@ -18,7 +18,7 @@ html {
     height:100vh;
 
     font-size:rem(28,$text-bp-sm);
-    line-height: rem(36,$text-bp-sm);
+    line-height: rem(44,$text-bp-sm);
 
     @include bp-medium {
         font-size:rem(18,$text-bp-md);
@@ -77,10 +77,10 @@ h1, h2, h3 {
 }
 
 p {
-    margin:rem(10,$text-bp-sm) 0;
+    margin:rem(40,$text-bp-sm) 0;
 
     @include bp-medium {
-        margin:rem(10,$text-bp-md) 0;
+        margin:rem(20,$text-bp-md) 0;
     }
 
     @include bp-large {
