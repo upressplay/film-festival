@@ -116,4 +116,15 @@
             margin: rem(20,$text-bp-lg) auto;
         }   
     }
+    &.size1250x120 {
+        width: rem(750,$text-bp-sm);
+        @include bp-medium {
+            width: rem(970,$text-bp-md);
+        }
+
+        @include bp-large {
+            margin: rem(20,$text-bp-lg) auto;
+            width: rem(1210,$text-bp-lg);
+        }   
+    }
 }

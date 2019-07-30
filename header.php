@@ -68,14 +68,20 @@
 				<div id="schedule-btn">SCHEDULE <i class="far fa-caret-square-down"></i></div>
 				<div id="schedule-menu" class="schedule-thumbs menu">
 					<?php 
-						$date_now = date('Y-m-d H:i:s');
+						$today = date('Y-m-d H:i:s');
 						$args = array(
-						   'category_name'		=>'schedule',
+						   	'category_name'		=>'schedule',
 						    'posts_per_page'	=> 3,
-						    'order'				=> 'ASC',
-							'orderby'			=> 'meta_value',
-							'meta_key'			=> 'start_date',
-							'meta_type'			=> 'DATETIME'
+						    'meta_key' 			=> 'start_date',
+							'orderby' 			=> 'meta_value',
+							'order' 			=> 'ASC',
+							'meta_query' 		=> array(
+			                    array(
+			                        'key' 		=> 'start_date',
+			                        'value' 	=> $today,
+			                        'compare' 	=> '>'
+			                    ),
+			                ),  
 						);
 						$query = new WP_Query( $args );
 						while ( $query->have_posts() ) : $query->the_post(); 

@@ -2,23 +2,41 @@
     display: flex;
     flex-direction:row;
     flex-wrap:nowrap;
+
+    margin:0 rem(50,$text-bp-sm) rem(50,$text-bp-sm) rem(50,$text-bp-sm);
+
+    @include bp-medium {
+        margin:0 0 0 rem(50,$text-bp-md);
+    }
+    @include bp-large {
+        margin:0 rem(50,$text-bp-lg) rem(50,$text-bp-lg) rem(50,$text-bp-lg);
+    } 
     
-    .thumb-img {
-        width:rem(200,$text-bp-sm);
-        margin:rem(15,$text-bp-sm) rem(5,$text-bp-sm);
+    >.thumb-img {
+        flex-basis:auto;
+        width:rem(650,$text-bp-sm);
+        margin:0 rem(50,$text-bp-sm) rem(50,$text-bp-sm) rem(50,$text-bp-sm);
 
         @include bp-medium {
-            width:rem(150,$text-bp-md);
-            margin:rem(15,$text-bp-md) rem(5,$text-bp-md);
+            width:rem(300,$text-bp-md);
+            margin:0 0 0 rem(50,$text-bp-md);
         }
         @include bp-large {
-            width:rem(150,$text-bp-lg);
-            margin:rem(15,$text-bp-lg) rem(5,$text-bp-lg);
+            width:rem(300,$text-bp-lg);
+            margin:0 rem(50,$text-bp-lg) 0 0;
         }    
     }
     
-    .info {
-        .title {
+    >.info {
+        width:rem(200,$text-bp-sm);
+
+        @include bp-medium {
+            width:rem(150,$text-bp-md);
+        }
+        @include bp-large {
+            width:rem(750,$text-bp-lg);
+        } 
+        >.title {
             text-align: left;
             font-family: $narrow-font;
             font-weight: 700;
@@ -33,8 +51,8 @@
                 line-height:rem(30,$text-bp-md);
             }
             @include bp-large {
-                font-size:rem(21,$text-bp-lg);
-                line-height:rem(24,$text-bp-lg);
+                font-size:rem(36,$text-bp-lg);
+                line-height:rem(40,$text-bp-lg);
                 
             }
             

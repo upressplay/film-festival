@@ -36,7 +36,7 @@
 
 </div><!-- thumb-holder -->
 <?php 
-	$page_placement = 'Official Selection Top Banner';
+	$page_placement = 'Official Selection Bottom Banner';
 	include( locate_template( 'banner.php', false, false ) ); 
 ?>
 <?php if (function_exists("pagination")) {

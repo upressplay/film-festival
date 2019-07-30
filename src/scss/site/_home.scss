@@ -90,14 +90,4 @@
     }
 }
 
-.banner {
-    border: 1px solid #000;
-    margin: rem(20,$text-bp-sm);
-    @include bp-medium {
-        margin: rem(20,$text-bp-md);
-    }
 
-    @include bp-large {
-        margin: rem(20,$text-bp-lg);
-    }
-}

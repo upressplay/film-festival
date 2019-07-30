@@ -1,7 +1,7 @@
 <div class="thumb-hosts">
 	<?php if ( has_post_thumbnail() ) : ?>
 		<div class="thumb-img"> 
-			<?php the_post_thumbnail('sq'); ?>
+			<?php the_post_thumbnail('med'); ?>
 		</div><!-- thumb-img --> 
 	<?php endif; ?>
 	<div class="info">

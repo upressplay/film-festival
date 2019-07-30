@@ -3,6 +3,8 @@
 	<?php if(is_front_page()) : ?>
 		
 	<?php  else :  ?>
+
+
 		
 	<?php endif; ?>
 
@@ -19,12 +21,17 @@
 					<?php the_post_thumbnail('header'); ?>
 				</header><!-- header --> 
 			<?php endif; ?>
+
+			
 			<?php if ( !empty( get_the_content() ) ) : ?>
 			<div class="page-content">
 				<?php the_content(); ?>
 			</div>
 			<?php endif; ?>
-			
+			<?php 
+				$page_placement = 'Home Page Top Banner';
+				include( locate_template( 'banner.php', false, false ) ); 
+			?>
 		<?php endwhile; ?>
 	<?php endif; ?>
 <?php get_footer(); ?>
