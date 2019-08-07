@@ -28,7 +28,7 @@ html {
 
     @include bp-large {
         font-size:rem(18,$text-bp-lg);
-        line-height: rem(24,$text-bp-lg);
+        line-height: rem(30,$text-bp-lg);
     }
 
 
@@ -84,7 +84,7 @@ p {
     }
 
     @include bp-large {
-        margin:rem(20,$text-bp-lg) 0;
+        margin:rem(30,$text-bp-lg) 0;
     }
 }
 a:link {
