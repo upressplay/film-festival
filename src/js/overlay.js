@@ -117,28 +117,44 @@
 
 	function openContent(id) {
 		trace.log('openContent id! = '+id);
+
 		var entry = currentContent.content[id];		
 
 		var hires = entry.attr('data-hires');
 		var vidid = entry.attr('data-vidid');
+		var vidYouTubeId = entry.attr('data-youtube-vidid');
+		var vidVimeoId = entry.attr('data-vimeo-vidid');
 		var width = parseInt(entry.attr('data-hires-w'));
 		var height = parseInt(entry.attr('data-hires-h'));
 		var url = entry.attr('href');
+
 		trace.log("url = "+url);
 		trace.log("width = "+width+" height = "+height);
+
 		if(height >= width) {
 			dom.content.addClass('tall');
 		} else {
 			trace.log('remove tall')
 			dom.content.removeClass('tall');	
 		}
+		
 		current = id;
-		trace.log("hires = "+hires+" vidid = "+vidid);
 
-		if(vidid != undefined && vidid != "") {
-			trace.log("this is a video");
+		trace.log("vidYouTubeId = "+vidYouTubeId+" vidVimeoId = "+vidVimeoId);
+
+		if(vidYouTubeId != undefined && vidYouTubeId != "") {
+			trace.log("this is a youtube video");
 			dom.content.html('');
-			dom.content.html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+vidid+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+			dom.content.html('<iframe src="https://www.youtube.com/embed/'+vidYouTubeId+'" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+			dom.content.addClass('videos');
+		} else {
+			dom.content.removeClass('videos');	
+		}
+
+		if(vidVimeoId != undefined && vidVimeoId != "") {
+			trace.log("this is a vimeo video");
+			dom.content.html('');
+			dom.content.html('<iframe src="https://player.vimeo.com/video/'+vidVimeoId+'" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
 			dom.content.addClass('videos');
 		} else {
 			dom.content.removeClass('videos');	

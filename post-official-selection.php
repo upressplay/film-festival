@@ -154,6 +154,14 @@
 			Videos
 		</div><!-- title -->
 	</div><!-- section-header -->
+
+	<div class="photo-gallery">
+		<?php foreach($videos as $video) : ?>
+		<div class="thumb-photos videos" data-vimeo-vidid="<?php echo $video['vimeo_id']; ?>" data-youtube-vidid="<?php echo $video['youtube_id']; ?>">
+			<img src="<?php echo $video['thumb']['sizes']['rect']; ?>"/>
+		</div>
+		 <?php endforeach; ?>
+	</div>
 	<?php endif; ?>
 	<?php 
 		$page_placement = 'Official Selection Top Banner';
