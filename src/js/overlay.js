@@ -116,13 +116,15 @@
 	}
 
 	function openContent(id) {
-		trace.log('openContent id = '+id);
+		trace.log('openContent id! = '+id);
 		var entry = currentContent.content[id];		
 
 		var hires = entry.attr('data-hires');
 		var vidid = entry.attr('data-vidid');
 		var width = parseInt(entry.attr('data-hires-w'));
 		var height = parseInt(entry.attr('data-hires-h'));
+		var url = entry.attr('href');
+		trace.log("url = "+url);
 		trace.log("width = "+width+" height = "+height);
 		if(height >= width) {
 			dom.content.addClass('tall');

@@ -4,11 +4,11 @@
 	</div>
 
 	<div class="social-nav"> 
-		<div class="share facebook" data-type="facebook" data-title="" data-url="" data-desc="">
+		<div class="share-btn facebook" data-type="facebook" data-title="" data-url="" data-desc="">
 			<span class="fab fa-facebook-square" aria-hidden="true" ></span>
 			<span class="screen-reader-text">Facebook</span>
 		</div>
-		<div class="share twitter" data-type="twitter" data-title=""  data-url="" data-desc="">
+		<div class="share-btn twitter" data-type="twitter" data-title=""  data-url="" data-desc="">
 			<span class="fab fa-twitter-square" aria-hidden="true" ></span>
 			<span class="screen-reader-text">Twitter</span>
 		</div>
