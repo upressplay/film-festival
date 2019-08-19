@@ -18,15 +18,17 @@
 	?>
 	<div class="info">
 		<div class="poster-social">
-			<div class="poster-thumb" data-hires="<?php echo $poster['url']; ?>"> 
+			<div class="poster-thumb photos" data-hires="<?php echo $poster['url']; ?>" data-hires-w="<?php echo $poster['width']; ?>" data-hires-h="<?php echo $poster['height']; ?>"> 
 				<img src="<?php echo $poster['sizes']['tall']; ?>"/>
+				<img src="<?php echo $poster['url']; ?>" style=
+				"display: none;"/>
 			</div>
 			<div class="social"> 
-				<div class="page-social-btn share-btn" data-type="facebook" data-title="<?php echo get_the_title($post->ID) ?>" data-url="<?php echo get_permalink($post->ID) ?>" data-desc="<?php echo get_field('synopsis'); ?>">
+				<div class="page-social-btn share-btn" data-type="facebook" data-title="<?php echo get_the_title($post->ID) ?>" data-url="<?php echo get_permalink($post->ID) ?>" data-desc="<?php echo strip_tags(get_field('synopsis')); ?>">
 					<span class="fab fa-facebook-square" aria-hidden="true" ></span>
 					<span class="screen-reader-text">Facebook</span>
 				</div>
-				<div class="page-social-btn share-btn" data-type="twitter" data-title="<?php echo get_the_title($post->ID) ?>"  data-url="<?php echo get_permalink($post->ID) ?>" data-desc="<?php echo get_field('synopsis'); ?>">
+				<div class="page-social-btn share-btn" data-type="twitter" data-title="<?php echo get_the_title($post->ID) ?>"  data-url="<?php echo get_permalink($post->ID) ?>" data-desc="<?php echo strip_tags(get_field('synopsis')); ?>">
 					<span class="fab fa-twitter-square" aria-hidden="true" ></span>
 					<span class="screen-reader-text">Twitter</span>
 				</div>
@@ -97,6 +99,8 @@
 				
 			</div><!-- date-tickets -->
 			<div class="synopsis">
+				<strong>Runtime:</strong>
+				<?php echo get_field('runtime'); ?>
 				<?php echo get_field('synopsis'); ?>
 			</div>
 			
@@ -142,8 +146,9 @@
 	</div><!-- section-header -->
 	<div class="photo-gallery">
 		<?php foreach($photos as $photo) : ?>
-		<div class="thumb-photos photos" data-hires="<?php echo $photo['image']['url']; ?>">
+		<div class="thumb-photos photos" data-hires="<?php echo $photo['image']['url']; ?>" data-hires-w="<?php echo $photo['image']['width']; ?>" data-hires-h="<?php echo $photo['image']['height']; ?>">
 			<img src="<?php echo $photo['image']['sizes']['thumbnail']; ?>"/>
+			<img src="<?php echo $photo['image']['url']; ?>"style="display:none;"/>
 		</div>
 		 <?php endforeach; ?>
 	</div>
@@ -157,8 +162,11 @@
 
 	<div class="photo-gallery">
 		<?php foreach($videos as $video) : ?>
-		<div class="thumb-photos videos" data-vimeo-vidid="<?php echo $video['vimeo_id']; ?>" data-youtube-vidid="<?php echo $video['youtube_id']; ?>">
+		<div class="thumb-videos videos" data-vimeo-vidid="<?php echo $video['vimeo_id']; ?>" data-youtube-vidid="<?php echo $video['youtube_id']; ?>">
 			<img src="<?php echo $video['thumb']['sizes']['rect']; ?>"/>
+			<div class="thumb-title">
+				<?php echo $video['video_title']; ?>
+			</div>
 		</div>
 		 <?php endforeach; ?>
 	</div>

@@ -75,7 +75,7 @@
                 }    
             }
             .tagline {
-                font-family: $sub-font;
+                font-family: $body-font;
                 color: #3375e2;
                 font-size:rem(33,$text-bp-sm);
                 line-height:rem(30,$text-bp-sm);
@@ -145,6 +145,7 @@
     }
     .poster-thumb {
         width:inherit;
+        border: 1px solid #000;
         @include bp-medium {
         }
 
@@ -153,7 +154,8 @@
         }    
     }
     .title {
-        text-align: left;
+        display: block;
+        text-align: center;
         font-family: $narrow-font;
         font-weight: 700;
         color:#000;

@@ -121,9 +121,10 @@
 		var entry = currentContent.content[id];		
 
 		var hires = entry.attr('data-hires');
-		var vidid = entry.attr('data-vidid');
 		var vidYouTubeId = entry.attr('data-youtube-vidid');
 		var vidVimeoId = entry.attr('data-vimeo-vidid');
+		var isVid = false;
+
 		var width = parseInt(entry.attr('data-hires-w'));
 		var height = parseInt(entry.attr('data-hires-h'));
 		var url = entry.attr('href');
@@ -144,20 +145,21 @@
 
 		if(vidYouTubeId != undefined && vidYouTubeId != "") {
 			trace.log("this is a youtube video");
+			isVid = true;
 			dom.content.html('');
 			dom.content.html('<iframe src="https://www.youtube.com/embed/'+vidYouTubeId+'" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 			dom.content.addClass('videos');
-		} else {
-			dom.content.removeClass('videos');	
 		}
-
+		
 		if(vidVimeoId != undefined && vidVimeoId != "") {
 			trace.log("this is a vimeo video");
+			isVid = true;
 			dom.content.html('');
 			dom.content.html('<iframe src="https://player.vimeo.com/video/'+vidVimeoId+'" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>');
 			dom.content.addClass('videos');
-		} else {
-			dom.content.removeClass('videos');	
+		} 
+		if(!isVid) {
+			dom.content.removeClass('videos');		
 		}
 
 		if(hires != undefined && hires != "") {
