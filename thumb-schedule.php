@@ -10,16 +10,35 @@
 	$time = date("g:i a", strtotime($start_date));
 	$month = date("M", strtotime($start_date));
 	$day = date("j", strtotime($start_date));
+	$selections = get_field('selections');
+	$selections_count = count($selections);
+	echo '$selections_count'.$selections_count;
 
 ?>
-<?php if($date_now_u < $end_date_u) : ?>
 <a href="<?php echo get_permalink($post->ID);?>">
 	<div class="thumb-schedule">
+<?php if ( $selections_count > 1  || $selections_count > 1 )  : ?>
 	<?php if ( has_post_thumbnail() )  : ?>
 		<div class="poster-thumb"> 
 			<?php the_post_thumbnail('tall'); ?>
 		</div><!-- poster-thumb -->
 	<?php endif; ?>
+	<?php else: ?>
+	<?php if($selections) :
+				    foreach( $selections as $selection ) : ?>
+
+				    	<?php 
+				    		$poster = get_field('poster', $selection->ID);
+				    	?>
+				    	<div class="poster-thumb"> 
+			<img src="<?php echo $poster['sizes']['tall']; ?>"/>
+		</div><!-- poster-thumb -->
+				    	
+				    <?php endforeach; ?>
+				<?php endif; ?>
+
+<?php endif; ?>
+
 		<div class="info">
 			<div class="title"> 
 				<?php echo get_the_title($post->ID);?>
@@ -37,8 +56,8 @@
 			</div><!-- date-tickets -->
 			<div class="selections">
 				<?php 
-				$selections = get_field('selections');
-				if($selections) :
+				
+				if($selections && $selections_count > 1) :
 				    foreach( $selections as $selection ) : ?>
 
 				    	<?php 
@@ -59,5 +78,4 @@
 		</div><!-- info -->
 	</div> <!-- thumb-schedule -->
 </a>
-<? endif;?>
 
