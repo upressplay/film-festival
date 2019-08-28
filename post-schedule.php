@@ -11,6 +11,10 @@
 
 	$tickets_url = get_field('tickets',$post->ID);
 
+	$selections = get_field('selections');
+	$feature = get_field('feature');
+	$content = "";
+
 ?>
 <div class="schedule">
 	<div class="info-banner">
@@ -31,10 +35,29 @@
 	</div><!-- info-banner -->
 	<div class="block-selections">
 		<div class="block-info">
-			<?php if ( has_post_thumbnail() )  : ?>
-				<div class="poster-thumb"> 
-					<?php the_post_thumbnail('tall'); ?>
-				</div><!-- poster-thumb -->
+
+			<?php if($feature) :
+			    foreach( $feature as $f ) : ?>
+			    	<?php 
+			    		$poster = get_field('poster', $f->ID);
+			    		$runtime = '<strong>Runtime:</strong> '.get_field('runtime',$f->ID).'<br/>';
+			    		$content = $runtime.get_field('tagline',$f->ID);
+
+			    	?>
+			    	<a href="<?php echo get_permalink($f->ID);?>">
+						
+						<div class="poster-thumb"> 
+							<img src="<?php echo $poster['sizes']['tall']; ?>"/>
+						</div><!-- poster-thumb -->
+
+					</a>
+				<?php endforeach; ?>
+		    <?php else: ?>
+				<?php if ( has_post_thumbnail() )  : ?>
+					<div class="poster-thumb"> 
+						<?php the_post_thumbnail('tall'); ?>
+					</div><!-- poster-thumb -->
+				<?php endif; ?>
 			<?php endif; ?>
 			<div class="block-host">
 				<div class="title"> 
@@ -56,14 +79,17 @@
 						
 				<?php endif; ?>
 				<div class="content"> 
-					<?php echo get_the_content($post->ID);?>
+					<?php if($content == "") {
+						echo get_the_content($post->ID);
+					} else {
+						echo $content;
+					}
+					?>
 				</div>
 			</div><!-- block-host -->
 		</div> <!-- block-info -->
 		<div class="selections">
-			<?php 
-			$selections = get_field('selections',$post->ID);
-			if($selections) :
+			<?php if($selections) :
 			    foreach( $selections as $selection ) : ?>
 
 			    	<?php 

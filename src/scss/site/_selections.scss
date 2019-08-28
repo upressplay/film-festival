@@ -136,7 +136,7 @@
     margin:rem(15,$text-bp-sm) rem(5,$text-bp-sm);
 
     @include bp-medium {
-        width:rem(150,$text-bp-md);
+        width:rem(120,$text-bp-md);
         margin:rem(15,$text-bp-md) rem(5,$text-bp-md);
     }
     @include bp-large {
