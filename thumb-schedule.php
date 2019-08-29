@@ -10,8 +10,8 @@
 	$time = date("g:i a", strtotime($start_date));
 	$month = date("M", strtotime($start_date));
 	$day = date("j", strtotime($start_date));
-	$selections = get_field('selections');
-	$feature = get_field('feature');
+	$selections = get_field('selections',$post->ID);
+	$feature = get_field('feature',$post->ID);
 
 ?>
 

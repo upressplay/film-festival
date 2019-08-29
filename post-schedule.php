@@ -11,8 +11,8 @@
 
 	$tickets_url = get_field('tickets',$post->ID);
 
-	$selections = get_field('selections');
-	$feature = get_field('feature');
+	$selections = get_field('selections',$post->ID);
+	$feature = get_field('feature',$post->ID);
 	$content = "";
 
 ?>
@@ -41,8 +41,8 @@
 			    	<?php 
 			    		$poster = get_field('poster', $f->ID);
 			    		$runtime = '<strong>Runtime:</strong> '.get_field('runtime',$f->ID).'<br/>';
-			    		$content = $runtime.get_field('tagline',$f->ID);
 
+			    		$content = $runtime.get_field('tagline',$f->ID);
 			    	?>
 			    	<a href="<?php echo get_permalink($f->ID);?>">
 						
@@ -79,11 +79,11 @@
 						
 				<?php endif; ?>
 				<div class="content"> 
-					<?php if($content == "") {
-						echo get_the_content($post->ID);
-					} else {
-						echo $content;
-					}
+
+					<?php 
+					$postContent = get_the_content($post->ID);
+					$content = $content . $postContent; 
+					echo $content;
 					?>
 				</div>
 			</div><!-- block-host -->
