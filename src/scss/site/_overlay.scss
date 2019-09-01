@@ -61,10 +61,11 @@
             }
 
             &.tall {
-                height: auto;
+                width: auto;
+                height: 90vh;
                 @include bp-medium {
                     width: auto;
-                    height: 100vh;
+                    height: 90vh;
                 }
 
                 @include bp-large {

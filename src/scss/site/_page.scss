@@ -18,6 +18,7 @@
 .photo-gallery {
 	display: flex;
 	flex-direction:row;
+    flex-wrap:wrap;
     .photo-thumb {
     	cursor: pointer;
         width:rem(250,$text-bp-sm);

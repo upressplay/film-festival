@@ -11,7 +11,7 @@
 	</h1>
 </div><!-- section-header -->
 <?php 
-	$page_placement = 'Official Selection Top Banner';
+	$page_placement = 'Schedule Top Banner';
 	include( locate_template( 'banner.php', false, false ) ); 
 ?>
 <div class="thumb-holder">
@@ -36,7 +36,7 @@
 
 </div><!-- thumb-holder -->
 <?php 
-	$page_placement = 'Official Selection Bottom Banner';
+	$page_placement = 'Schedule Bottom Banner';
 	include( locate_template( 'banner.php', false, false ) ); 
 ?>
 <?php if (function_exists("pagination")) {

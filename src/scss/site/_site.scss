@@ -17,12 +17,12 @@ html {
     width:100vw;
     height:100vh;
 
-    font-size:rem(28,$text-bp-sm);
-    line-height: rem(44,$text-bp-sm);
+    font-size:rem(36,$text-bp-sm);
+    line-height: rem(60,$text-bp-sm);
 
     @include bp-medium {
-        font-size:rem(18,$text-bp-md);
-        line-height: rem(24,$text-bp-md);
+        font-size:rem(24,$text-bp-md);
+        line-height: rem(36,$text-bp-md);
     }
 
 
@@ -64,6 +64,10 @@ html {
     @include bp-large {
         width:rem(1250,$text-bp-lg);
     }
+
+    .banner:nth-child(3) {
+      border: 10px solid #000;
+    }
 }
 
 img {
@@ -77,7 +81,7 @@ h1, h2, h3 {
 }
 
 p {
-    margin:rem(40,$text-bp-sm) 0;
+    margin:rem(30,$text-bp-sm) 0;
 
     @include bp-medium {
         margin:rem(20,$text-bp-md) 0;

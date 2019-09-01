@@ -17,10 +17,8 @@
 		?>
 		<?php if ( has_post_thumbnail() && $right_placement) : ?>
 			
-		<a href="<?php echo $url; ?>" target="_blank">
-			<div class="banner <?php echo $size; ?>">
+		<a href="<?php echo $url; ?>" target="_blank" class="banner <?php echo $size; ?>">
 				<?php the_post_thumbnail(); ?>
-			</div>
 		</a>
 		<?php endif; ?>
 		

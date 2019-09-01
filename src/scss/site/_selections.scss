@@ -36,9 +36,10 @@
                 margin-right:0 rem(20,$text-bp-lg) 0 0;
             }
             .poster-thumb {
+                cursor: pointer;
                 display: inline-block;
                 border: 1px solid #000;
-                width:rem(400,$text-bp-sm);
+                width:rem(550,$text-bp-sm);
                 @include bp-medium {
                     width:rem(225,$text-bp-md);
                 }
@@ -78,7 +79,7 @@
                 font-family: $body-font;
                 color: #3375e2;
                 font-size:rem(33,$text-bp-sm);
-                line-height:rem(30,$text-bp-sm);
+                line-height:rem(40,$text-bp-sm);
                 margin: rem(50,$text-bp-sm) 0 rem(50,$text-bp-sm) 0;
                 @include bp-medium {
                     font-size:rem(28,$text-bp-md);
@@ -132,8 +133,8 @@
 }
 
 .thumb-selection {
-    width:rem(200,$text-bp-sm);
-    margin:rem(15,$text-bp-sm) rem(5,$text-bp-sm);
+    width:rem(210,$text-bp-sm);
+    margin:rem(15,$text-bp-sm) rem(12,$text-bp-sm);
 
     @include bp-medium {
         width:rem(120,$text-bp-md);
@@ -143,7 +144,7 @@
         width:rem(150,$text-bp-lg);
         margin:rem(15,$text-bp-lg) rem(5,$text-bp-lg);
     }
-    .poster-thumb {
+    >.poster-thumb {
         width:inherit;
         border: 1px solid #000;
         @include bp-medium {
@@ -153,7 +154,7 @@
             margin-bottom: rem(10,$text-bp-lg);
         }    
     }
-    .title {
+    >.title {
         display: block;
         text-align: center;
         font-family: $narrow-font;
@@ -162,15 +163,17 @@
         text-transform: uppercase;
         font-size:rem(40,$text-bp-sm);
         line-height:rem(44,$text-bp-sm);
-        
+        margin:rem(20,$text-bp-sm) 0;
         
         @include bp-medium {
-            font-size:rem(18,$text-bp-md);
-            line-height:rem(30,$text-bp-md);
+            font-size:rem(21,$text-bp-md);
+            line-height:rem(24,$text-bp-md);
+            margin:rem(10,$text-bp-md) 0;
         }
         @include bp-large {
             font-size:rem(21,$text-bp-lg);
             line-height:rem(24,$text-bp-lg);
+            margin:rem(10,$text-bp-lg) 0;
             
         }
         
@@ -186,10 +189,10 @@
     @include bp-large {
         width:rem(50,$text-bp-lg);
     }
-    .poster-thumb-sm {
+    >.poster-thumb-sm {
         width:inherit;   
     }
-    .title {
+    >.title {
         text-align: left;
         font-family: $narrow-font;
         font-weight: 700;
@@ -205,7 +208,7 @@
         }
         @include bp-large {
             font-size:rem(24,$text-bp-lg);
-            line-height:rem(30,$text-bp-lg);
+            line-height:rem(28,$text-bp-lg);
             
         }
         
@@ -219,7 +222,7 @@
     color:#000;
     text-transform: uppercase;
 
-    .title {
+    >.title {
         text-align: center;
         font-weight: 700;
         font-size:rem(30,$text-bp-sm);
@@ -234,7 +237,7 @@
             
         }      
     }
-    .desc {
+    >.desc {
         text-align: center;
         font-weight: 300;
         font-size:rem(30,$text-bp-sm);

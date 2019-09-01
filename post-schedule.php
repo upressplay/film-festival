@@ -40,7 +40,10 @@
 			    foreach( $feature as $f ) : ?>
 			    	<?php 
 			    		$poster = get_field('poster', $f->ID);
-			    		$runtime = '<strong>Runtime:</strong> '.get_field('runtime',$f->ID).'<br/>';
+			    		$runtime = get_field('runtime',$f->ID);
+			    		if($runtime !="") {
+			    			$runtime = '<p><strong>Runtime:</strong> '.$runtime.'</p>';	
+			    		}
 
 			    		$content = $runtime.get_field('tagline',$f->ID);
 			    	?>
@@ -61,7 +64,9 @@
 			<?php endif; ?>
 			<div class="block-host">
 				<div class="title"> 
-					<?php echo get_the_title($post->ID);?>
+					<div class="txt"> 
+						<?php echo get_the_title($post->ID);?>
+					</div>
 				</div>
 				
 				<?php

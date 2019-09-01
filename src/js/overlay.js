@@ -71,11 +71,11 @@
         });
 
 		dom.overlay.on('swipeleft', function(){
-			trace.log('left');
-			nextOverlay('left');
-		}).on('swiperight', function(){
 			trace.log('right');
 			nextOverlay('right');
+		}).on('swiperight', function(){
+			trace.log('left');
+			nextOverlay('left');
 		});
 
 	}
