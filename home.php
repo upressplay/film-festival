@@ -67,7 +67,10 @@
 			endwhile;
 		?>
 	</div>
-
+	<?php 
+		$page_placement = 'Home Page Mid Banner';
+		include( locate_template( 'banner.php', false, false ) ); 
+	?>
 	<div class="section-header blue">
 		<h2 class="title">
 			Photos

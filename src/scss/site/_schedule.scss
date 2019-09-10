@@ -266,18 +266,23 @@
     }
     
 }
+.schedule-thumbs{
+
+    .date-tickets {
+        align-items:flex-start;
+    }   
+}
 .date-tickets {
     display: flex;
-    align-items:flex-start;
-
-    flex-direction:row;
-    flex-wrap:nowrap;
+    flex-direction:column;
+    flex-wrap:wrap;
     justify-content:flex-start;
     align-items:center;
 
     @include bp-medium {
         
-        
+        flex-direction:row;
+        flex-wrap:nowrap;     
     }
     .schedule-date {
         display: flex;
@@ -357,6 +362,7 @@
     }   
 }
 
+
 .tickets-btn {
     display: inline-block;
     font-family: $nav-font;
@@ -380,4 +386,24 @@
 }
 .tickets-btn:hover {
     background-color: $color-blue;    
+}
+
+.selection {
+    .tickets-btn {
+
+        font-size:rem(80,$text-bp-sm);
+        padding:rem(35,$text-bp-sm) rem(35,$text-bp-sm); 
+        margin:rem(20,$text-bp-lg);
+        @include bp-medium {
+            font-size:rem(22,$text-bp-md);
+            padding:rem(10,$text-bp-md);
+            margin:0 rem(20,$text-bp-md);
+        }
+
+        @include bp-large {
+            font-size:rem(48,$text-bp-lg);
+            padding:rem(20,$text-bp-lg) rem(25,$text-bp-lg);
+            margin:0 rem(20,$text-bp-lg);
+        }   
+    }
 }

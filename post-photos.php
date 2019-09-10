@@ -16,11 +16,7 @@
 	</header> 
 	<?php endif; ?>
 
-	<div class="banner">
-		<a href="https://bang-energy.com" target="_blank">
-			<img src="http://new.kapowiff.com/wp-content/uploads/2019/02/bang_720x90.jpg"/>
-		</a>
-	</div>
+	
 
 
 </div><!-- single -->
