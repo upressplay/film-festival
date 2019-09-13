@@ -70,25 +70,37 @@
         } 
         .block-info {
             display: flex;
-            flex-direction:row;
+            flex-direction:column;
             flex-wrap: nowrap;
+            align-items:center;
+            justify-content: center;
+
+            @include bp-medium {
+                flex-direction:row;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
             .poster-thumb {
-                width:rem(225,$text-bp-sm);
-                margin-right: rem(20,$text-bp-sm);
+                border: 1px solid #000;
+                width:rem(500,$text-bp-sm);
+                margin: 0 0 rem(20,$text-bp-sm) 0;
                 @include bp-medium {
-                     width:rem(150,$text-bp-md);
-                     margin-right: rem(20,$text-bp-md);
+                     width:rem(260,$text-bp-md);
+                     margin: 0 rem(20,$text-bp-md) 0 0;
                 }
 
                 @include bp-large {
-                    width:rem(150,$text-bp-lg);
-                    margin-right: rem(20,$text-bp-lg);
+                    width:rem(240,$text-bp-lg);
+                    margin: 0 rem(20,$text-bp-lg) 0 0;
                 }    
             }
             >.block-host{
-                width:rem(400,$text-bp-sm);
+                text-align: center;
+                width:rem(650,$text-bp-sm);
                 @include bp-medium {
-                     width:rem(560,$text-bp-md);
+                    text-align: left;
+                     width:rem(650,$text-bp-md);
                 }
 
                 @include bp-large {
@@ -99,8 +111,8 @@
                     font-family: $headline-font;
                     color:#FFF;
                     background-color: #000;
-                    font-size:rem(50,$text-bp-sm);
-                    line-height:rem(55,$text-bp-sm);
+                    font-size:rem(60,$text-bp-sm);
+                    line-height:rem(60,$text-bp-sm);
                     padding: rem(10,$text-bp-sm) rem(20,$text-bp-sm);
                     margin-bottom: rem(10,$text-bp-sm);
                      
@@ -155,6 +167,12 @@
             display: flex;
             flex-direction:row;
             flex-wrap: wrap;
+            justify-content:center;
+            @include bp-medium {
+                justify-content:flex-start;
+                font-size:rem(28,$text-bp-md);
+                line-height:rem(32,$text-bp-md);
+            }
         }    
     }
     
@@ -266,23 +284,18 @@
     }
     
 }
-.schedule-thumbs{
-
-    .date-tickets {
-        align-items:flex-start;
-    }   
-}
 .date-tickets {
     display: flex;
-    flex-direction:column;
-    flex-wrap:wrap;
+    align-items:flex-start;
+
+    flex-direction:row;
+    flex-wrap:nowrap;
     justify-content:flex-start;
     align-items:center;
 
     @include bp-medium {
         
-        flex-direction:row;
-        flex-wrap:nowrap;     
+        
     }
     .schedule-date {
         display: flex;
@@ -362,7 +375,6 @@
     }   
 }
 
-
 .tickets-btn {
     display: inline-block;
     font-family: $nav-font;
@@ -386,24 +398,4 @@
 }
 .tickets-btn:hover {
     background-color: $color-blue;    
-}
-
-.selection {
-    .tickets-btn {
-
-        font-size:rem(80,$text-bp-sm);
-        padding:rem(35,$text-bp-sm) rem(35,$text-bp-sm); 
-        margin:rem(20,$text-bp-lg);
-        @include bp-medium {
-            font-size:rem(22,$text-bp-md);
-            padding:rem(10,$text-bp-md);
-            margin:0 rem(20,$text-bp-md);
-        }
-
-        @include bp-large {
-            font-size:rem(48,$text-bp-lg);
-            padding:rem(20,$text-bp-lg) rem(25,$text-bp-lg);
-            margin:0 rem(20,$text-bp-lg);
-        }   
-    }
 }

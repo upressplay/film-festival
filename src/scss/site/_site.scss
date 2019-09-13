@@ -58,7 +58,7 @@ html {
 
     width:rem(750,$text-bp-sm);
     @include bp-medium {
-        width:rem(970,$text-bp-md);
+        width:rem(950,$text-bp-md);
     }
 
     @include bp-large {

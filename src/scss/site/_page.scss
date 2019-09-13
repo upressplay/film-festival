@@ -71,7 +71,7 @@
     }   
     .share-btn {
         color: $color-blue; 
-        font-size:rem(60,$text-bp-sm);
+        font-size:rem(100,$text-bp-sm);
         margin: rem(20,$text-bp-sm);
          
         @include bp-medium {

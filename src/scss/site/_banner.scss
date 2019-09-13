@@ -119,14 +119,17 @@
         }   
     }
     &.size1250x120 {
-        width: rem(750,$text-bp-sm);
+        width: rem(746,$text-bp-sm);
+        height: rem(93,$text-bp-sm);
         @include bp-medium {
-            width: rem(970,$text-bp-md);
+            width: rem(910,$text-bp-md);
+            height: rem(120,$text-bp-md);
         }
 
         @include bp-large {
             margin: rem(20,$text-bp-lg) auto;
             width: rem(1210,$text-bp-lg);
+            height: rem(150,$text-bp-lg);
         }   
     }
 }
