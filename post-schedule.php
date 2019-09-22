@@ -57,7 +57,14 @@
 				<?php endforeach; ?>
 		    <?php else: ?>
 				<?php if ( has_post_thumbnail() )  : ?>
-					<div class="poster-thumb"> 
+
+					<?php 
+						$imgdata = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						$imgurl = $imgdata[0]; // the url of the thumbnail picture
+						$imgwidth = $imgdata[1]; // thumbnail's width
+						$imgheight = $imgdata[2];
+						?>
+					<div class="poster-thumb photos" data-hires="<?php echo $imgurl; ?>" data-hires-w="<?php echo $imgwidth; ?>" data-hires-h="<?php echo $imgheight; ?>"> 
 						<?php the_post_thumbnail('tall'); ?>
 					</div><!-- poster-thumb -->
 				<?php endif; ?>
