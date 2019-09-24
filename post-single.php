@@ -5,10 +5,6 @@
 	</header> 
 	<?php endif; ?>
 
-	<?php 
-		$page_placement = 'News Top Banner';
-		include( locate_template( 'banner.php', false, false ) ); 
-	?>
 	
 	<h1 class="title">
 		<?php the_title(); ?>
@@ -22,10 +18,6 @@
 		<?php the_content(); ?>
 	</div>
 
-	<?php 
-		$page_placement = 'News Bottom Banner';
-		include( locate_template( 'banner.php', false, false ) ); 
-	?>
 </div><!-- single -->
 
 

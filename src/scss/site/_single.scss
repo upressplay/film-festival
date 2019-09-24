@@ -32,14 +32,14 @@
         margin: rem(30,$text-bp-sm);
          
         @include bp-medium {
-            font-size:rem(28,$text-bp-md);
-            line-height:rem(32,$text-bp-md);
+            font-size:rem(48,$text-bp-md);
+            line-height:rem(55,$text-bp-md);
             margin: rem(15,$text-bp-md);
         }
 
         @include bp-large {
-            font-size:rem(36,$text-bp-lg);
-            line-height:rem(40,$text-bp-lg);
+            font-size:rem(48,$text-bp-lg);
+            line-height:rem(55,$text-bp-lg);
             margin: rem(10,$text-bp-lg) rem(20,$text-bp-lg);
         }    
     }

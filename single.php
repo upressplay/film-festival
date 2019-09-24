@@ -18,6 +18,8 @@
 				get_template_part( 'post-photos' );
 			} elseif ($catSlug == "schedule") {
 				get_template_part( 'post-schedule' );
+			} elseif ($catSlug == "news") {
+				get_template_part( 'post-news' );
 			} else {
 				get_template_part( 'post-single' );
 			} 

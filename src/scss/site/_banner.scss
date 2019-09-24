@@ -95,14 +95,15 @@
             width: rem(980,$text-bp-lg);
         }   
     }
-    &.size750x2000 {
+    &.size750x200 {
+        margin:0;
         width: rem(750,$text-bp-sm);
         @include bp-medium {
             width: rem(300,$text-bp-md);
         }
 
         @include bp-large {
-            width: rem(350,$text-bp-lg);
+            width: rem(348,$text-bp-lg);
         }   
     }
     &.size980x120 {
