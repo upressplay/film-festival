@@ -3,7 +3,6 @@
 	$videos = get_field('videos');
 	$photos = get_field('photos');
 	$poster = get_field('poster');
-
 ?>
 
 <div class="selection">
@@ -48,54 +47,7 @@
 			
 
 			<div class="date-tickets">
-				<?php 
-
-				$args = array(
-				   'category_name'		=>'schedule',
-				    'order'				=> 'ASC',
-				    'meta_query' => array(
-						array(
-							'key' => 'selections', // name of custom field
-							'value' => '"' . $post->ID . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
-							'compare' => 'LIKE'
-						)
-					)
-				);
-				$schedules = get_posts( $args );
-				if( $schedules ): ?>
-					<?php foreach( $schedules as $schedule ): ?>
-						<?php 
-
-						$start_date = get_field('start_date', $schedule->ID);
-
-						$weekday = date("D", strtotime($start_date));
-						$time = date("g:i a", strtotime($start_date));
-						$month = date("M", strtotime($start_date));
-						$day = date("j", strtotime($start_date));
-						?>
-
-						<div class="schedule-date">
-							<div class="day-holder">
-								<div class="day"><?php echo $weekday; ?></div>
-							</div> 
-							<div class="time-date">
-								<div class="time"><?php echo $time; ?> </div>
-								<div class="date"><?php echo $month; ?> <?php echo $day; ?> </div>
-							</div><!-- date-time -->
-						</div><!-- schedule-date -->
-
-						<?php 
-							$cta_btn = get_field('cta_btn', $schedule->ID);
-						?>
-						<?php if ($cta_btn['url'] != '') : ?>
-						<a href="<?php echo $cta_btn['url']; ?>" target="blank">
-							<div class="tickets-btn">
-								<?php echo $cta_btn['text']; ?>
-							</div>
-						</a>
-						<?php endif; ?>
-					<?php endforeach; ?>
-				<?php endif; ?>
+				
 
 				<?php 
 
@@ -193,11 +145,11 @@
 			Photos
 		</div><!-- title -->
 	</div><!-- section-header -->
+
 	<div class="photo-gallery">
 		<?php foreach($photos as $photo) : ?>
 		<div class="thumb-photos photos" data-hires="<?php echo $photo['image']['url']; ?>" data-hires-w="<?php echo $photo['image']['width']; ?>" data-hires-h="<?php echo $photo['image']['height']; ?>">
 			<img src="<?php echo $photo['image']['sizes']['thumbnail']; ?>"/>
-			<img src="<?php echo $photo['image']['url']; ?>"style="display:none;"/>
 		</div>
 		 <?php endforeach; ?>
 	</div>
@@ -221,11 +173,41 @@
 	</div>
 	<?php endif; ?>
 	<?php 
+		$args = array(
+			'category_name'		=>'photos',
+			'order'				=> 'ASC',
+			'meta_query' => array(
+				array(
+					'key' => 'selections', // name of custom field
+					'value' => '"' . $post->ID . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+					'compare' => 'LIKE'
+				)
+			)
+		);
+		$festivalPhotos = new WP_Query( $args );
+		if( $festivalPhotos->have_posts() ) :?>
+		<div class="section-header">
+			<div class="title">
+				Festival Photos
+			</div><!-- title -->
+		</div><!-- section-header -->
+			<div class="photos-thumbs">
+				<?php
+				while ( $festivalPhotos->have_posts() ) : $festivalPhotos->the_post();
+					//Post data
+					get_template_part( 'thumb-photos' );
+					//echo get_the_post_thumbnail(get_the_ID());
+				endwhile; ?>
+			</div><!-- photo-thumbs --->
+	<?php endif; ?>
+	<?php 
 		$page_placement = 'Official Selection Top Banner';
 		include( locate_template( 'banner.php', false, false ) ); 
 	?>
 </div><!-- selection -->
 
-
+<div class="page-nav">
+	<?php previous_post_link('%link', '<i class="fas fa-caret-square-left"></i>', TRUE); ?>  <?php next_post_link('%link', '<i class="fas fa-caret-square-right"></i>', TRUE); ?> 
+</div> 
 
 

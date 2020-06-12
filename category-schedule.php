@@ -47,6 +47,8 @@
 				'orderby'			=> 'meta_value',
 				'meta_key'			=> 'start_date',
 				'meta_type'			=> 'DATETIME',
+				'meta_value' => date('Y-m-d h:i'),
+      'meta_compare' => '>',
 				'paged'				=> $paged
 			);
 			$query = new WP_Query( $args );

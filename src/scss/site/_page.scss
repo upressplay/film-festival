@@ -43,17 +43,28 @@
 }
 .page-nav {
     text-align: center;
-    font-size:rem(75,$text-bp-sm);
-    margin:rem(30,$text-bp-sm); 
+    font-size:rem(100,$text-bp-sm);
+    margin:rem(25,$text-bp-sm); 
     @include bp-medium {
         text-align: left;
-        font-size:rem(36,$text-bp-md);
+        font-size:rem(50,$text-bp-md);
         margin:rem(20,$text-bp-md);
     }
 
     @include bp-large {
         font-size:rem(48,$text-bp-lg);
         margin:rem(20,$text-bp-lg);
+    }
+    a {
+        margin: rem(10,$text-bp-sm);
+     
+        @include bp-medium {
+            margin: rem(10,$text-bp-md);
+        }
+
+        @include bp-large {
+            margin: rem(10,$text-bp-lg);
+        }   
     }
 }
 .social {
@@ -72,7 +83,7 @@
     .share-btn {
         color: $color-blue; 
         font-size:rem(100,$text-bp-sm);
-        margin: rem(20,$text-bp-sm);
+        margin: rem(25,$text-bp-sm);
          
         @include bp-medium {
             font-size:rem(50,$text-bp-md);
@@ -81,11 +92,12 @@
 
         @include bp-large {
             font-size:rem(50,$text-bp-lg);
-            margin: rem(10,$text-bp-lg);
+            margin: rem(15,$text-bp-lg);
         }   
         &:hover {
             color:#000;
         }
+        
     }
     
 } 

@@ -49,6 +49,9 @@
                 }   
 
             }
+            .social {
+                justify-content: center;
+            }
 
         }
         
@@ -254,4 +257,82 @@
         }  
     }
     
+}
+
+.horizontal-thumb {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    align-items: center;
+    text-align: center;
+    margin:rem(25,$text-bp-sm);
+    @include bp-medium {
+        flex-direction: row;
+        flex-wrap:nowrap;
+        align-items: flex-start;
+        text-align: left;
+        margin:rem(25,$text-bp-md);
+        
+    }
+
+    @include bp-large {
+        margin:rem(25,$text-bp-lg);
+    }  
+    .poster-thumb {
+        border: 1px solid #000;
+        width:rem(400,$text-bp-sm);
+        margin:0 0 rem(25,$text-bp-sm) 0 ;
+        @include bp-medium {
+            width:rem(150,$text-bp-md);
+            margin: 0 rem(25,$text-bp-md) 0 0;
+        }
+
+        @include bp-large {
+            width:rem(150,$text-bp-lg);
+            margin: 0 rem(25,$text-bp-lg) 0 0;
+        }   
+    }
+    .info {
+		width:rem(690,$text-bp-sm);
+	    @include bp-medium {
+	    	width:rem(500,$text-bp-md);
+	    }
+
+	    @include bp-large {
+	    	width:rem(900,$text-bp-lg);
+	    } 
+	    >.title {
+            display: inline;
+            font-family: $headline-font;
+            color:$color-blue;
+            font-size:rem(72,$text-bp-sm);
+            line-height:rem(77,$text-bp-sm);
+            margin-bottom: rem(25,$text-bp-sm);
+             
+            @include bp-medium {
+                font-size:rem(28,$text-bp-md);
+                line-height:rem(32,$text-bp-md);
+                margin-bottom: rem(15,$text-bp-md);
+            }
+
+            @include bp-large {
+                font-size:rem(36,$text-bp-lg);
+                line-height:rem(40,$text-bp-lg);
+                margin-bottom: rem(10,$text-bp-lg);
+            }    
+        }
+        >.sub {
+            color:#000;
+            font-weight: 700;
+            margin-bottom: rem(15,$text-bp-sm);
+             
+            @include bp-medium {
+                margin-bottom: rem(15,$text-bp-md);
+            }
+
+            @include bp-large {
+                margin-bottom: rem(10,$text-bp-lg);
+            }   
+        }	
+	}
 }

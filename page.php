@@ -1,12 +1,9 @@
 <?php get_header(); ?>
 
-	<?php if(is_front_page()) : ?>
-		
-	<?php  else :  ?>
-
-
-		
-	<?php endif; ?>
+	<?php 
+		$page_placement = 'Page Top Banner';
+		include( locate_template( 'banner.php', false, false ) ); 
+	?>
 
 	<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : ?>
@@ -29,7 +26,7 @@
 			</div>
 			<?php endif; ?>
 			<?php 
-				$page_placement = 'Page Top Banner';
+				$page_placement = 'Page Bottom Banner';
 				include( locate_template( 'banner.php', false, false ) ); 
 			?>
 		<?php endwhile; ?>

@@ -556,17 +556,25 @@ nav {
 
 .page-nav {
   text-align: center;
-  font-size: 4.6875rem;
-  margin: 1.875rem; }
+  font-size: 6.25rem;
+  margin: 1.5625rem; }
   @media only screen and (min-width: 751px) {
     .page-nav {
       text-align: left;
-      font-size: 3rem;
+      font-size: 4.16667rem;
       margin: 1.66667rem; } }
   @media only screen and (min-width: 1271px) {
     .page-nav {
       font-size: 4.8rem;
       margin: 2rem; } }
+  .page-nav a {
+    margin: 0.625rem; }
+    @media only screen and (min-width: 751px) {
+      .page-nav a {
+        margin: 0.83333rem; } }
+    @media only screen and (min-width: 1271px) {
+      .page-nav a {
+        margin: 1rem; } }
 
 .social {
   display: flex;
@@ -578,7 +586,7 @@ nav {
   .social .share-btn {
     color: #3375e2;
     font-size: 6.25rem;
-    margin: 1.25rem; }
+    margin: 1.5625rem; }
     @media only screen and (min-width: 751px) {
       .social .share-btn {
         font-size: 4.16667rem;
@@ -586,7 +594,7 @@ nav {
     @media only screen and (min-width: 1271px) {
       .social .share-btn {
         font-size: 5rem;
-        margin: 1rem; } }
+        margin: 1.5rem; } }
     .social .share-btn:hover {
       color: #000; }
 
@@ -631,7 +639,7 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center; }
     .overlay .holder .content {
       width: 58.33333rem; }
@@ -730,6 +738,34 @@ nav {
   @media only screen and (min-width: 1271px) {
     .single header {
       margin: 2rem; } }
+  .single header.photo-header {
+    display: inline-block;
+    width: 43.75rem;
+    height: auto;
+    margin-bottom: 0; }
+    .single header.photo-header img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 0; }
+    @media only screen and (min-width: 751px) {
+      .single header.photo-header {
+        width: auto;
+        height: 70vh;
+        margin-bottom: 0; }
+        .single header.photo-header img {
+          width: auto;
+          height: 100%; } }
+
+.single .social {
+  justify-content: center;
+  margin: 0 1.25rem; }
+  @media only screen and (min-width: 751px) {
+    .single .social {
+      justify-content: flex-start;
+      margin: 0 1.25rem; } }
+  @media only screen and (min-width: 1271px) {
+    .single .social {
+      margin: 0 1.5rem; } }
 
 .single > .info {
   display: flex;
@@ -745,11 +781,13 @@ nav {
 .single > .title {
   font-family: "Hitchcock", san-serif;
   color: #3375e2;
+  text-align: center;
   font-size: 3.125rem;
   line-height: 3.3125rem;
   margin: 1.875rem; }
   @media only screen and (min-width: 751px) {
     .single > .title {
+      text-align: left;
       font-size: 4rem;
       line-height: 4.58333rem;
       margin: 1.25rem; } }
@@ -757,7 +795,7 @@ nav {
     .single > .title {
       font-size: 4.8rem;
       line-height: 5.5rem;
-      margin: 1rem 2rem; } }
+      margin: 2rem 2rem; } }
 
 .single > .date {
   font-size: 1.875rem;
@@ -776,9 +814,11 @@ nav {
       margin: 1rem 2rem; } }
 
 .single > .content {
+  text-align: center;
   margin: 1.25rem 1.875rem; }
   @media only screen and (min-width: 751px) {
     .single > .content {
+      text-align: left;
       margin: 0.83333rem 1.66667rem; } }
   @media only screen and (min-width: 1271px) {
     .single > .content {
@@ -1261,6 +1301,8 @@ nav {
       @media only screen and (min-width: 1271px) {
         .selection .info .poster-social .poster-thumb {
           width: 22.5rem; } }
+    .selection .info .poster-social .social {
+      justify-content: center; }
   .selection .info .info-txt > .title {
     display: inline;
     font-family: "Hitchcock", san-serif;
@@ -1414,6 +1456,71 @@ nav {
       .winner > .desc {
         font-size: 1.8rem;
         line-height: 2.1rem; } }
+
+.horizontal-thumb {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  margin: 1.5625rem; }
+  @media only screen and (min-width: 751px) {
+    .horizontal-thumb {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      text-align: left;
+      margin: 2.08333rem; } }
+  @media only screen and (min-width: 1271px) {
+    .horizontal-thumb {
+      margin: 2.5rem; } }
+  .horizontal-thumb .poster-thumb {
+    border: 1px solid #000;
+    width: 25rem;
+    margin: 0 0 1.5625rem 0; }
+    @media only screen and (min-width: 751px) {
+      .horizontal-thumb .poster-thumb {
+        width: 12.5rem;
+        margin: 0 2.08333rem 0 0; } }
+    @media only screen and (min-width: 1271px) {
+      .horizontal-thumb .poster-thumb {
+        width: 15rem;
+        margin: 0 2.5rem 0 0; } }
+  .horizontal-thumb .info {
+    width: 43.125rem; }
+    @media only screen and (min-width: 751px) {
+      .horizontal-thumb .info {
+        width: 41.66667rem; } }
+    @media only screen and (min-width: 1271px) {
+      .horizontal-thumb .info {
+        width: 90rem; } }
+    .horizontal-thumb .info > .title {
+      display: inline;
+      font-family: "Hitchcock", san-serif;
+      color: #3375e2;
+      font-size: 4.5rem;
+      line-height: 4.8125rem;
+      margin-bottom: 1.5625rem; }
+      @media only screen and (min-width: 751px) {
+        .horizontal-thumb .info > .title {
+          font-size: 2.33333rem;
+          line-height: 2.66667rem;
+          margin-bottom: 1.25rem; } }
+      @media only screen and (min-width: 1271px) {
+        .horizontal-thumb .info > .title {
+          font-size: 3.6rem;
+          line-height: 4rem;
+          margin-bottom: 1rem; } }
+    .horizontal-thumb .info > .sub {
+      color: #000;
+      font-weight: 700;
+      margin-bottom: 0.9375rem; }
+      @media only screen and (min-width: 751px) {
+        .horizontal-thumb .info > .sub {
+          margin-bottom: 1.25rem; } }
+      @media only screen and (min-width: 1271px) {
+        .horizontal-thumb .info > .sub {
+          margin-bottom: 1rem; } }
 
 .thumb-hosts {
   display: flex;
