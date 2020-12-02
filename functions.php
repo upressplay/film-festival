@@ -127,3 +127,20 @@ function pagination($pages = '', $range = 4)
     	echo "</div>";
     }
 }
+
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Register options page.
+        $option_page = acf_add_options_page(array(
+            'page_title'    => __('Kapow Settings'),
+            'menu_title'    => __('Kapow'),
+            'menu_slug'     => 'kapow-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+    }
+}

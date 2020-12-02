@@ -44,11 +44,7 @@
 			</h2><!-- tagline -->
 			<?php endif; ?>
 
-			
-
 			<div class="date-tickets">
-				
-
 				<?php 
 
 				$args = array(
@@ -100,8 +96,32 @@
 				
 			</div><!-- date-tickets -->
 			<div class="synopsis">
-				<strong>Runtime:</strong>
-				<?php echo get_field('runtime'); ?>
+				<?php if( get_field('runtime') ): ?>
+					<strong>Runtime:</strong>
+					<?php echo the_field('runtime'); ?>
+				<?php endif; ?>
+				<?php if( get_field('festival-year') ): ?>
+					<br/>
+					<strong>Festival:</strong>
+					<?php 
+						$festivalYear = get_field('festival-year'); ?>
+						<a href="/official-selection/?festival=<?php echo $festivalYear; ?>">
+							<?php echo $festivalYear; ?>
+						</a>
+				<?php endif; ?>
+				<?php if( get_field('genre') ): ?>
+					<br/>
+					<strong>Genre:</strong>
+					<?php 
+						$genreField = get_field_object('genre');
+						$genres = get_field('genre');
+						foreach( $genres as $genre ) : ?>
+							<a href="/official-selection/?genre=<?php echo $genre['value']; ?>">
+								<?php echo $genre['label']; ?>
+							</a>
+						<?php endforeach; 
+					?>
+				<?php endif; ?>
 				<?php echo get_field('synopsis'); ?>
 			</div>
 			

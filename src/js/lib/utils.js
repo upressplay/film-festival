@@ -123,6 +123,7 @@
         getWindowHeight:getWindowHeight,
         setUrl:setUrl,
         getPercent:getPercent,
+        queryString:queryString,
         screenBpSm:screenBpSm,
         screenBpMd:screenBpMd,
         screenBpLg:screenBpLg

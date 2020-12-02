@@ -1628,3 +1628,57 @@ nav {
   @media only screen and (min-width: 1271px) {
     #footer a:active {
       color: #b6b6b6; } }
+
+select,
+.submit-btn {
+  position: relative;
+  font-family: "Hitchcock", san-serif;
+  color: #fff;
+  background-color: #3375e2;
+  box-sizing: border-box;
+  appearance: none;
+  font-size: 1.875rem;
+  padding: 0.9375rem 0.9375rem;
+  margin: 2.5rem 0.625rem; }
+  @media only screen and (min-width: 751px) {
+    select,
+    .submit-btn {
+      font-size: 2.08333rem;
+      padding: 0.83333rem 0.83333rem;
+      margin: 1.66667rem 0.83333rem; } }
+  @media only screen and (min-width: 1271px) {
+    select,
+    .submit-btn {
+      font-size: 2.5rem;
+      padding: 1rem 1rem;
+      margin: 2rem 1rem; } }
+
+select:after {
+  content: "\f150";
+  font-family: FontAwesome;
+  color: #000;
+  padding: 12px 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: red;
+  z-index: 1;
+  text-align: center;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box; }
+
+.submit-btn {
+  cursor: pointer;
+  background-color: #000;
+  border: 0;
+  transition: all 0.2s ease; }
+  .submit-btn:hover {
+    background-color: #3375e2; }
+
+#filter-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
