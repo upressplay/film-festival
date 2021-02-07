@@ -8,9 +8,11 @@ select,
     appearance: none;
     font-size: rem(30,$text-bp-sm);
     padding: rem(15,$text-bp-sm) rem(15,$text-bp-sm);
-    margin: rem(40,$text-bp-sm) rem(10,$text-bp-sm);
+    margin: rem(10,$text-bp-sm) rem(10,$text-bp-sm);
+    width:80%;
 
     @include bp-medium {
+        width:25%;
         font-size: rem(25,$text-bp-md);
         padding: rem(10,$text-bp-md) rem(10,$text-bp-md);
         margin: rem(20,$text-bp-md) rem(10,$text-bp-md);
@@ -24,16 +26,16 @@ select,
 }
 
 select:after {
-    content:"\f150";
-    font-family: FontAwesome;
+    content:"<>";
+    font-family: Font Awesome\ 5 Free;
     color: #000;
     padding: 12px 8px;
     position: absolute; right: 0; top: 0;
     background: red;
     z-index: 1;
     text-align: center;
-    width: 10%;
-    height: 100%;      
+    width: rem(20,$text-bp-lg);
+    height: rem(20,$text-bp-lg);      
     pointer-events: none;
     box-sizing: border-box;   
 }
@@ -48,7 +50,17 @@ select:after {
 }
 #filter-nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: rem(30,$text-bp-sm) 0 rem(10,$text-bp-sm);
+
+    @include bp-medium {
+        margin: 0;
+        flex-direction: row;
+    }
+
+    @include bp-large {
+        
+    }
 }

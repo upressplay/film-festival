@@ -38,11 +38,41 @@
 
 			 endwhile; ?>
 		</div>
+		
+		
 	</div>
+
+	
 	<?php 
 		$page_placement = 'Home Page Top Banner';
 		include( locate_template( 'banner.php', false, false ) ); 
 	?>
+
+	<div class="section-header">
+		<h2 class="title">
+			Official-Selections
+		</h2><!-- title -->
+		<a href="/official-selection">
+			<div class="more-btn">
+				More
+			</div><!-- more-btn -->
+		</a>
+	</div><!-- section-header -->
+	<div class="schedule-thumbs">
+		<?php 
+			$today = date('Y-m-d H:i:s');
+			$args = array(
+				'category_name'		=>'official-selection',
+				'posts_per_page'	=> 7,
+				'order' 			=> 'ASC',
+			);
+			$query = new WP_Query( $args );
+			while ( $query->have_posts() ) : $query->the_post(); 
+				
+				get_template_part( 'thumb-official-selection' );	
+
+			endwhile; ?>
+	</div>
 	<div class="section-header gray">
 		<h2 class="title">
 			News

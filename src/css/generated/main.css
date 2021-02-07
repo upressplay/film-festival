@@ -642,13 +642,17 @@ nav {
     justify-content: space-between;
     align-items: center; }
     .overlay .holder .content {
-      width: 58.33333rem; }
+      opacity: 0;
+      width: 58.33333rem;
+      transition: opacity 0.5s ease-in-out 0.1s; }
       @media only screen and (min-width: 751px) {
         .overlay .holder .content {
           width: 83.33333rem; } }
       @media only screen and (min-width: 1271px) {
         .overlay .holder .content {
           width: 100rem; } }
+      .overlay .holder .content.active {
+        opacity: 1; }
       .overlay .holder .content.videos {
         height: 26.375rem; }
         @media only screen and (min-width: 751px) {
@@ -1112,13 +1116,13 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0.625rem 0; }
+    margin: 0.625rem 0.625rem 0.625rem 0; }
     @media only screen and (min-width: 751px) {
       .date-tickets .schedule-date {
-        margin: 0.83333rem 0; } }
+        margin: 0.83333rem 0.83333rem 0.83333rem 0; } }
     @media only screen and (min-width: 1271px) {
       .date-tickets .schedule-date {
-        margin: 1rem 0; } }
+        margin: 1rem 1rem 1rem 0; } }
     .date-tickets .schedule-date .day-holder {
       margin-right: 0.625rem; }
       @media only screen and (min-width: 751px) {
@@ -1338,6 +1342,21 @@ nav {
         font-size: 2.8rem;
         line-height: 3.6rem;
         margin: 2.5rem 0; } }
+  .selection .info h4 {
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 3.4375rem;
+    margin: 0; }
+    @media only screen and (min-width: 751px) {
+      .selection .info h4 {
+        font-size: 1.75rem;
+        line-height: 2.75rem; } }
+    @media only screen and (min-width: 1271px) {
+      .selection .info h4 {
+        font-size: 2.1rem;
+        line-height: 3.6rem; } }
+  .selection .info .aspects h4 {
+    display: inline-block; }
   .selection .info .synopsis {
     margin: 2.1875rem 0; }
     @media only screen and (min-width: 751px) {
@@ -1346,6 +1365,14 @@ nav {
     @media only screen and (min-width: 1271px) {
       .selection .info .synopsis {
         margin: 1.5rem 0; } }
+    .selection .info .synopsis p {
+      margin: 0 0 0.3125rem 0; }
+      @media only screen and (min-width: 751px) {
+        .selection .info .synopsis p {
+          margin: 0 0 0.41667rem 0; } }
+      @media only screen and (min-width: 1271px) {
+        .selection .info .synopsis p {
+          margin: 0 0 0.5rem 0; } }
   .selection .info .cast-crew {
     margin: 0.9375rem 0; }
     @media only screen and (min-width: 751px) {
@@ -1355,9 +1382,18 @@ nav {
       .selection .info .cast-crew {
         margin: 1.5rem 0; } }
     .selection .info .cast-crew .member > .title {
-      font-weight: 700; }
-  .selection .info .links a {
-    margin-right: 1.5rem; }
+      font-weight: 700;
+      font-style: italic; }
+  .selection .info .links {
+    margin: 0.9375rem 0; }
+    @media only screen and (min-width: 751px) {
+      .selection .info .links {
+        margin: 1.25rem 0; } }
+    @media only screen and (min-width: 1271px) {
+      .selection .info .links {
+        margin: 1.5rem 0; } }
+    .selection .info .links a {
+      margin-right: 1.5rem; }
 
 .thumb-selection {
   width: 13.125rem;
@@ -1522,6 +1558,15 @@ nav {
         .horizontal-thumb .info > .sub {
           margin-bottom: 1rem; } }
 
+#festival-lineup p {
+  margin: 0; }
+
+#festival-lineup tr {
+  vertical-align: top; }
+  #festival-lineup tr td {
+    width: 5%;
+    padding: 1%; }
+
 .thumb-hosts {
   display: flex;
   flex-direction: column;
@@ -1639,10 +1684,12 @@ select,
   appearance: none;
   font-size: 1.875rem;
   padding: 0.9375rem 0.9375rem;
-  margin: 2.5rem 0.625rem; }
+  margin: 0.625rem 0.625rem;
+  width: 80%; }
   @media only screen and (min-width: 751px) {
     select,
     .submit-btn {
+      width: 25%;
       font-size: 2.08333rem;
       padding: 0.83333rem 0.83333rem;
       margin: 1.66667rem 0.83333rem; } }
@@ -1654,8 +1701,8 @@ select,
       margin: 2rem 1rem; } }
 
 select:after {
-  content: "\f150";
-  font-family: FontAwesome;
+  content: "<>";
+  font-family: Font Awesome\ 5 Free;
   color: #000;
   padding: 12px 8px;
   position: absolute;
@@ -1664,8 +1711,8 @@ select:after {
   background: red;
   z-index: 1;
   text-align: center;
-  width: 10%;
-  height: 100%;
+  width: 2rem;
+  height: 2rem;
   pointer-events: none;
   box-sizing: border-box; }
 
@@ -1679,6 +1726,11 @@ select:after {
 
 #filter-nav {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin: 1.875rem 0 0.625rem; }
+  @media only screen and (min-width: 751px) {
+    #filter-nav {
+      margin: 0;
+      flex-direction: row; } }

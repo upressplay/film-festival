@@ -1,5 +1,4 @@
-<a href="<?php echo get_permalink($post->ID);?>">
-	<div class="thumb-news">
+<a href="<?php echo get_permalink($post->ID);?>" class="thumb-news">
 		<?php if ( has_post_thumbnail() ) : ?>
 			<div class="thumb-img"> 
 				<?php the_post_thumbnail('rect'); ?>
@@ -20,8 +19,6 @@
 			</div> 
 			<?php endif; ?>
 		</div><!-- info --> 
-		
-	</div> <!-- thumb -->
 </a> 
 
 

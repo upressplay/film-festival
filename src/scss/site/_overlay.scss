@@ -35,7 +35,7 @@
         justify-content: space-between;
         align-items: center;
         .content {
-
+            opacity: 0;
             width: rem(700,$text-bp-md);
 
             @include bp-medium {
@@ -45,6 +45,11 @@
             @include bp-large {
                 width: rem(1000,$text-bp-lg);
 
+            }
+
+            transition: opacity 0.5s ease-in-out 0.1s;
+            &.active {
+                opacity: 1;
             }
             &.videos {
                 height: rem(422,$text-bp-sm);
@@ -78,6 +83,7 @@
                     height:100%;
                 } 
             }
+            
         }
     }
 

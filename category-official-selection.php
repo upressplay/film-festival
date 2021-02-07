@@ -19,6 +19,17 @@
 
     $meta_query = array('relation' => 'AND');
 
+    if($_GET['award'] && !empty($_GET['award']))
+    {
+        $awardQuery = $_GET['award'];
+        $meta_query[] = array(
+            'key'     => 'awards',
+            'value'   => $awardQuery,
+            'compare' => 'LIKE',
+        );
+
+    }
+
     if($_GET['genre'] && !empty($_GET['genre']))
     {
         $genreQuery = $_GET['genre'];
@@ -66,6 +77,8 @@
         $genres = $genre_field['choices']; 
         $festivalYear = get_field_object('festival-year');
         $festivalYears = $festivalYear['choices']; 
+        $awards_field = get_field_object('awards');
+        $awards = $awards_field['choices']; 
         
         ?>
         <form id="filter-nav">
@@ -90,6 +103,18 @@
                         $genreSelected = 'selected';
                     }?>
                     <option <?php echo $genreSelected; ?> value="<?php echo $key; ?>"><?php echo $genre; ?></option>
+                <?php endforeach; ?>
+            </select>
+
+            <select name="award" id="award">    
+                <option value="">Award</option>  
+                <?php foreach( $awards as $key => $award ): 
+                    
+                    $awardSelected = '';
+                    if($awardQuery == $key) {
+                        $awardSelected = 'selected';
+                    }?>
+                    <option <?php echo $awardSelected; ?> value="<?php echo $key; ?>"><?php echo $award; ?></option>
                 <?php endforeach; ?>
             </select>
             <button type="submit" class="submit-btn">Submit</button>

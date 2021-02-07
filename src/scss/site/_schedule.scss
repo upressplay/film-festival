@@ -304,13 +304,13 @@
         justify-content:center;
         align-items:center;
 
-        margin:rem(10,$text-bp-sm) 0; 
+        margin:rem(10,$text-bp-sm) rem(10,$text-bp-sm) rem(10,$text-bp-sm) 0; 
         @include bp-medium {
-            margin:rem(10,$text-bp-md) 0;
+            margin:rem(10,$text-bp-md) rem(10,$text-bp-md) rem(10,$text-bp-md) 0;
         }
 
         @include bp-large {
-            margin:rem(10,$text-bp-lg) 0;
+            margin:rem(10,$text-bp-lg) rem(10,$text-bp-lg) rem(10,$text-bp-lg) 0;
         }
         .day-holder {
             margin-right: rem(10,$text-bp-sm);

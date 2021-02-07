@@ -95,8 +95,15 @@
 					<?php 
 					$postContent = get_the_content($post->ID);
 					$content = $content . $postContent; 
+
+					if($selections) :
+						foreach( $selections as $selection ) :
+							$content = $content . get_the_title($selection->ID) .' - '. get_field('runtime', $selection->ID).'<br/>';
+						endforeach; 
+					endif;
 					echo $content;
 					?>
+
 				</div>
 			</div><!-- block-host -->
 		</div> <!-- block-info -->

@@ -9,9 +9,9 @@
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
 			<div class="section-header">
-				<span class="title">
+				<h1 class="title">
 					<?php the_title(); ?>
-				</span>
+				</h1>
 			</div><!-- section-header -->
 			<?php if ( has_post_thumbnail() ) : ?>
 				<header> 

@@ -160,21 +160,31 @@
 		} 
 		if(!isVid) {
 			dom.content.removeClass('videos');		
+		} else {
+			dom.content.addClass('active');
 		}
 
 		if(hires != undefined && hires != "") {
 			trace.log("this is a photo");
+
+			var img = document.createElement('img');
+			img.src = hires;
+			img.onload = function () {
+				dom.content.addClass('active');
+			}
 			dom.content.html('');
-			dom.content.html('<img src="'+hires+'"/>');
+			dom.content.html(img);
 		}
 
-		dom.content.addClass('active');
+		
 	}
 
 	function closeContent(id) {
 		trace.log("closeContent "); 
 		dom.content.removeClass('active');
-		openContent(id);
+
+		setTimeout(function(){ openContent(id); }, 500);
+		
 	}
 
 
