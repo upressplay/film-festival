@@ -127,3 +127,9 @@ a:active {
     }    
 }
 
+figure {
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 40px;
+}

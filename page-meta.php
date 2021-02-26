@@ -57,12 +57,30 @@
 <?php 
 			$today = date('Y-m-d H:i:s');
 			$args = array(
-				'category_name'		=>'official-selection',
+				'category_name'		=> array('official-selection','features'),
 				'order' 			=> 'ASC',
+				'posts_per_page'	=> 800,
 			);
 			$query = new WP_Query( $args );
 			while ( $query->have_posts() ) : $query->the_post(); 
-				if( get_field('festival-year') == '2021' ): ?>
+				$isMovie = true;
+				$genres = get_field('genre');
+				$genreString = '';
+				$count = 0;
+				foreach( $genres as $genre ) : 
+					if($count > 0) {
+						$genreString = $genreString . ', ';
+					}
+					$count = 1;
+					$genreString = $genreString  . $genre['label'];
+					if($genre['label'] == 'VR' || $genre['label'] == 'Podcasts') {
+						$isMovie = false;
+					}
+				endforeach; 
+					
+				if( (get_field('festival-year') == '2021') && $isMovie ): ?>
+
+				
 				
 				<tr>
 					<td><?php echo get_the_title($post->ID); ?></td>
@@ -131,17 +149,6 @@
 					<td><?php echo the_field('runtime'); ?></td>
 					<td>
 					<?php 
-						$genreField = get_field_object('genre');
-						$genres = get_field('genre');
-						$genreString = '';
-						$count = 0;
-						foreach( $genres as $genre ) : 
-							if($count > 0) {
-								$genreString = $genreString . ', ';
-							}
-							$count = 1;
-							$genreString = $genreString  . $genre['label'];
-						endforeach; 
 						echo $genreString;
 					?>
 					</td>

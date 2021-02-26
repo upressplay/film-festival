@@ -76,7 +76,7 @@
 				<div id="schedule-btn">SCHEDULE <i class="far fa-caret-square-down"></i></div>
 				<div id="schedule-menu" class="schedule-thumbs menu">
 					<?php 
-						$today = date('Y-m-d H:i:s');
+						$today = date('Y-m');
 						$args = array(
 						   	'category_name'		=>'schedule',
 						    'posts_per_page'	=> 3,

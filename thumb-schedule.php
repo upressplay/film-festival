@@ -22,11 +22,9 @@
 		    		$poster = get_field('poster', $f->ID);
 		    	?>
 		    	<a href="<?php echo get_permalink($f->ID);?>">
-					
-						<div class="poster-thumb"> 
-							<img src="<?php echo $poster['sizes']['tall']; ?>"/>
-						</div><!-- poster-thumb -->
-
+					<div class="poster-thumb"> 
+						<img src="<?php echo $poster['sizes']['tall']; ?>"/>
+					</div><!-- poster-thumb -->
 				</a>
 	    <?php endforeach; ?>
 	<?php else: ?>

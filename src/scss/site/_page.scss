@@ -31,7 +31,8 @@
     }
 }
 
-.page-content, .post-content {
+.page-content, 
+.post-content, {
 	padding:rem(25,$text-bp-sm) rem(50,$text-bp-sm);
 
     @include bp-medium {
@@ -40,6 +41,21 @@
     @include bp-large {
         padding:rem(25,$text-bp-lg) rem(50,$text-bp-lg); 
     }  	
+    iframe {
+
+        width:rem(630,$text-bp-sm);
+        height:rem(380,$text-bp-sm);
+
+        @include bp-medium {
+            width:rem(850,$text-bp-md);
+            height:rem(478,$text-bp-md);
+        }
+
+        @include bp-large {
+            width:rem(1150,$text-bp-lg);
+            height:rem(646,$text-bp-lg);
+        }    
+    }
 }
 .page-nav {
     text-align: center;
@@ -115,4 +131,47 @@
         margin: rem(50,$text-bp-lg) auto;
         width: rem(200,$text-bp-lg);
     }    
+}
+
+.twitch-holder {
+    display: flex;
+    flex-direction: column;
+    padding:rem(25,$text-bp-sm) rem(50,$text-bp-sm);
+
+    @include bp-medium {
+        flex-direction: row;
+        padding:rem(25,$text-bp-md) rem(50,$text-bp-md);
+    }
+    @include bp-large {
+        padding:rem(25,$text-bp-lg) rem(50,$text-bp-lg); 
+    }  	
+}
+#twitch_feed {
+    width: rem(625,$text-bp-sm);
+    height: rem(350,$text-bp-sm);
+         
+    @include bp-medium {
+        width: rem(550,$text-bp-md);
+        height: rem(310,$text-bp-md);
+    }
+
+    @include bp-large {
+        width: rem(900,$text-bp-lg);
+        height: rem(506,$text-bp-lg);
+    }  
+}
+#chat_embed {
+
+    width: rem(625,$text-bp-sm);
+    height: rem(310,$text-bp-sm);
+         
+    @include bp-medium {
+        width: rem(275,$text-bp-md);
+        height: rem(310,$text-bp-md);
+    }
+
+    @include bp-large {
+        width: rem(200,$text-bp-lg);
+        height: rem(506,$text-bp-lg);
+    }
 }

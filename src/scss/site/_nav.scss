@@ -111,7 +111,7 @@ nav {
 
      @include bp-medium {
         font-size: rem(24,$text-bp-md);
-        padding: rem(7,$text-bp-md) 0;
+        padding: rem(5,$text-bp-md) 0;
       }
 
     @include bp-large {

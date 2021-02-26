@@ -14,6 +14,7 @@
 	$selections = get_field('selections',$post->ID);
 	$feature = get_field('feature',$post->ID);
 	$content = "";
+	$duration = "";
 
 ?>
 <div class="schedule">
@@ -21,12 +22,12 @@
 		<div class="day-holder">
 			<div class="day"><?php echo $weekday; ?></div>
 		</div> 
-		<div class="date-time"><?php echo $month; ?> <?php echo $day; ?>  <?php echo $time; ?> to <?php echo $end_date_time; ?> </div>
+		<div class="date-time"><?php echo $month; ?> <?php echo $day; ?>  <?php echo $time; ?> PST</div>
 		<?php 
 			$cta_btn = get_field('cta_btn');
 		?>
 		<?php if ($cta_btn['url'] != '') : ?>
-		<a href="<?php echo $cta_btn['url']; ?>" target="blank">
+		<a href="<?php echo $cta_btn['url']; ?>" target="<?php echo $cta_btn['target']; ?>">
 			<div class="tickets-btn">
 				<?php echo $cta_btn['text']; ?>
 			</div>
@@ -42,10 +43,10 @@
 			    		$poster = get_field('poster', $f->ID);
 			    		$runtime = get_field('runtime',$f->ID);
 			    		if($runtime !="") {
-			    			$runtime = '<p><strong>Runtime:</strong> '.$runtime.'</p>';	
-			    		}
-
-			    		$content = $runtime.get_field('tagline',$f->ID);
+							$runtime = '<p><strong>Runtime:</strong> '.$runtime.' minutes</p>';	
+							
+						}
+						$content = $runtime . get_field('synopsis',$f->ID);
 			    	?>
 			    	<a href="<?php echo get_permalink($f->ID);?>">
 						
@@ -97,11 +98,24 @@
 					$content = $content . $postContent; 
 
 					if($selections) :
+						$totalSeconds = 0;
 						foreach( $selections as $selection ) :
-							$content = $content . get_the_title($selection->ID) .' - '. get_field('runtime', $selection->ID).'<br/>';
+							$runtime = get_field('runtime', $selection->ID);
+							if($runtime == ''){
+								$runtime = 0;
+							}
+							$duration =  $duration + $runtime;
+
+							
+							$content = $content . get_the_title($selection->ID) .' - '. $runtime.' min.<br/>';
 						endforeach; 
+						
 					endif;
 					echo $content;
+					if($duration !='') {
+						echo '<p><strong>Duration: </strong>'.$duration.' min.</p>';
+					}
+					
 					?>
 
 				</div>

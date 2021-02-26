@@ -1,4 +1,5 @@
 .selection {
+    
     header {
         border: 1px solid #000;
         margin: rem(20,$text-bp-sm);
@@ -54,7 +55,20 @@
             }
 
         }
-        
+        .date-tickets {
+            .tickets-btn {
+
+                max-width:rem(200,$text-bp-sm);
+                @include bp-medium {
+                    max-width:rem(200,$text-bp-md);
+                }
+
+                @include bp-large {
+                    max-width:rem(200,$text-bp-lg);
+                }  
+
+            }
+        }
         .info-txt {
             >.title {
                 display: inline;
@@ -74,7 +88,7 @@
 
                 @include bp-large {
                     font-size:rem(50,$text-bp-lg);
-                    line-height:rem(95,$text-bp-lg);
+                    line-height:rem(75,$text-bp-lg);
                     padding: rem(15,$text-bp-lg) rem(15,$text-bp-lg);
                 }    
             }
@@ -127,13 +141,13 @@
                 margin: rem(15,$text-bp-lg) 0;
             }
             p {
-                margin: 0 0 rem(5,$text-bp-sm) 0;
+                margin: 0 0 rem(15,$text-bp-sm) 0;
                 @include bp-medium {
-                    margin: 0 0 rem(5,$text-bp-md) 0;
+                    margin: 0 0 rem(15,$text-bp-md) 0;
                 }
 
                 @include bp-large {
-                    margin: 0 0 rem(5,$text-bp-lg) 0;
+                    margin: 0 0 rem(15,$text-bp-lg) 0;
                 }
             }
         }

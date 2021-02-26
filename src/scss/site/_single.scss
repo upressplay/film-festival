@@ -89,8 +89,10 @@
         font-weight: 700;
         line-height:rem(36,$text-bp-sm);
         margin: rem(10,$text-bp-sm) rem(30,$text-bp-sm);
+        text-align: center;
          
         @include bp-medium {
+            text-align: left;
             font-size:rem(28,$text-bp-md);
             line-height:rem(32,$text-bp-md);
             margin: rem(10,$text-bp-md) rem(20,$text-bp-md);
@@ -114,6 +116,12 @@
         @include bp-large {
             margin: rem(10,$text-bp-lg) rem(20,$text-bp-lg);
         }    
+        .wp-block-image{
+            img{
+                width:auto;
+
+            }
+        }
     }
 
 }

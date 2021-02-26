@@ -73,10 +73,8 @@
     flex-wrap: wrap;
     justify-content: flex-start;   
 }
-
-
-
-.news-thumbs {
+.news-thumbs,
+.schedule-thumbs {
     margin: rem(30,$text-bp-sm);
 
     @include bp-medium {
@@ -84,9 +82,42 @@
     }
     @include bp-large {
         margin: rem(50,$text-bp-lg); 
-    } 
-    a {
-        color: #000;
+    }
+}
+    
+
+
+.news-thumbs,
+.thumb-holder,
+.schedule-thumbs {
+    
+    a,
+    a:link,
+    a:active,
+    a:visited {
+        .info {
+            color:#000;
+            .title {
+                color:$color-blue;    
+            }
+        }
+        .poster-thumb,
+        .thumb-img {
+            img {
+                outline:0px solid $color-blue;
+                outline-offset: 0px;
+                transition: all 0.25s ease-in-out;
+            }
+        } 
+    }
+    a:hover {
+        .poster-thumb,
+        .thumb-img {
+            img  {
+                outline:10px solid $color-blue;
+                outline-offset: -10px;
+            }
+        }   
     }
 }
 

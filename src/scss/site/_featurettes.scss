@@ -1,0 +1,58 @@
+.featurette-vid {
+    width: rem(750,$text-bp-sm);
+        height: rem(422,$text-bp-sm);
+
+    @include bp-medium {
+        width: rem(970,$text-bp-md);
+        height: rem(546,$text-bp-md);
+    }
+
+    @include bp-large {
+        width: rem(1250,$text-bp-lg);
+        height: rem(700,$text-bp-lg);
+    }      
+}
+
+.thumb-featurette {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width:rem(600,$text-bp-sm);
+    @include bp-medium {
+        width:rem(300,$text-bp-md);
+    }
+
+    @include bp-large {
+        width:rem(280,$text-bp-lg);
+    }   
+
+    img {
+        border: 1px solid #000;
+    }
+    h3 {
+        color:$color-dark;
+
+        text-align: center;
+        font-family: $narrow-font;
+        font-weight: 700;
+        color:#000;
+        text-transform: uppercase;
+        font-size:rem(30,$text-bp-sm);
+        line-height:rem(33,$text-bp-sm);
+        
+        
+        @include bp-medium {
+            font-size:rem(18,$text-bp-md);
+            line-height:rem(20,$text-bp-md);
+        }
+        @include bp-large {
+            font-size:rem(24,$text-bp-lg);
+            line-height:rem(26,$text-bp-lg);
+            
+        }
+    }
+
+}

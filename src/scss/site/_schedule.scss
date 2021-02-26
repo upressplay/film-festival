@@ -97,15 +97,32 @@
             }
             >.block-host{
                 text-align: center;
-                width:rem(650,$text-bp-sm);
                 @include bp-medium {
                     text-align: left;
-                     width:rem(650,$text-bp-md);
                 }
 
                 @include bp-large {
-                    width:rem(700,$text-bp-lg);
                 }    
+                .content {
+                    ul {
+                        text-align: left;
+                    }
+                    iframe {
+
+                        width:rem(750,$text-bp-sm);
+                        height:rem(422,$text-bp-sm);
+
+                        @include bp-medium {
+                            width:rem(640,$text-bp-md);
+                            height:rem(360,$text-bp-md);
+                        }
+
+                        @include bp-large {
+                            width:rem(930,$text-bp-lg);
+                            height:rem(525,$text-bp-lg);
+                        }    
+                    }
+                }
                 >.title {
                     
                     font-family: $headline-font;
@@ -163,20 +180,31 @@
             }
             
         }
-        .selections {
-            display: flex;
-            flex-direction:row;
-            flex-wrap: wrap;
-            justify-content:center;
-            @include bp-medium {
-                justify-content:flex-start;
-                font-size:rem(28,$text-bp-md);
-                line-height:rem(32,$text-bp-md);
-            }
-        }    
+            
     }
-    
+}
 
+.selections {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:center;
+    @include bp-medium {
+        justify-content:flex-start;
+        font-size:rem(28,$text-bp-md);
+        line-height:rem(32,$text-bp-md);
+    }
+    .thumb-selection {
+        margin: rem(20,$text-bp-sm);
+
+        @include bp-medium {
+            justify-content: space-around; 
+            margin: rem(15,$text-bp-md) rem(15,$text-bp-md) rem(15,$text-bp-md) 0;
+        }
+        @include bp-large {
+            margin: rem(22,$text-bp-lg) rem(22,$text-bp-lg) rem(22,$text-bp-lg) 0; 
+        } 
+    }
 }
 
 .schedule-thumbs {
@@ -187,11 +215,10 @@
     margin: rem(20,$text-bp-sm);
 
     @include bp-medium {
-        justify-content: flex-start; 
+        justify-content: space-around; 
         margin: rem(15,$text-bp-md);
     }
     @include bp-large {
-        justify-content: flex-start; 
         margin: rem(20,$text-bp-lg); 
     } 
     &.menu {
@@ -286,25 +313,26 @@
 }
 .date-tickets {
     display: flex;
-    align-items:flex-start;
-
-    flex-direction:row;
-    flex-wrap:nowrap;
-    justify-content:flex-start;
     align-items:center;
 
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+
     @include bp-medium {
-        
+        align-items:flex-start;
+        flex-direction:row;   
         
     }
     .schedule-date {
         display: flex;
         flex-direction:row;
-        flex-wrap:wrap;
+        flex-wrap:nowrap;
         justify-content:center;
         align-items:center;
 
-        margin:rem(10,$text-bp-sm) rem(10,$text-bp-sm) rem(10,$text-bp-sm) 0; 
+        margin:rem(30,$text-bp-sm); 
+
         @include bp-medium {
             margin:rem(10,$text-bp-md) rem(10,$text-bp-md) rem(10,$text-bp-md) 0;
         }
@@ -376,22 +404,26 @@
 }
 
 .tickets-btn {
+    text-align: center;
     display: inline-block;
     font-family: $nav-font;
     color:#FFF;
     background-color: $color-red;
 
-    font-size:rem(48,$text-bp-sm);
+    font-size:rem(36,$text-bp-sm);
+    line-height:rem(36,$text-bp-sm);
     padding:rem(15,$text-bp-sm); 
-    margin:0 rem(20,$text-bp-lg);
+    margin:rem(20,$text-bp-sm) rem(10,$text-bp-sm);
     @include bp-medium {
         font-size:rem(22,$text-bp-md);
+        line-height:rem(22,$text-bp-md);
         padding:rem(10,$text-bp-md);
         margin:0 rem(20,$text-bp-md);
     }
 
     @include bp-large {
         font-size:rem(28,$text-bp-lg);
+        line-height:rem(28,$text-bp-lg);
         padding:rem(5,$text-bp-lg) rem(15,$text-bp-lg);
         margin:0 rem(20,$text-bp-lg);
     }   

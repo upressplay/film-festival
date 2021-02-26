@@ -17,19 +17,16 @@
 			<?php 
 				$today = date('Y-m-d H:i:s');
 				$args = array(
-				   	'category_name'		=>'schedule',
-				    'posts_per_page'	=> 3,
-				    'meta_key' 			=> 'start_date',
-					'orderby' 			=> 'meta_value',
-					'order' 			=> 'ASC',
-					'meta_query' 		=> array(
-	                    array(
-	                        'key' 		=> 'start_date',
-	                        'value' 	=> $today,
-	                        'compare' 	=> '>'
-	                    ),
-	                ),  
-				);
+					'category_name'		=>'schedule',
+					'posts_per_page'	=> 3,
+					 'order'				=> 'ASC',
+					 'orderby'			=> 'meta_value',
+					 'meta_key'			=> 'start_date',
+					 'meta_type'			=> 'DATETIME',
+					 'meta_value' 		=> date('Y-m'),
+					   'meta_compare' 		=> '>',
+					 'paged'				=> $paged
+				 );
 				$query = new WP_Query( $args );
 				while ( $query->have_posts() ) : $query->the_post(); 
 				    
@@ -48,6 +45,44 @@
 		include( locate_template( 'banner.php', false, false ) ); 
 	?>
 
+<div class="section-header">
+		<h2 class="title">
+			Featurettes
+		</h2><!-- title -->
+		<a href="/featurettes">
+			<div class="more-btn">
+				More
+			</div><!-- more-btn -->
+		</a>
+	</div><!-- section-header -->
+	<div class="schedule-thumbs">
+		<?php 
+			$args = array(
+				'category_name'		=>'featurettes',
+				'posts_per_page'	=> 4,
+				'order' 			=> 'ASC',
+			);
+			$query = new WP_Query( $args );
+			while ( $query->have_posts() ) : $query->the_post(); 
+				
+				get_template_part( 'thumb-featurette' );	
+
+			endwhile; ?>
+	</div>
+
+	<div class="section-header">
+		<h2 class="title">
+			Twitch
+		</h2><!-- title -->
+	</div><!-- section-header -->
+	<div class="twitch-holder">
+		<iframe id="twitch_feed" src="https://player.twitch.tv/?channel=kapowiff&amp;parent=kapowiff.com" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+		<iframe id="chat_embed" src="https://www.twitch.tv/embed/kapowiff/chat?parent=kapowiff.com"></iframe>
+	</div>
+	<?php 
+		$page_placement = 'Home Page Mid Banner';
+		include( locate_template( 'banner.php', false, false ) ); 
+	?>
 	<div class="section-header">
 		<h2 class="title">
 			Official-Selections
@@ -60,7 +95,6 @@
 	</div><!-- section-header -->
 	<div class="schedule-thumbs">
 		<?php 
-			$today = date('Y-m-d H:i:s');
 			$args = array(
 				'category_name'		=>'official-selection',
 				'posts_per_page'	=> 7,
@@ -73,6 +107,7 @@
 
 			endwhile; ?>
 	</div>
+	
 	<div class="section-header gray">
 		<h2 class="title">
 			News
@@ -98,7 +133,7 @@
 		?>
 	</div>
 	<?php 
-		$page_placement = 'Home Page Mid Banner';
+		$page_placement = 'Home Page Mid2 Banner';
 		include( locate_template( 'banner.php', false, false ) ); 
 	?>
 	<div class="section-header blue">

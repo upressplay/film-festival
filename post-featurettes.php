@@ -1,3 +1,8 @@
+<?php 
+    $featuretteVid = get_field('featurette_video');
+    if($featuretteVid) :
+        echo '<div class="featurette-vid"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/'.$featuretteVid.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>';
+    endif; ?>
 <?php
 	
 	$videos = get_field('videos');
@@ -6,13 +11,8 @@
 ?>
 
 <div class="selection">
-	<?php if ( has_post_thumbnail() ) : ?>
-	<header> 
-		<?php the_post_thumbnail('header'); ?>
-	</header> 
-	<?php endif; ?>
 	<?php 
-		$page_placement = 'Official Selection Top Banner';
+		$page_placement = 'Featurette Top Banner';
 		include( locate_template( 'banner.php', false, false ) ); 
 	?>
 	<div class="info">
@@ -70,30 +70,24 @@
 						?>
 
 						<div class="schedule-date">
-							<a href="/schedule">
-								<div class="day-holder">
-									<div class="day"><?php echo $weekday; ?></div>
-								</div> 
-							</a>
-							<a href="/schedule">
-								<div class="time-date">
-									<div class="time"><?php echo $time; ?> </div>
-									<div class="date"><?php echo $month; ?> <?php echo $day; ?> </div>
-								</div><!-- date-time -->
-							</a>
+							<div class="day-holder">
+								<div class="day"><?php echo $weekday; ?></div>
+							</div> 
+							<div class="time-date">
+								<div class="time"><?php echo $time; ?> </div>
+								<div class="date"><?php echo $month; ?> <?php echo $day; ?> </div>
+							</div><!-- date-time -->
+						</div><!-- schedule-date -->
 
-							<?php 
+						<?php 
 							$cta_btn = get_field('cta_btn', $schedule->ID);
 						?>
 						<?php if ($cta_btn['url'] != '') : ?>
-						<a href="<?php echo $cta_btn['url']; ?>" target="<?php echo $cta_btn['target']; ?>">
+						<a href="<?php echo $cta_btn['url']; ?>" target="blank">
 							<div class="tickets-btn">
 								<?php echo $cta_btn['text']; ?>
 							</div>
 						</a>
-						</div><!-- schedule-date -->
-
-						
 						<?php endif; ?>
 					<?php endforeach; ?>
 				<?php endif; ?>
@@ -103,7 +97,7 @@
 			<?php if( get_field('runtime') ): ?>
 				<div class="aspects">
 					<h4>Runtime:</h4>
-					<?php echo the_field('runtime'); ?> min.
+					<?php echo the_field('runtime'); ?>
 				</div>
 			<?php endif; ?>
 			
@@ -330,7 +324,7 @@
 			</div><!-- photo-thumbs --->
 	<?php endif; ?>
 	<?php 
-		$page_placement = 'Official Selection Bottom Banner';
+		$page_placement = 'Featurette Bottom Banner';
 		include( locate_template( 'banner.php', false, false ) ); 
 	?>
 </div><!-- selection -->
@@ -338,5 +332,6 @@
 <div class="page-nav">
 	<?php previous_post_link('%link', '<i class="fas fa-caret-square-left"></i>', TRUE); ?>  <?php next_post_link('%link', '<i class="fas fa-caret-square-right"></i>', TRUE); ?> 
 </div> 
+
 
 
